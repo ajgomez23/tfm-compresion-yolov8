@@ -1,0 +1,51 @@
+experiment_id,technique,runtime,precision,map_50_95,latency_p50_ms,frontier,frontier_runtime,distance_to_ideal
+s_baseline_default_745e3d08,Referencia,openvino,fp32,0.376214,134.2438,estricta,estricta,0.21922916872059003
+s_baseline_default_745e3d08,Referencia,onnxruntime,fp32,0.376214,144.132,solo con suelo,estricta,0.2270848976106094
+s_baseline_default_745e3d08,Referencia,pytorch,fp32,0.376214,203.8891,dominado,estricta,0.2815177345736162
+s_pruning_l1global_r25_4e91ddbc,Poda estructurada,openvino,fp32,0.357922,110.4585,estricta,estricta,0.28213456266798204
+s_pruning_l1global_r25_4e91ddbc,Poda estructurada,onnxruntime,fp32,0.357923,122.7169,estricta,estricta,0.2882343105214498
+s_pruning_l1global_r25_randomctl_a658e5d4,Poda estructurada,openvino,fp32,0.347943,98.5692,estricta,estricta,0.32329408983057883
+s_pruning_l1global_r25_randomctl_a658e5d4,Poda estructurada,onnxruntime,fp32,0.347942,111.2425,dominado,estricta,0.3281149446650796
+s_pruning_l1global_r50_iter4_d8fe066f,Poda estructurada,openvino,fp32,0.331078,73.3439,estricta,estricta,0.3970143419962396
+s_pruning_l1global_r50_iter4_d8fe066f,Poda estructurada,onnxruntime,fp32,0.331078,86.3515,dominado,estricta,0.399778581366733
+m_baseline_default_dfe22158,Referencia,onnxruntime,fp32,0.409316,350.4465,estricta,estricta,0.40597938779323894
+n_baseline_default_fab9d45c,Referencia,openvino,fp32,0.325635,44.8115,estricta,estricta,0.4197673225460234
+n_baseline_default_fab9d45c,Referencia,onnxruntime,fp32,0.325635,53.2729,dominado,estricta,0.4205039964275371
+n_baseline_default_fab9d45c,Referencia,pytorch,fp32,0.325636,79.179,dominado,estricta,0.4243871411252065
+m_baseline_default_dfe22158,Referencia,openvino,fp32,0.409313,367.6264,solo con suelo,estricta,0.4274368421672939
+s_pruning_l1global_r50_9419b26f,Poda estructurada,openvino,fp32,0.316322,63.4413,dominado,dominado,0.4669441791124486
+s_pruning_l1global_r50_9419b26f,Poda estructurada,onnxruntime,fp32,0.316322,80.4303,dominado,dominado,0.4695678071936378
+s_qat_int8-noexcl_d4d403fa,Cuantización QAT,openvino,int8,0.312429,72.7711,dominado,dominado,0.48712751624309164
+s_ptq_int8-noexcl_5bcd71f0,Cuantización PTQ,openvino,int8,0.310032,70.5537,dominado,dominado,0.4984256539266774
+m_ptq_int8-noexcl_b1a6e9e7,Cuantización PTQ,openvino,int8,0.311959,162.6528,dominado,dominado,0.5151323397086651
+m_baseline_default_dfe22158,Referencia,pytorch,fp32,0.409316,454.6437,dominado,estricta,0.5361265226112856
+s_pruning_l1global_r50_randomctl_d581bd22,Poda estructurada,openvino,fp32,0.300316,62.8196,dominado,dominado,0.5446720464004506
+s_pruning_l1global_r50_randomctl_d581bd22,Poda estructurada,onnxruntime,fp32,0.300316,74.9582,dominado,dominado,0.5461755575566342
+s_combined_prune-l1global-r25-ptqint8_4a1d5adc,Combinaciones,openvino,int8,0.298402,55.9581,dominado,dominado,0.5533288852404737
+s_qat_int8-noexcl_4d491880,Cuantización QAT,openvino,int8,0.298013,56.365,dominado,dominado,0.5552584198487208
+l_ptq_int8-noexcl_4a52a7e5,Cuantización PTQ,openvino,int8,0.321734,329.584,dominado,dominado,0.5798139731838563
+l_ptq_int8-noexcl_4a52a7e5,Cuantización PTQ,onnxruntime,int8,0.309595,293.3968,dominado,dominado,0.5994388744264385
+s_combined_prune-l1global-r25-randomctl-ptqint8_e70dc4d6,Combinaciones,openvino,int8,0.288337,50.3066,dominado,dominado,0.6019552401148999
+s_pruning_bnscale_r50_f51fef4c,Poda estructurada,openvino,fp32,0.286544,64.649,dominado,dominado,0.6118641996812197
+s_pruning_bnscale_r50_f51fef4c,Poda estructurada,onnxruntime,fp32,0.286545,80.2087,dominado,dominado,0.6137150301109674
+s_ptq_int8-noexcl_5bcd71f0,Cuantización PTQ,onnxruntime,int8,0.286091,67.5694,dominado,dominado,0.6143692401268659
+m_ptq_int8-noexcl_b1a6e9e7,Cuantización PTQ,onnxruntime,int8,0.281464,162.8844,dominado,dominado,0.6574802539133401
+s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5,Combinaciones,openvino,int8,0.275993,39.3646,estricta,estricta,0.6616484536533329
+s_qat_int8-noexcl_d4d403fa,Cuantización QAT,onnxruntime,int8,0.274701,71.0929,dominado,dominado,0.6701462710149132
+s_qat_int8-noexcl_4d491880,Cuantización QAT,onnxruntime,int8,0.272785,65.7955,dominado,dominado,0.678945147810442
+s_combined_prune-l1global-r25-ptqint8_4a1d5adc,Combinaciones,onnxruntime,int8,0.270323,66.9954,dominado,dominado,0.691042443019745
+s_qat_int8-noexcl_43300d34,Cuantización QAT,openvino,int8,0.267243,35.7216,estricta,estricta,0.704254613600217
+s_combined_prune-l1global-r50-ptqint8_9067dba2,Combinaciones,openvino,int8,0.263447,35.4919,estricta,estricta,0.722778193910118
+s_combined_prune-l1global-r25-randomctl-ptqint8_e70dc4d6,Combinaciones,onnxruntime,int8,0.259057,61.5336,dominado,dominado,0.7454564102362186
+n_ptq_int8-noexcl_a78f566a,Cuantización PTQ,openvino,int8,0.254759,25.6084,estricta,estricta,0.7650860911633901
+s_combined_prune-l1global-r50-randomctl-ptqint8_13a9774e,Combinaciones,openvino,int8,0.249635,34.293,dominado,dominado,0.7901751129710715
+s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5,Combinaciones,onnxruntime,int8,0.249358,47.5047,dominado,estricta,0.791925529658301
+n_ptq_int8-noexcl_a78f566a,Cuantización PTQ,onnxruntime,int8,0.247739,30.0546,dominado,estricta,0.7993758752237655
+s_qat_int8-noexcl_43300d34,Cuantización QAT,onnxruntime,int8,0.247754,45.2895,dominado,estricta,0.7996614800737111
+s_combined_prune-bnscale-r50-ptqint8_7712cb36,Combinaciones,openvino,int8,0.243604,35.4794,dominado,dominado,0.8196357471842723
+s_combined_prune-l1global-r50-ptqint8_9067dba2,Combinaciones,onnxruntime,int8,0.238463,45.0749,dominado,dominado,0.8449905543803714
+l_baseline_default_188b9407,Referencia,onnxruntime,fp32,0.41148,704.9157,estricta,estricta,0.8487039381913293
+l_baseline_default_188b9407,Referencia,openvino,fp32,0.41148,708.296,solo con suelo,estricta,0.8529271725394191
+s_combined_prune-l1global-r50-randomctl-ptqint8_13a9774e,Combinaciones,onnxruntime,int8,0.223422,42.3687,dominado,dominado,0.9183069314443644
+l_baseline_default_188b9407,Referencia,pytorch,fp32,0.41148,826.0139,dominado,estricta,1.0
+s_combined_prune-bnscale-r50-ptqint8_7712cb36,Combinaciones,onnxruntime,int8,0.206639,43.0575,dominado,dominado,1.0002375988575785

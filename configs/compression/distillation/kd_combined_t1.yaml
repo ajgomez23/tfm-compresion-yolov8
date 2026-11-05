@@ -1,0 +1,12 @@
+# Ablación de temperatura: T=1.
+#
+# Es el control de la elección de T=2. A T=1 el maestro tiene 1,12 clases efectivas de 17 y la clase
+# principal aporta el 98,7 % de la divergencia, así que el término de respuesta debería comportarse
+# casi como no destilar.
+
+_base_: kd_combined.yaml
+
+technique_variant: l2n_combined_t1
+
+distillation:
+  temperature: 1.0

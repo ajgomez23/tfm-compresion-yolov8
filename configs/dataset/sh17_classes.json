@@ -1,0 +1,38 @@
+{
+  "_comment": "Mapeo canonico de indice a nombre de clase de SH17. Es la fuente unica de los nombres de clase del proyecto: de aqui salen las cabeceras ap_class_NN_nombre del registro y las etiquetas de las figuras. No editar a mano.",
+  "_source": "https://github.com/ahmadmughees/SH17dataset/blob/master/sh17.yaml",
+  "_source_verified": "2026-08-07",
+  "_warning": "El ORDEN de este mapeo procede de sh17.yaml, que es el que usan los ficheros de etiquetas YOLO del dataset. NO coincide con el orden en que el README del repositorio enumera las clases en prosa, ni con el de las reexportaciones de terceros. Usar otro orden produciria 17 columnas de AP por clase mal etiquetadas, con un error silencioso e indetectable a posteriori.",
+  "_verification": {
+    "date": "2026-08-08",
+    "method": "Cruce de las etiquetas YOLO (indice numerico) con las anotaciones Pascal VOC (nombre de clase) de la MISMA imagen, emparejando cada caja con su homologa por geometria, sobre 400 imagenes muestreadas del ZIP oficial.",
+    "result": "Los 17 indices mapean a la clase semanticamente correcta. El ORDEN queda confirmado contra los datos reales, no solo contra sh17.yaml.",
+    "images_matched": 400,
+    "naming_discrepancies": "Dos nombres difieren en la cadena, no en el concepto ni en el indice: el indice 5 es 'face-mask' en sh17.yaml y 'face-mask-medical' en las anotaciones VOC; el indice 7 es 'tool' en sh17.yaml y 'tools' en VOC. Se conserva la forma de sh17.yaml como canonica, por ser el fichero que consume el pipeline de entrenamiento, y se registra la variante VOC como alias para que la discrepancia quede trazable."
+  },
+  "dataset": "SH17",
+  "num_classes": 17,
+  "classes": [
+    "person",
+    "ear",
+    "ear-mufs",
+    "face",
+    "face-guard",
+    "face-mask",
+    "foot",
+    "tool",
+    "glasses",
+    "gloves",
+    "helmet",
+    "hands",
+    "head",
+    "medical-suit",
+    "shoes",
+    "safety-suit",
+    "safety-vest"
+  ],
+  "voc_aliases": {
+    "5": "face-mask-medical",
+    "7": "tools"
+  }
+}

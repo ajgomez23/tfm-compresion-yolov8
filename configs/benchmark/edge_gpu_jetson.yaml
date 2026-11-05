@@ -1,0 +1,21 @@
+# Perfil declarado pero no ejecutado, por falta de hardware.
+device_id: edge_gpu_jetson
+description: >-
+  Dispositivo de borde con GPU NVIDIA embebida, tipo Jetson Orin Nano.
+device_type: cuda
+valid_for_measurement: true
+available: false
+unavailable_reason: >-
+  No se dispone del dispositivo fisico. Ademas habria que registrar el modo de
+  potencia activo, que condiciona por completo la latencia en Jetson.
+requires_temperature: true
+num_threads: null
+cpu_affinity: []
+backends:
+  - pytorch
+warmup_iterations: 50
+measure_iterations: 300
+repetitions: 3
+throughput_batch_sizes: [1, 2, 4]
+latency_representative: true
+notes: ""

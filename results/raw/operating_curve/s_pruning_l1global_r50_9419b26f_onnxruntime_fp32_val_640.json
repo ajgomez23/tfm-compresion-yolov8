@@ -1,0 +1,2705 @@
+{
+  "experiment_id": "s_pruning_l1global_r50_9419b26f",
+  "runtime": "onnxruntime",
+  "precision": "fp32",
+  "split": "val",
+  "input_resolution": 640,
+  "size_criterion": "inference_resolution",
+  "num_detections": 178457,
+  "source": {
+    "predictions": "/home/gomez/tfm-edge-object-detection/results/raw/artifact_eval/validator_s_pruning_l1global_r50_9419b26f_onnxruntime_fp32/predictions.json",
+    "recorded_dump": "/home/gomez/tfm-edge-object-detection/results/raw/artifact_eval/s_pruning_l1global_r50_9419b26f_onnxruntime_fp32_val_640.json",
+    "note": "Las detecciones NO se han vuelto a generar: son las de la evaluación ya registrada, leídas otra vez en umbrales fijos."
+  },
+  "anchor": {
+    "anchored": true,
+    "tolerance": 1e-06,
+    "max_difference": 0.0,
+    "compared": {
+      "map_50": {
+        "rebuilt": 0.5093657444139822,
+        "recorded": 0.5093657444139822
+      },
+      "map_50_95": {
+        "rebuilt": 0.31632224623345623,
+        "recorded": 0.31632224623345623
+      },
+      "operating_point.precision": {
+        "rebuilt": 0.658114,
+        "recorded": 0.658114
+      },
+      "operating_point.recall": {
+        "rebuilt": 0.483529,
+        "recorded": 0.483529
+      },
+      "operating_point.f1": {
+        "rebuilt": 0.539291,
+        "recorded": 0.539291
+      },
+      "operating_point.confidence": {
+        "rebuilt": 0.22378,
+        "recorded": 0.22378
+      }
+    }
+  },
+  "curve": {
+    "iou": 0.5,
+    "max_detections": 100,
+    "num_classes": 17,
+    "points": [
+      {
+        "confidence": 0.05,
+        "precision": 0.343683,
+        "recall": 0.628342,
+        "f1": 0.444331,
+        "true_positives": 8859,
+        "false_positives": 10509,
+        "num_gt": 11507,
+        "per_class": {
+          "0": {
+            "name": "person",
+            "precision": 0.547994,
+            "recall": 0.879771,
+            "true_positives": 1844,
+            "false_positives": 1521,
+            "num_gt": 2096
+          },
+          "1": {
+            "name": "ear",
+            "precision": 0.600958,
+            "recall": 0.745964,
+            "true_positives": 878,
+            "false_positives": 583,
+            "num_gt": 1177
+          },
+          "2": {
+            "name": "ear-mufs",
+            "precision": 0.13369,
+            "recall": 0.531915,
+            "true_positives": 25,
+            "false_positives": 162,
+            "num_gt": 47
+          },
+          "3": {
+            "name": "face",
+            "precision": 0.718885,
+            "recall": 0.902799,
+            "true_positives": 1161,
+            "false_positives": 454,
+            "num_gt": 1286
+          },
+          "4": {
+            "name": "face-guard",
+            "precision": 0.178571,
+            "recall": 0.526316,
+            "true_positives": 10,
+            "false_positives": 46,
+            "num_gt": 19
+          },
+          "5": {
+            "name": "face-mask",
+            "precision": 0.374269,
+            "recall": 0.576577,
+            "true_positives": 64,
+            "false_positives": 107,
+            "num_gt": 111
+          },
+          "6": {
+            "name": "foot",
+            "precision": 0.182171,
+            "recall": 0.330986,
+            "true_positives": 47,
+            "false_positives": 211,
+            "num_gt": 142
+          },
+          "7": {
+            "name": "tool",
+            "precision": 0.135833,
+            "recall": 0.373995,
+            "true_positives": 279,
+            "false_positives": 1775,
+            "num_gt": 746
+          },
+          "8": {
+            "name": "glasses",
+            "precision": 0.248684,
+            "recall": 0.632107,
+            "true_positives": 189,
+            "false_positives": 571,
+            "num_gt": 299
+          },
+          "9": {
+            "name": "gloves",
+            "precision": 0.257303,
+            "recall": 0.519274,
+            "true_positives": 229,
+            "false_positives": 661,
+            "num_gt": 441
+          },
+          "10": {
+            "name": "helmet",
+            "precision": 0.399038,
+            "recall": 0.674797,
+            "true_positives": 83,
+            "false_positives": 125,
+            "num_gt": 123
+          },
+          "11": {
+            "name": "hands",
+            "precision": 0.502537,
+            "recall": 0.854985,
+            "true_positives": 1981,
+            "false_positives": 1961,
+            "num_gt": 2317
+          },
+          "12": {
+            "name": "head",
+            "precision": 0.677447,
+            "recall": 0.858221,
+            "true_positives": 1592,
+            "false_positives": 758,
+            "num_gt": 1855
+          },
+          "13": {
+            "name": "medical-suit",
+            "precision": 0.252747,
+            "recall": 0.793103,
+            "true_positives": 23,
+            "false_positives": 68,
+            "num_gt": 29
+          },
+          "14": {
+            "name": "shoes",
+            "precision": 0.234954,
+            "recall": 0.564673,
+            "true_positives": 406,
+            "false_positives": 1322,
+            "num_gt": 719
+          },
+          "15": {
+            "name": "safety-suit",
+            "precision": 0.126214,
+            "recall": 0.393939,
+            "true_positives": 13,
+            "false_positives": 90,
+            "num_gt": 33
+          },
+          "16": {
+            "name": "safety-vest",
+            "precision": 0.271318,
+            "recall": 0.522388,
+            "true_positives": 35,
+            "false_positives": 94,
+            "num_gt": 67
+          }
+        }
+      },
+      {
+        "confidence": 0.1,
+        "precision": 0.456162,
+        "recall": 0.568126,
+        "f1": 0.506024,
+        "true_positives": 8563,
+        "false_positives": 5464,
+        "num_gt": 11507,
+        "per_class": {
+          "0": {
+            "name": "person",
+            "precision": 0.68,
+            "recall": 0.867844,
+            "true_positives": 1819,
+            "false_positives": 856,
+            "num_gt": 2096
+          },
+          "1": {
+            "name": "ear",
+            "precision": 0.700162,
+            "recall": 0.73407,
+            "true_positives": 864,
+            "false_positives": 370,
+            "num_gt": 1177
+          },
+          "2": {
+            "name": "ear-mufs",
+            "precision": 0.215054,
+            "recall": 0.425532,
+            "true_positives": 20,
+            "false_positives": 73,
+            "num_gt": 47
+          },
+          "3": {
+            "name": "face",
+            "precision": 0.799861,
+            "recall": 0.895023,
+            "true_positives": 1151,
+            "false_positives": 288,
+            "num_gt": 1286
+          },
+          "4": {
+            "name": "face-guard",
+            "precision": 0.269231,
+            "recall": 0.368421,
+            "true_positives": 7,
+            "false_positives": 19,
+            "num_gt": 19
+          },
+          "5": {
+            "name": "face-mask",
+            "precision": 0.538462,
+            "recall": 0.567568,
+            "true_positives": 63,
+            "false_positives": 54,
+            "num_gt": 111
+          },
+          "6": {
+            "name": "foot",
+            "precision": 0.315217,
+            "recall": 0.204225,
+            "true_positives": 29,
+            "false_positives": 63,
+            "num_gt": 142
+          },
+          "7": {
+            "name": "tool",
+            "precision": 0.222451,
+            "recall": 0.289544,
+            "true_positives": 216,
+            "false_positives": 755,
+            "num_gt": 746
+          },
+          "8": {
+            "name": "glasses",
+            "precision": 0.383966,
+            "recall": 0.608696,
+            "true_positives": 182,
+            "false_positives": 292,
+            "num_gt": 299
+          },
+          "9": {
+            "name": "gloves",
+            "precision": 0.371634,
+            "recall": 0.469388,
+            "true_positives": 207,
+            "false_positives": 350,
+            "num_gt": 441
+          },
+          "10": {
+            "name": "helmet",
+            "precision": 0.531034,
+            "recall": 0.626016,
+            "true_positives": 77,
+            "false_positives": 68,
+            "num_gt": 123
+          },
+          "11": {
+            "name": "hands",
+            "precision": 0.633608,
+            "recall": 0.829953,
+            "true_positives": 1923,
+            "false_positives": 1112,
+            "num_gt": 2317
+          },
+          "12": {
+            "name": "head",
+            "precision": 0.792149,
+            "recall": 0.848518,
+            "true_positives": 1574,
+            "false_positives": 413,
+            "num_gt": 1855
+          },
+          "13": {
+            "name": "medical-suit",
+            "precision": 0.283582,
+            "recall": 0.655172,
+            "true_positives": 19,
+            "false_positives": 48,
+            "num_gt": 29
+          },
+          "14": {
+            "name": "shoes",
+            "precision": 0.372372,
+            "recall": 0.517385,
+            "true_positives": 372,
+            "false_positives": 627,
+            "num_gt": 719
+          },
+          "15": {
+            "name": "safety-suit",
+            "precision": 0.217391,
+            "recall": 0.30303,
+            "true_positives": 10,
+            "false_positives": 36,
+            "num_gt": 33
+          },
+          "16": {
+            "name": "safety-vest",
+            "precision": 0.428571,
+            "recall": 0.447761,
+            "true_positives": 30,
+            "false_positives": 40,
+            "num_gt": 67
+          }
+        }
+      },
+      {
+        "confidence": 0.15,
+        "precision": 0.522682,
+        "recall": 0.522187,
+        "f1": 0.522434,
+        "true_positives": 8335,
+        "false_positives": 3562,
+        "num_gt": 11507,
+        "per_class": {
+          "0": {
+            "name": "person",
+            "precision": 0.752301,
+            "recall": 0.857824,
+            "true_positives": 1798,
+            "false_positives": 592,
+            "num_gt": 2096
+          },
+          "1": {
+            "name": "ear",
+            "precision": 0.763063,
+            "recall": 0.719626,
+            "true_positives": 847,
+            "false_positives": 263,
+            "num_gt": 1177
+          },
+          "2": {
+            "name": "ear-mufs",
+            "precision": 0.285714,
+            "recall": 0.382979,
+            "true_positives": 18,
+            "false_positives": 45,
+            "num_gt": 47
+          },
+          "3": {
+            "name": "face",
+            "precision": 0.84451,
+            "recall": 0.891135,
+            "true_positives": 1146,
+            "false_positives": 211,
+            "num_gt": 1286
+          },
+          "4": {
+            "name": "face-guard",
+            "precision": 0.294118,
+            "recall": 0.263158,
+            "true_positives": 5,
+            "false_positives": 12,
+            "num_gt": 19
+          },
+          "5": {
+            "name": "face-mask",
+            "precision": 0.604167,
+            "recall": 0.522523,
+            "true_positives": 58,
+            "false_positives": 38,
+            "num_gt": 111
+          },
+          "6": {
+            "name": "foot",
+            "precision": 0.320755,
+            "recall": 0.119718,
+            "true_positives": 17,
+            "false_positives": 36,
+            "num_gt": 142
+          },
+          "7": {
+            "name": "tool",
+            "precision": 0.310231,
+            "recall": 0.252011,
+            "true_positives": 188,
+            "false_positives": 418,
+            "num_gt": 746
+          },
+          "8": {
+            "name": "glasses",
+            "precision": 0.502924,
+            "recall": 0.575251,
+            "true_positives": 172,
+            "false_positives": 170,
+            "num_gt": 299
+          },
+          "9": {
+            "name": "gloves",
+            "precision": 0.459799,
+            "recall": 0.414966,
+            "true_positives": 183,
+            "false_positives": 215,
+            "num_gt": 441
+          },
+          "10": {
+            "name": "helmet",
+            "precision": 0.589286,
+            "recall": 0.536585,
+            "true_positives": 66,
+            "false_positives": 46,
+            "num_gt": 123
+          },
+          "11": {
+            "name": "hands",
+            "precision": 0.711212,
+            "recall": 0.81312,
+            "true_positives": 1884,
+            "false_positives": 765,
+            "num_gt": 2317
+          },
+          "12": {
+            "name": "head",
+            "precision": 0.84424,
+            "recall": 0.841509,
+            "true_positives": 1561,
+            "false_positives": 288,
+            "num_gt": 1855
+          },
+          "13": {
+            "name": "medical-suit",
+            "precision": 0.313725,
+            "recall": 0.551724,
+            "true_positives": 16,
+            "false_positives": 35,
+            "num_gt": 29
+          },
+          "14": {
+            "name": "shoes",
+            "precision": 0.471646,
+            "recall": 0.47427,
+            "true_positives": 341,
+            "false_positives": 382,
+            "num_gt": 719
+          },
+          "15": {
+            "name": "safety-suit",
+            "precision": 0.264706,
+            "recall": 0.272727,
+            "true_positives": 9,
+            "false_positives": 25,
+            "num_gt": 33
+          },
+          "16": {
+            "name": "safety-vest",
+            "precision": 0.553191,
+            "recall": 0.38806,
+            "true_positives": 26,
+            "false_positives": 21,
+            "num_gt": 67
+          }
+        }
+      },
+      {
+        "confidence": 0.2,
+        "precision": 0.583627,
+        "recall": 0.496267,
+        "f1": 0.536414,
+        "true_positives": 8133,
+        "false_positives": 2558,
+        "num_gt": 11507,
+        "per_class": {
+          "0": {
+            "name": "person",
+            "precision": 0.792688,
+            "recall": 0.848282,
+            "true_positives": 1778,
+            "false_positives": 465,
+            "num_gt": 2096
+          },
+          "1": {
+            "name": "ear",
+            "precision": 0.802124,
+            "recall": 0.706032,
+            "true_positives": 831,
+            "false_positives": 205,
+            "num_gt": 1177
+          },
+          "2": {
+            "name": "ear-mufs",
+            "precision": 0.354167,
+            "recall": 0.361702,
+            "true_positives": 17,
+            "false_positives": 31,
+            "num_gt": 47
+          },
+          "3": {
+            "name": "face",
+            "precision": 0.87366,
+            "recall": 0.887247,
+            "true_positives": 1141,
+            "false_positives": 165,
+            "num_gt": 1286
+          },
+          "4": {
+            "name": "face-guard",
+            "precision": 0.416667,
+            "recall": 0.263158,
+            "true_positives": 5,
+            "false_positives": 7,
+            "num_gt": 19
+          },
+          "5": {
+            "name": "face-mask",
+            "precision": 0.658824,
+            "recall": 0.504505,
+            "true_positives": 56,
+            "false_positives": 29,
+            "num_gt": 111
+          },
+          "6": {
+            "name": "foot",
+            "precision": 0.44,
+            "recall": 0.077465,
+            "true_positives": 11,
+            "false_positives": 14,
+            "num_gt": 142
+          },
+          "7": {
+            "name": "tool",
+            "precision": 0.374065,
+            "recall": 0.201072,
+            "true_positives": 150,
+            "false_positives": 251,
+            "num_gt": 746
+          },
+          "8": {
+            "name": "glasses",
+            "precision": 0.600719,
+            "recall": 0.558528,
+            "true_positives": 167,
+            "false_positives": 111,
+            "num_gt": 299
+          },
+          "9": {
+            "name": "gloves",
+            "precision": 0.537736,
+            "recall": 0.387755,
+            "true_positives": 171,
+            "false_positives": 147,
+            "num_gt": 441
+          },
+          "10": {
+            "name": "helmet",
+            "precision": 0.666667,
+            "recall": 0.504065,
+            "true_positives": 62,
+            "false_positives": 31,
+            "num_gt": 123
+          },
+          "11": {
+            "name": "hands",
+            "precision": 0.770327,
+            "recall": 0.793267,
+            "true_positives": 1838,
+            "false_positives": 548,
+            "num_gt": 2317
+          },
+          "12": {
+            "name": "head",
+            "precision": 0.879115,
+            "recall": 0.83504,
+            "true_positives": 1549,
+            "false_positives": 213,
+            "num_gt": 1855
+          },
+          "13": {
+            "name": "medical-suit",
+            "precision": 0.357143,
+            "recall": 0.517241,
+            "true_positives": 15,
+            "false_positives": 27,
+            "num_gt": 29
+          },
+          "14": {
+            "name": "shoes",
+            "precision": 0.528716,
+            "recall": 0.435327,
+            "true_positives": 313,
+            "false_positives": 279,
+            "num_gt": 719
+          },
+          "15": {
+            "name": "safety-suit",
+            "precision": 0.285714,
+            "recall": 0.242424,
+            "true_positives": 8,
+            "false_positives": 20,
+            "num_gt": 33
+          },
+          "16": {
+            "name": "safety-vest",
+            "precision": 0.583333,
+            "recall": 0.313433,
+            "true_positives": 21,
+            "false_positives": 15,
+            "num_gt": 67
+          }
+        }
+      },
+      {
+        "confidence": 0.25,
+        "precision": 0.642212,
+        "recall": 0.475702,
+        "f1": 0.546557,
+        "true_positives": 7975,
+        "false_positives": 1901,
+        "num_gt": 11507,
+        "per_class": {
+          "0": {
+            "name": "person",
+            "precision": 0.828531,
+            "recall": 0.836832,
+            "true_positives": 1754,
+            "false_positives": 363,
+            "num_gt": 2096
+          },
+          "1": {
+            "name": "ear",
+            "precision": 0.825735,
+            "recall": 0.692438,
+            "true_positives": 815,
+            "false_positives": 172,
+            "num_gt": 1177
+          },
+          "2": {
+            "name": "ear-mufs",
+            "precision": 0.484848,
+            "recall": 0.340426,
+            "true_positives": 16,
+            "false_positives": 17,
+            "num_gt": 47
+          },
+          "3": {
+            "name": "face",
+            "precision": 0.897152,
+            "recall": 0.881804,
+            "true_positives": 1134,
+            "false_positives": 130,
+            "num_gt": 1286
+          },
+          "4": {
+            "name": "face-guard",
+            "precision": 0.555556,
+            "recall": 0.263158,
+            "true_positives": 5,
+            "false_positives": 4,
+            "num_gt": 19
+          },
+          "5": {
+            "name": "face-mask",
+            "precision": 0.743243,
+            "recall": 0.495495,
+            "true_positives": 55,
+            "false_positives": 19,
+            "num_gt": 111
+          },
+          "6": {
+            "name": "foot",
+            "precision": 0.466667,
+            "recall": 0.049296,
+            "true_positives": 7,
+            "false_positives": 8,
+            "num_gt": 142
+          },
+          "7": {
+            "name": "tool",
+            "precision": 0.445614,
+            "recall": 0.170241,
+            "true_positives": 127,
+            "false_positives": 158,
+            "num_gt": 746
+          },
+          "8": {
+            "name": "glasses",
+            "precision": 0.679325,
+            "recall": 0.538462,
+            "true_positives": 161,
+            "false_positives": 76,
+            "num_gt": 299
+          },
+          "9": {
+            "name": "gloves",
+            "precision": 0.615672,
+            "recall": 0.37415,
+            "true_positives": 165,
+            "false_positives": 103,
+            "num_gt": 441
+          },
+          "10": {
+            "name": "helmet",
+            "precision": 0.714286,
+            "recall": 0.487805,
+            "true_positives": 60,
+            "false_positives": 24,
+            "num_gt": 123
+          },
+          "11": {
+            "name": "hands",
+            "precision": 0.813429,
+            "recall": 0.779025,
+            "true_positives": 1805,
+            "false_positives": 414,
+            "num_gt": 2317
+          },
+          "12": {
+            "name": "head",
+            "precision": 0.900468,
+            "recall": 0.829111,
+            "true_positives": 1538,
+            "false_positives": 170,
+            "num_gt": 1855
+          },
+          "13": {
+            "name": "medical-suit",
+            "precision": 0.342857,
+            "recall": 0.413793,
+            "true_positives": 12,
+            "false_positives": 23,
+            "num_gt": 29
+          },
+          "14": {
+            "name": "shoes",
+            "precision": 0.601227,
+            "recall": 0.408901,
+            "true_positives": 294,
+            "false_positives": 195,
+            "num_gt": 719
+          },
+          "15": {
+            "name": "safety-suit",
+            "precision": 0.347826,
+            "recall": 0.242424,
+            "true_positives": 8,
+            "false_positives": 15,
+            "num_gt": 33
+          },
+          "16": {
+            "name": "safety-vest",
+            "precision": 0.655172,
+            "recall": 0.283582,
+            "true_positives": 19,
+            "false_positives": 10,
+            "num_gt": 67
+          }
+        }
+      },
+      {
+        "confidence": 0.3,
+        "precision": 0.687551,
+        "recall": 0.459706,
+        "f1": 0.551003,
+        "true_positives": 7824,
+        "false_positives": 1448,
+        "num_gt": 11507,
+        "per_class": {
+          "0": {
+            "name": "person",
+            "precision": 0.856862,
+            "recall": 0.831107,
+            "true_positives": 1742,
+            "false_positives": 291,
+            "num_gt": 2096
+          },
+          "1": {
+            "name": "ear",
+            "precision": 0.853035,
+            "recall": 0.680544,
+            "true_positives": 801,
+            "false_positives": 138,
+            "num_gt": 1177
+          },
+          "2": {
+            "name": "ear-mufs",
+            "precision": 0.555556,
+            "recall": 0.319149,
+            "true_positives": 15,
+            "false_positives": 12,
+            "num_gt": 47
+          },
+          "3": {
+            "name": "face",
+            "precision": 0.915516,
+            "recall": 0.876361,
+            "true_positives": 1127,
+            "false_positives": 104,
+            "num_gt": 1286
+          },
+          "4": {
+            "name": "face-guard",
+            "precision": 0.555556,
+            "recall": 0.263158,
+            "true_positives": 5,
+            "false_positives": 4,
+            "num_gt": 19
+          },
+          "5": {
+            "name": "face-mask",
+            "precision": 0.80597,
+            "recall": 0.486486,
+            "true_positives": 54,
+            "false_positives": 13,
+            "num_gt": 111
+          },
+          "6": {
+            "name": "foot",
+            "precision": 0.6,
+            "recall": 0.042254,
+            "true_positives": 6,
+            "false_positives": 4,
+            "num_gt": 142
+          },
+          "7": {
+            "name": "tool",
+            "precision": 0.516588,
+            "recall": 0.146113,
+            "true_positives": 109,
+            "false_positives": 102,
+            "num_gt": 746
+          },
+          "8": {
+            "name": "glasses",
+            "precision": 0.72381,
+            "recall": 0.508361,
+            "true_positives": 152,
+            "false_positives": 58,
+            "num_gt": 299
+          },
+          "9": {
+            "name": "gloves",
+            "precision": 0.668122,
+            "recall": 0.346939,
+            "true_positives": 153,
+            "false_positives": 76,
+            "num_gt": 441
+          },
+          "10": {
+            "name": "helmet",
+            "precision": 0.753247,
+            "recall": 0.471545,
+            "true_positives": 58,
+            "false_positives": 19,
+            "num_gt": 123
+          },
+          "11": {
+            "name": "hands",
+            "precision": 0.854449,
+            "recall": 0.762624,
+            "true_positives": 1767,
+            "false_positives": 301,
+            "num_gt": 2317
+          },
+          "12": {
+            "name": "head",
+            "precision": 0.918577,
+            "recall": 0.821024,
+            "true_positives": 1523,
+            "false_positives": 135,
+            "num_gt": 1855
+          },
+          "13": {
+            "name": "medical-suit",
+            "precision": 0.366667,
+            "recall": 0.37931,
+            "true_positives": 11,
+            "false_positives": 19,
+            "num_gt": 29
+          },
+          "14": {
+            "name": "shoes",
+            "precision": 0.643357,
+            "recall": 0.383866,
+            "true_positives": 276,
+            "false_positives": 153,
+            "num_gt": 719
+          },
+          "15": {
+            "name": "safety-suit",
+            "precision": 0.421053,
+            "recall": 0.242424,
+            "true_positives": 8,
+            "false_positives": 11,
+            "num_gt": 33
+          },
+          "16": {
+            "name": "safety-vest",
+            "precision": 0.68,
+            "recall": 0.253731,
+            "true_positives": 17,
+            "false_positives": 8,
+            "num_gt": 67
+          }
+        }
+      },
+      {
+        "confidence": 0.35,
+        "precision": 0.724352,
+        "recall": 0.439523,
+        "f1": 0.547085,
+        "true_positives": 7683,
+        "false_positives": 1113,
+        "num_gt": 11507,
+        "per_class": {
+          "0": {
+            "name": "person",
+            "precision": 0.878571,
+            "recall": 0.821565,
+            "true_positives": 1722,
+            "false_positives": 238,
+            "num_gt": 2096
+          },
+          "1": {
+            "name": "ear",
+            "precision": 0.875986,
+            "recall": 0.660153,
+            "true_positives": 777,
+            "false_positives": 110,
+            "num_gt": 1177
+          },
+          "2": {
+            "name": "ear-mufs",
+            "precision": 0.608696,
+            "recall": 0.297872,
+            "true_positives": 14,
+            "false_positives": 9,
+            "num_gt": 47
+          },
+          "3": {
+            "name": "face",
+            "precision": 0.929285,
+            "recall": 0.868585,
+            "true_positives": 1117,
+            "false_positives": 85,
+            "num_gt": 1286
+          },
+          "4": {
+            "name": "face-guard",
+            "precision": 0.714286,
+            "recall": 0.263158,
+            "true_positives": 5,
+            "false_positives": 2,
+            "num_gt": 19
+          },
+          "5": {
+            "name": "face-mask",
+            "precision": 0.875,
+            "recall": 0.441441,
+            "true_positives": 49,
+            "false_positives": 7,
+            "num_gt": 111
+          },
+          "6": {
+            "name": "foot",
+            "precision": 0.625,
+            "recall": 0.035211,
+            "true_positives": 5,
+            "false_positives": 3,
+            "num_gt": 142
+          },
+          "7": {
+            "name": "tool",
+            "precision": 0.59375,
+            "recall": 0.127346,
+            "true_positives": 95,
+            "false_positives": 65,
+            "num_gt": 746
+          },
+          "8": {
+            "name": "glasses",
+            "precision": 0.814607,
+            "recall": 0.48495,
+            "true_positives": 145,
+            "false_positives": 33,
+            "num_gt": 299
+          },
+          "9": {
+            "name": "gloves",
+            "precision": 0.706731,
+            "recall": 0.333333,
+            "true_positives": 147,
+            "false_positives": 61,
+            "num_gt": 441
+          },
+          "10": {
+            "name": "helmet",
+            "precision": 0.814286,
+            "recall": 0.463415,
+            "true_positives": 57,
+            "false_positives": 13,
+            "num_gt": 123
+          },
+          "11": {
+            "name": "hands",
+            "precision": 0.886121,
+            "recall": 0.752266,
+            "true_positives": 1743,
+            "false_positives": 224,
+            "num_gt": 2317
+          },
+          "12": {
+            "name": "head",
+            "precision": 0.929361,
+            "recall": 0.815633,
+            "true_positives": 1513,
+            "false_positives": 115,
+            "num_gt": 1855
+          },
+          "13": {
+            "name": "medical-suit",
+            "precision": 0.366667,
+            "recall": 0.37931,
+            "true_positives": 11,
+            "false_positives": 19,
+            "num_gt": 29
+          },
+          "14": {
+            "name": "shoes",
+            "precision": 0.702128,
+            "recall": 0.367177,
+            "true_positives": 264,
+            "false_positives": 112,
+            "num_gt": 719
+          },
+          "15": {
+            "name": "safety-suit",
+            "precision": 0.357143,
+            "recall": 0.151515,
+            "true_positives": 5,
+            "false_positives": 9,
+            "num_gt": 33
+          },
+          "16": {
+            "name": "safety-vest",
+            "precision": 0.636364,
+            "recall": 0.208955,
+            "true_positives": 14,
+            "false_positives": 8,
+            "num_gt": 67
+          }
+        }
+      },
+      {
+        "confidence": 0.4,
+        "precision": 0.740158,
+        "recall": 0.420225,
+        "f1": 0.536086,
+        "true_positives": 7511,
+        "false_positives": 891,
+        "num_gt": 11507,
+        "per_class": {
+          "0": {
+            "name": "person",
+            "precision": 0.894019,
+            "recall": 0.812977,
+            "true_positives": 1704,
+            "false_positives": 202,
+            "num_gt": 2096
+          },
+          "1": {
+            "name": "ear",
+            "precision": 0.890201,
+            "recall": 0.640612,
+            "true_positives": 754,
+            "false_positives": 93,
+            "num_gt": 1177
+          },
+          "2": {
+            "name": "ear-mufs",
+            "precision": 0.6,
+            "recall": 0.255319,
+            "true_positives": 12,
+            "false_positives": 8,
+            "num_gt": 47
+          },
+          "3": {
+            "name": "face",
+            "precision": 0.938619,
+            "recall": 0.856143,
+            "true_positives": 1101,
+            "false_positives": 72,
+            "num_gt": 1286
+          },
+          "4": {
+            "name": "face-guard",
+            "precision": 0.666667,
+            "recall": 0.210526,
+            "true_positives": 4,
+            "false_positives": 2,
+            "num_gt": 19
+          },
+          "5": {
+            "name": "face-mask",
+            "precision": 0.90566,
+            "recall": 0.432432,
+            "true_positives": 48,
+            "false_positives": 5,
+            "num_gt": 111
+          },
+          "6": {
+            "name": "foot",
+            "precision": 0.571429,
+            "recall": 0.028169,
+            "true_positives": 4,
+            "false_positives": 3,
+            "num_gt": 142
+          },
+          "7": {
+            "name": "tool",
+            "precision": 0.617886,
+            "recall": 0.101877,
+            "true_positives": 76,
+            "false_positives": 47,
+            "num_gt": 746
+          },
+          "8": {
+            "name": "glasses",
+            "precision": 0.874214,
+            "recall": 0.464883,
+            "true_positives": 139,
+            "false_positives": 20,
+            "num_gt": 299
+          },
+          "9": {
+            "name": "gloves",
+            "precision": 0.768362,
+            "recall": 0.30839,
+            "true_positives": 136,
+            "false_positives": 41,
+            "num_gt": 441
+          },
+          "10": {
+            "name": "helmet",
+            "precision": 0.820896,
+            "recall": 0.447154,
+            "true_positives": 55,
+            "false_positives": 12,
+            "num_gt": 123
+          },
+          "11": {
+            "name": "hands",
+            "precision": 0.908169,
+            "recall": 0.734139,
+            "true_positives": 1701,
+            "false_positives": 172,
+            "num_gt": 2317
+          },
+          "12": {
+            "name": "head",
+            "precision": 0.937422,
+            "recall": 0.807547,
+            "true_positives": 1498,
+            "false_positives": 100,
+            "num_gt": 1855
+          },
+          "13": {
+            "name": "medical-suit",
+            "precision": 0.423077,
+            "recall": 0.37931,
+            "true_positives": 11,
+            "false_positives": 15,
+            "num_gt": 29
+          },
+          "14": {
+            "name": "shoes",
+            "precision": 0.747024,
+            "recall": 0.349096,
+            "true_positives": 251,
+            "false_positives": 85,
+            "num_gt": 719
+          },
+          "15": {
+            "name": "safety-suit",
+            "precision": 0.4,
+            "recall": 0.121212,
+            "true_positives": 4,
+            "false_positives": 6,
+            "num_gt": 33
+          },
+          "16": {
+            "name": "safety-vest",
+            "precision": 0.619048,
+            "recall": 0.19403,
+            "true_positives": 13,
+            "false_positives": 8,
+            "num_gt": 67
+          }
+        }
+      },
+      {
+        "confidence": 0.45,
+        "precision": 0.771328,
+        "recall": 0.396008,
+        "f1": 0.523332,
+        "true_positives": 7343,
+        "false_positives": 685,
+        "num_gt": 11507,
+        "per_class": {
+          "0": {
+            "name": "person",
+            "precision": 0.913821,
+            "recall": 0.804389,
+            "true_positives": 1686,
+            "false_positives": 159,
+            "num_gt": 2096
+          },
+          "1": {
+            "name": "ear",
+            "precision": 0.902228,
+            "recall": 0.619371,
+            "true_positives": 729,
+            "false_positives": 79,
+            "num_gt": 1177
+          },
+          "2": {
+            "name": "ear-mufs",
+            "precision": 0.5625,
+            "recall": 0.191489,
+            "true_positives": 9,
+            "false_positives": 7,
+            "num_gt": 47
+          },
+          "3": {
+            "name": "face",
+            "precision": 0.948873,
+            "recall": 0.851477,
+            "true_positives": 1095,
+            "false_positives": 59,
+            "num_gt": 1286
+          },
+          "4": {
+            "name": "face-guard",
+            "precision": 1.0,
+            "recall": 0.157895,
+            "true_positives": 3,
+            "false_positives": 0,
+            "num_gt": 19
+          },
+          "5": {
+            "name": "face-mask",
+            "precision": 0.938776,
+            "recall": 0.414414,
+            "true_positives": 46,
+            "false_positives": 3,
+            "num_gt": 111
+          },
+          "6": {
+            "name": "foot",
+            "precision": 0.4,
+            "recall": 0.014085,
+            "true_positives": 2,
+            "false_positives": 3,
+            "num_gt": 142
+          },
+          "7": {
+            "name": "tool",
+            "precision": 0.670103,
+            "recall": 0.087131,
+            "true_positives": 65,
+            "false_positives": 32,
+            "num_gt": 746
+          },
+          "8": {
+            "name": "glasses",
+            "precision": 0.920863,
+            "recall": 0.428094,
+            "true_positives": 128,
+            "false_positives": 11,
+            "num_gt": 299
+          },
+          "9": {
+            "name": "gloves",
+            "precision": 0.8125,
+            "recall": 0.294785,
+            "true_positives": 130,
+            "false_positives": 30,
+            "num_gt": 441
+          },
+          "10": {
+            "name": "helmet",
+            "precision": 0.83871,
+            "recall": 0.422764,
+            "true_positives": 52,
+            "false_positives": 10,
+            "num_gt": 123
+          },
+          "11": {
+            "name": "hands",
+            "precision": 0.92539,
+            "recall": 0.717307,
+            "true_positives": 1662,
+            "false_positives": 134,
+            "num_gt": 2317
+          },
+          "12": {
+            "name": "head",
+            "precision": 0.948751,
+            "recall": 0.798383,
+            "true_positives": 1481,
+            "false_positives": 80,
+            "num_gt": 1855
+          },
+          "13": {
+            "name": "medical-suit",
+            "precision": 0.409091,
+            "recall": 0.310345,
+            "true_positives": 9,
+            "false_positives": 13,
+            "num_gt": 29
+          },
+          "14": {
+            "name": "shoes",
+            "precision": 0.809859,
+            "recall": 0.319889,
+            "true_positives": 230,
+            "false_positives": 54,
+            "num_gt": 719
+          },
+          "15": {
+            "name": "safety-suit",
+            "precision": 0.444444,
+            "recall": 0.121212,
+            "true_positives": 4,
+            "false_positives": 5,
+            "num_gt": 33
+          },
+          "16": {
+            "name": "safety-vest",
+            "precision": 0.666667,
+            "recall": 0.179104,
+            "true_positives": 12,
+            "false_positives": 6,
+            "num_gt": 67
+          }
+        }
+      },
+      {
+        "confidence": 0.5,
+        "precision": 0.810791,
+        "recall": 0.380955,
+        "f1": 0.518357,
+        "true_positives": 7152,
+        "false_positives": 514,
+        "num_gt": 11507,
+        "per_class": {
+          "0": {
+            "name": "person",
+            "precision": 0.927731,
+            "recall": 0.790076,
+            "true_positives": 1656,
+            "false_positives": 129,
+            "num_gt": 2096
+          },
+          "1": {
+            "name": "ear",
+            "precision": 0.920949,
+            "recall": 0.593883,
+            "true_positives": 699,
+            "false_positives": 60,
+            "num_gt": 1177
+          },
+          "2": {
+            "name": "ear-mufs",
+            "precision": 0.727273,
+            "recall": 0.170213,
+            "true_positives": 8,
+            "false_positives": 3,
+            "num_gt": 47
+          },
+          "3": {
+            "name": "face",
+            "precision": 0.959436,
+            "recall": 0.846034,
+            "true_positives": 1088,
+            "false_positives": 46,
+            "num_gt": 1286
+          },
+          "4": {
+            "name": "face-guard",
+            "precision": 1.0,
+            "recall": 0.157895,
+            "true_positives": 3,
+            "false_positives": 0,
+            "num_gt": 19
+          },
+          "5": {
+            "name": "face-mask",
+            "precision": 0.956522,
+            "recall": 0.396396,
+            "true_positives": 44,
+            "false_positives": 2,
+            "num_gt": 111
+          },
+          "6": {
+            "name": "foot",
+            "precision": 0.5,
+            "recall": 0.007042,
+            "true_positives": 1,
+            "false_positives": 1,
+            "num_gt": 142
+          },
+          "7": {
+            "name": "tool",
+            "precision": 0.6875,
+            "recall": 0.073727,
+            "true_positives": 55,
+            "false_positives": 25,
+            "num_gt": 746
+          },
+          "8": {
+            "name": "glasses",
+            "precision": 0.95,
+            "recall": 0.381271,
+            "true_positives": 114,
+            "false_positives": 6,
+            "num_gt": 299
+          },
+          "9": {
+            "name": "gloves",
+            "precision": 0.826389,
+            "recall": 0.269841,
+            "true_positives": 119,
+            "false_positives": 25,
+            "num_gt": 441
+          },
+          "10": {
+            "name": "helmet",
+            "precision": 0.87931,
+            "recall": 0.414634,
+            "true_positives": 51,
+            "false_positives": 7,
+            "num_gt": 123
+          },
+          "11": {
+            "name": "hands",
+            "precision": 0.942308,
+            "recall": 0.697885,
+            "true_positives": 1617,
+            "false_positives": 99,
+            "num_gt": 2317
+          },
+          "12": {
+            "name": "head",
+            "precision": 0.959947,
+            "recall": 0.78814,
+            "true_positives": 1462,
+            "false_positives": 61,
+            "num_gt": 1855
+          },
+          "13": {
+            "name": "medical-suit",
+            "precision": 0.5,
+            "recall": 0.310345,
+            "true_positives": 9,
+            "false_positives": 9,
+            "num_gt": 29
+          },
+          "14": {
+            "name": "shoes",
+            "precision": 0.868313,
+            "recall": 0.293463,
+            "true_positives": 211,
+            "false_positives": 32,
+            "num_gt": 719
+          },
+          "15": {
+            "name": "safety-suit",
+            "precision": 0.444444,
+            "recall": 0.121212,
+            "true_positives": 4,
+            "false_positives": 5,
+            "num_gt": 33
+          },
+          "16": {
+            "name": "safety-vest",
+            "precision": 0.733333,
+            "recall": 0.164179,
+            "true_positives": 11,
+            "false_positives": 4,
+            "num_gt": 67
+          }
+        }
+      },
+      {
+        "confidence": 0.55,
+        "precision": 0.859579,
+        "recall": 0.357875,
+        "f1": 0.505352,
+        "true_positives": 6907,
+        "false_positives": 404,
+        "num_gt": 11507,
+        "per_class": {
+          "0": {
+            "name": "person",
+            "precision": 0.936921,
+            "recall": 0.772424,
+            "true_positives": 1619,
+            "false_positives": 109,
+            "num_gt": 2096
+          },
+          "1": {
+            "name": "ear",
+            "precision": 0.932299,
+            "recall": 0.561597,
+            "true_positives": 661,
+            "false_positives": 48,
+            "num_gt": 1177
+          },
+          "2": {
+            "name": "ear-mufs",
+            "precision": 0.727273,
+            "recall": 0.170213,
+            "true_positives": 8,
+            "false_positives": 3,
+            "num_gt": 47
+          },
+          "3": {
+            "name": "face",
+            "precision": 0.968497,
+            "recall": 0.836703,
+            "true_positives": 1076,
+            "false_positives": 35,
+            "num_gt": 1286
+          },
+          "4": {
+            "name": "face-guard",
+            "precision": 1.0,
+            "recall": 0.157895,
+            "true_positives": 3,
+            "false_positives": 0,
+            "num_gt": 19
+          },
+          "5": {
+            "name": "face-mask",
+            "precision": 0.974359,
+            "recall": 0.342342,
+            "true_positives": 38,
+            "false_positives": 1,
+            "num_gt": 111
+          },
+          "6": {
+            "name": "foot",
+            "precision": 1.0,
+            "recall": 0.007042,
+            "true_positives": 1,
+            "false_positives": 0,
+            "num_gt": 142
+          },
+          "7": {
+            "name": "tool",
+            "precision": 0.721311,
+            "recall": 0.058981,
+            "true_positives": 44,
+            "false_positives": 17,
+            "num_gt": 746
+          },
+          "8": {
+            "name": "glasses",
+            "precision": 0.935484,
+            "recall": 0.29097,
+            "true_positives": 87,
+            "false_positives": 6,
+            "num_gt": 299
+          },
+          "9": {
+            "name": "gloves",
+            "precision": 0.888889,
+            "recall": 0.253968,
+            "true_positives": 112,
+            "false_positives": 14,
+            "num_gt": 441
+          },
+          "10": {
+            "name": "helmet",
+            "precision": 0.872727,
+            "recall": 0.390244,
+            "true_positives": 48,
+            "false_positives": 7,
+            "num_gt": 123
+          },
+          "11": {
+            "name": "hands",
+            "precision": 0.951741,
+            "recall": 0.672421,
+            "true_positives": 1558,
+            "false_positives": 79,
+            "num_gt": 2317
+          },
+          "12": {
+            "name": "head",
+            "precision": 0.965264,
+            "recall": 0.778976,
+            "true_positives": 1445,
+            "false_positives": 52,
+            "num_gt": 1855
+          },
+          "13": {
+            "name": "medical-suit",
+            "precision": 0.571429,
+            "recall": 0.275862,
+            "true_positives": 8,
+            "false_positives": 6,
+            "num_gt": 29
+          },
+          "14": {
+            "name": "shoes",
+            "precision": 0.902913,
+            "recall": 0.258693,
+            "true_positives": 186,
+            "false_positives": 20,
+            "num_gt": 719
+          },
+          "15": {
+            "name": "safety-suit",
+            "precision": 0.571429,
+            "recall": 0.121212,
+            "true_positives": 4,
+            "false_positives": 3,
+            "num_gt": 33
+          },
+          "16": {
+            "name": "safety-vest",
+            "precision": 0.692308,
+            "recall": 0.134328,
+            "true_positives": 9,
+            "false_positives": 4,
+            "num_gt": 67
+          }
+        }
+      },
+      {
+        "confidence": 0.6,
+        "precision": 0.864459,
+        "recall": 0.323795,
+        "f1": 0.471124,
+        "true_positives": 6611,
+        "false_positives": 317,
+        "num_gt": 11507,
+        "per_class": {
+          "0": {
+            "name": "person",
+            "precision": 0.948068,
+            "recall": 0.749046,
+            "true_positives": 1570,
+            "false_positives": 86,
+            "num_gt": 2096
+          },
+          "1": {
+            "name": "ear",
+            "precision": 0.939908,
+            "recall": 0.518267,
+            "true_positives": 610,
+            "false_positives": 39,
+            "num_gt": 1177
+          },
+          "2": {
+            "name": "ear-mufs",
+            "precision": 0.7,
+            "recall": 0.148936,
+            "true_positives": 7,
+            "false_positives": 3,
+            "num_gt": 47
+          },
+          "3": {
+            "name": "face",
+            "precision": 0.972578,
+            "recall": 0.827372,
+            "true_positives": 1064,
+            "false_positives": 30,
+            "num_gt": 1286
+          },
+          "4": {
+            "name": "face-guard",
+            "precision": 1.0,
+            "recall": 0.105263,
+            "true_positives": 2,
+            "false_positives": 0,
+            "num_gt": 19
+          },
+          "5": {
+            "name": "face-mask",
+            "precision": 1.0,
+            "recall": 0.279279,
+            "true_positives": 31,
+            "false_positives": 0,
+            "num_gt": 111
+          },
+          "6": {
+            "name": "foot",
+            "precision": 1.0,
+            "recall": 0.007042,
+            "true_positives": 1,
+            "false_positives": 0,
+            "num_gt": 142
+          },
+          "7": {
+            "name": "tool",
+            "precision": 0.77551,
+            "recall": 0.050938,
+            "true_positives": 38,
+            "false_positives": 11,
+            "num_gt": 746
+          },
+          "8": {
+            "name": "glasses",
+            "precision": 0.903846,
+            "recall": 0.157191,
+            "true_positives": 47,
+            "false_positives": 5,
+            "num_gt": 299
+          },
+          "9": {
+            "name": "gloves",
+            "precision": 0.929825,
+            "recall": 0.240363,
+            "true_positives": 106,
+            "false_positives": 8,
+            "num_gt": 441
+          },
+          "10": {
+            "name": "helmet",
+            "precision": 0.9,
+            "recall": 0.365854,
+            "true_positives": 45,
+            "false_positives": 5,
+            "num_gt": 123
+          },
+          "11": {
+            "name": "hands",
+            "precision": 0.959433,
+            "recall": 0.643073,
+            "true_positives": 1490,
+            "false_positives": 63,
+            "num_gt": 2317
+          },
+          "12": {
+            "name": "head",
+            "precision": 0.969325,
+            "recall": 0.766577,
+            "true_positives": 1422,
+            "false_positives": 45,
+            "num_gt": 1855
+          },
+          "13": {
+            "name": "medical-suit",
+            "precision": 0.7,
+            "recall": 0.241379,
+            "true_positives": 7,
+            "false_positives": 3,
+            "num_gt": 29
+          },
+          "14": {
+            "name": "shoes",
+            "precision": 0.930636,
+            "recall": 0.223922,
+            "true_positives": 161,
+            "false_positives": 12,
+            "num_gt": 719
+          },
+          "15": {
+            "name": "safety-suit",
+            "precision": 0.4,
+            "recall": 0.060606,
+            "true_positives": 2,
+            "false_positives": 3,
+            "num_gt": 33
+          },
+          "16": {
+            "name": "safety-vest",
+            "precision": 0.666667,
+            "recall": 0.119403,
+            "true_positives": 8,
+            "false_positives": 4,
+            "num_gt": 67
+          }
+        }
+      },
+      {
+        "confidence": 0.65,
+        "precision": 0.886572,
+        "recall": 0.298684,
+        "f1": 0.446831,
+        "true_positives": 6279,
+        "false_positives": 231,
+        "num_gt": 11507,
+        "per_class": {
+          "0": {
+            "name": "person",
+            "precision": 0.954232,
+            "recall": 0.726145,
+            "true_positives": 1522,
+            "false_positives": 73,
+            "num_gt": 2096
+          },
+          "1": {
+            "name": "ear",
+            "precision": 0.955479,
+            "recall": 0.474087,
+            "true_positives": 558,
+            "false_positives": 26,
+            "num_gt": 1177
+          },
+          "2": {
+            "name": "ear-mufs",
+            "precision": 0.75,
+            "recall": 0.12766,
+            "true_positives": 6,
+            "false_positives": 2,
+            "num_gt": 47
+          },
+          "3": {
+            "name": "face",
+            "precision": 0.976526,
+            "recall": 0.808709,
+            "true_positives": 1040,
+            "false_positives": 25,
+            "num_gt": 1286
+          },
+          "4": {
+            "name": "face-guard",
+            "precision": 1.0,
+            "recall": 0.105263,
+            "true_positives": 2,
+            "false_positives": 0,
+            "num_gt": 19
+          },
+          "5": {
+            "name": "face-mask",
+            "precision": 1.0,
+            "recall": 0.252252,
+            "true_positives": 28,
+            "false_positives": 0,
+            "num_gt": 111
+          },
+          "6": {
+            "name": "foot",
+            "precision": 1.0,
+            "recall": 0.0,
+            "true_positives": 0,
+            "false_positives": 0,
+            "num_gt": 142
+          },
+          "7": {
+            "name": "tool",
+            "precision": 0.871795,
+            "recall": 0.045576,
+            "true_positives": 34,
+            "false_positives": 5,
+            "num_gt": 746
+          },
+          "8": {
+            "name": "glasses",
+            "precision": 0.888889,
+            "recall": 0.080268,
+            "true_positives": 24,
+            "false_positives": 3,
+            "num_gt": 299
+          },
+          "9": {
+            "name": "gloves",
+            "precision": 0.947368,
+            "recall": 0.204082,
+            "true_positives": 90,
+            "false_positives": 5,
+            "num_gt": 441
+          },
+          "10": {
+            "name": "helmet",
+            "precision": 0.916667,
+            "recall": 0.357724,
+            "true_positives": 44,
+            "false_positives": 4,
+            "num_gt": 123
+          },
+          "11": {
+            "name": "hands",
+            "precision": 0.971685,
+            "recall": 0.607251,
+            "true_positives": 1407,
+            "false_positives": 41,
+            "num_gt": 2317
+          },
+          "12": {
+            "name": "head",
+            "precision": 0.977208,
+            "recall": 0.739623,
+            "true_positives": 1372,
+            "false_positives": 32,
+            "num_gt": 1855
+          },
+          "13": {
+            "name": "medical-suit",
+            "precision": 0.75,
+            "recall": 0.206897,
+            "true_positives": 6,
+            "false_positives": 2,
+            "num_gt": 29
+          },
+          "14": {
+            "name": "shoes",
+            "precision": 0.945205,
+            "recall": 0.191933,
+            "true_positives": 138,
+            "false_positives": 8,
+            "num_gt": 719
+          },
+          "15": {
+            "name": "safety-suit",
+            "precision": 0.5,
+            "recall": 0.060606,
+            "true_positives": 2,
+            "false_positives": 2,
+            "num_gt": 33
+          },
+          "16": {
+            "name": "safety-vest",
+            "precision": 0.666667,
+            "recall": 0.089552,
+            "true_positives": 6,
+            "false_positives": 3,
+            "num_gt": 67
+          }
+        }
+      },
+      {
+        "confidence": 0.7,
+        "precision": 0.903298,
+        "recall": 0.266211,
+        "f1": 0.411229,
+        "true_positives": 5829,
+        "false_positives": 157,
+        "num_gt": 11507,
+        "per_class": {
+          "0": {
+            "name": "person",
+            "precision": 0.963504,
+            "recall": 0.692748,
+            "true_positives": 1452,
+            "false_positives": 55,
+            "num_gt": 2096
+          },
+          "1": {
+            "name": "ear",
+            "precision": 0.963636,
+            "recall": 0.405268,
+            "true_positives": 477,
+            "false_positives": 18,
+            "num_gt": 1177
+          },
+          "2": {
+            "name": "ear-mufs",
+            "precision": 0.666667,
+            "recall": 0.085106,
+            "true_positives": 4,
+            "false_positives": 2,
+            "num_gt": 47
+          },
+          "3": {
+            "name": "face",
+            "precision": 0.980373,
+            "recall": 0.776827,
+            "true_positives": 999,
+            "false_positives": 20,
+            "num_gt": 1286
+          },
+          "4": {
+            "name": "face-guard",
+            "precision": 1.0,
+            "recall": 0.105263,
+            "true_positives": 2,
+            "false_positives": 0,
+            "num_gt": 19
+          },
+          "5": {
+            "name": "face-mask",
+            "precision": 1.0,
+            "recall": 0.198198,
+            "true_positives": 22,
+            "false_positives": 0,
+            "num_gt": 111
+          },
+          "6": {
+            "name": "foot",
+            "precision": 1.0,
+            "recall": 0.0,
+            "true_positives": 0,
+            "false_positives": 0,
+            "num_gt": 142
+          },
+          "7": {
+            "name": "tool",
+            "precision": 0.827586,
+            "recall": 0.032172,
+            "true_positives": 24,
+            "false_positives": 5,
+            "num_gt": 746
+          },
+          "8": {
+            "name": "glasses",
+            "precision": 0.833333,
+            "recall": 0.016722,
+            "true_positives": 5,
+            "false_positives": 1,
+            "num_gt": 299
+          },
+          "9": {
+            "name": "gloves",
+            "precision": 0.950617,
+            "recall": 0.174603,
+            "true_positives": 77,
+            "false_positives": 4,
+            "num_gt": 441
+          },
+          "10": {
+            "name": "helmet",
+            "precision": 0.925,
+            "recall": 0.300813,
+            "true_positives": 37,
+            "false_positives": 3,
+            "num_gt": 123
+          },
+          "11": {
+            "name": "hands",
+            "precision": 0.984103,
+            "recall": 0.56107,
+            "true_positives": 1300,
+            "false_positives": 21,
+            "num_gt": 2317
+          },
+          "12": {
+            "name": "head",
+            "precision": 0.985052,
+            "recall": 0.710512,
+            "true_positives": 1318,
+            "false_positives": 20,
+            "num_gt": 1855
+          },
+          "13": {
+            "name": "medical-suit",
+            "precision": 0.857143,
+            "recall": 0.206897,
+            "true_positives": 6,
+            "false_positives": 1,
+            "num_gt": 29
+          },
+          "14": {
+            "name": "shoes",
+            "precision": 0.952381,
+            "recall": 0.139082,
+            "true_positives": 100,
+            "false_positives": 5,
+            "num_gt": 719
+          },
+          "15": {
+            "name": "safety-suit",
+            "precision": 0.666667,
+            "recall": 0.060606,
+            "true_positives": 2,
+            "false_positives": 1,
+            "num_gt": 33
+          },
+          "16": {
+            "name": "safety-vest",
+            "precision": 0.8,
+            "recall": 0.059701,
+            "true_positives": 4,
+            "false_positives": 1,
+            "num_gt": 67
+          }
+        }
+      },
+      {
+        "confidence": 0.75,
+        "precision": 0.905039,
+        "recall": 0.223903,
+        "f1": 0.358992,
+        "true_positives": 5165,
+        "false_positives": 105,
+        "num_gt": 11507,
+        "per_class": {
+          "0": {
+            "name": "person",
+            "precision": 0.971533,
+            "recall": 0.635019,
+            "true_positives": 1331,
+            "false_positives": 39,
+            "num_gt": 2096
+          },
+          "1": {
+            "name": "ear",
+            "precision": 0.962766,
+            "recall": 0.307562,
+            "true_positives": 362,
+            "false_positives": 14,
+            "num_gt": 1177
+          },
+          "2": {
+            "name": "ear-mufs",
+            "precision": 0.6,
+            "recall": 0.06383,
+            "true_positives": 3,
+            "false_positives": 2,
+            "num_gt": 47
+          },
+          "3": {
+            "name": "face",
+            "precision": 0.985043,
+            "recall": 0.716952,
+            "true_positives": 922,
+            "false_positives": 14,
+            "num_gt": 1286
+          },
+          "4": {
+            "name": "face-guard",
+            "precision": 1.0,
+            "recall": 0.052632,
+            "true_positives": 1,
+            "false_positives": 0,
+            "num_gt": 19
+          },
+          "5": {
+            "name": "face-mask",
+            "precision": 1.0,
+            "recall": 0.162162,
+            "true_positives": 18,
+            "false_positives": 0,
+            "num_gt": 111
+          },
+          "6": {
+            "name": "foot",
+            "precision": 1.0,
+            "recall": 0.0,
+            "true_positives": 0,
+            "false_positives": 0,
+            "num_gt": 142
+          },
+          "7": {
+            "name": "tool",
+            "precision": 0.944444,
+            "recall": 0.022788,
+            "true_positives": 17,
+            "false_positives": 1,
+            "num_gt": 746
+          },
+          "8": {
+            "name": "glasses",
+            "precision": 1.0,
+            "recall": 0.013378,
+            "true_positives": 4,
+            "false_positives": 0,
+            "num_gt": 299
+          },
+          "9": {
+            "name": "gloves",
+            "precision": 0.969231,
+            "recall": 0.142857,
+            "true_positives": 63,
+            "false_positives": 2,
+            "num_gt": 441
+          },
+          "10": {
+            "name": "helmet",
+            "precision": 0.9,
+            "recall": 0.219512,
+            "true_positives": 27,
+            "false_positives": 3,
+            "num_gt": 123
+          },
+          "11": {
+            "name": "hands",
+            "precision": 0.991079,
+            "recall": 0.479499,
+            "true_positives": 1111,
+            "false_positives": 10,
+            "num_gt": 2317
+          },
+          "12": {
+            "name": "head",
+            "precision": 0.987884,
+            "recall": 0.659299,
+            "true_positives": 1223,
+            "false_positives": 15,
+            "num_gt": 1855
+          },
+          "13": {
+            "name": "medical-suit",
+            "precision": 0.8,
+            "recall": 0.137931,
+            "true_positives": 4,
+            "false_positives": 1,
+            "num_gt": 29
+          },
+          "14": {
+            "name": "shoes",
+            "precision": 0.973684,
+            "recall": 0.102921,
+            "true_positives": 74,
+            "false_positives": 2,
+            "num_gt": 719
+          },
+          "15": {
+            "name": "safety-suit",
+            "precision": 0.5,
+            "recall": 0.030303,
+            "true_positives": 1,
+            "false_positives": 1,
+            "num_gt": 33
+          },
+          "16": {
+            "name": "safety-vest",
+            "precision": 0.8,
+            "recall": 0.059701,
+            "true_positives": 4,
+            "false_positives": 1,
+            "num_gt": 67
+          }
+        }
+      },
+      {
+        "confidence": 0.8,
+        "precision": 0.987948,
+        "recall": 0.165866,
+        "f1": 0.284044,
+        "true_positives": 4100,
+        "false_positives": 57,
+        "num_gt": 11507,
+        "per_class": {
+          "0": {
+            "name": "person",
+            "precision": 0.978078,
+            "recall": 0.553435,
+            "true_positives": 1160,
+            "false_positives": 26,
+            "num_gt": 2096
+          },
+          "1": {
+            "name": "ear",
+            "precision": 0.95858,
+            "recall": 0.137638,
+            "true_positives": 162,
+            "false_positives": 7,
+            "num_gt": 1177
+          },
+          "2": {
+            "name": "ear-mufs",
+            "precision": 1.0,
+            "recall": 0.021277,
+            "true_positives": 1,
+            "false_positives": 0,
+            "num_gt": 47
+          },
+          "3": {
+            "name": "face",
+            "precision": 0.989717,
+            "recall": 0.598756,
+            "true_positives": 770,
+            "false_positives": 8,
+            "num_gt": 1286
+          },
+          "4": {
+            "name": "face-guard",
+            "precision": 1.0,
+            "recall": 0.052632,
+            "true_positives": 1,
+            "false_positives": 0,
+            "num_gt": 19
+          },
+          "5": {
+            "name": "face-mask",
+            "precision": 1.0,
+            "recall": 0.117117,
+            "true_positives": 13,
+            "false_positives": 0,
+            "num_gt": 111
+          },
+          "6": {
+            "name": "foot",
+            "precision": 1.0,
+            "recall": 0.0,
+            "true_positives": 0,
+            "false_positives": 0,
+            "num_gt": 142
+          },
+          "7": {
+            "name": "tool",
+            "precision": 1.0,
+            "recall": 0.017426,
+            "true_positives": 13,
+            "false_positives": 0,
+            "num_gt": 746
+          },
+          "8": {
+            "name": "glasses",
+            "precision": 1.0,
+            "recall": 0.003344,
+            "true_positives": 1,
+            "false_positives": 0,
+            "num_gt": 299
+          },
+          "9": {
+            "name": "gloves",
+            "precision": 0.977273,
+            "recall": 0.097506,
+            "true_positives": 43,
+            "false_positives": 1,
+            "num_gt": 441
+          },
+          "10": {
+            "name": "helmet",
+            "precision": 0.904762,
+            "recall": 0.154472,
+            "true_positives": 19,
+            "false_positives": 2,
+            "num_gt": 123
+          },
+          "11": {
+            "name": "hands",
+            "precision": 0.994987,
+            "recall": 0.342685,
+            "true_positives": 794,
+            "false_positives": 4,
+            "num_gt": 2317
+          },
+          "12": {
+            "name": "head",
+            "precision": 0.99172,
+            "recall": 0.581132,
+            "true_positives": 1078,
+            "false_positives": 9,
+            "num_gt": 1855
+          },
+          "13": {
+            "name": "medical-suit",
+            "precision": 1.0,
+            "recall": 0.068966,
+            "true_positives": 2,
+            "false_positives": 0,
+            "num_gt": 29
+          },
+          "14": {
+            "name": "shoes",
+            "precision": 1.0,
+            "recall": 0.058414,
+            "true_positives": 42,
+            "false_positives": 0,
+            "num_gt": 719
+          },
+          "15": {
+            "name": "safety-suit",
+            "precision": 1.0,
+            "recall": 0.0,
+            "true_positives": 0,
+            "false_positives": 0,
+            "num_gt": 33
+          },
+          "16": {
+            "name": "safety-vest",
+            "precision": 1.0,
+            "recall": 0.014925,
+            "true_positives": 1,
+            "false_positives": 0,
+            "num_gt": 67
+          }
+        }
+      },
+      {
+        "confidence": 0.85,
+        "precision": 0.982607,
+        "recall": 0.090842,
+        "f1": 0.166309,
+        "true_positives": 2441,
+        "false_positives": 29,
+        "num_gt": 11507,
+        "per_class": {
+          "0": {
+            "name": "person",
+            "precision": 0.983278,
+            "recall": 0.420802,
+            "true_positives": 882,
+            "false_positives": 15,
+            "num_gt": 2096
+          },
+          "1": {
+            "name": "ear",
+            "precision": 0.909091,
+            "recall": 0.008496,
+            "true_positives": 10,
+            "false_positives": 1,
+            "num_gt": 1177
+          },
+          "2": {
+            "name": "ear-mufs",
+            "precision": 1.0,
+            "recall": 0.0,
+            "true_positives": 0,
+            "false_positives": 0,
+            "num_gt": 47
+          },
+          "3": {
+            "name": "face",
+            "precision": 0.992556,
+            "recall": 0.311042,
+            "true_positives": 400,
+            "false_positives": 3,
+            "num_gt": 1286
+          },
+          "4": {
+            "name": "face-guard",
+            "precision": 1.0,
+            "recall": 0.0,
+            "true_positives": 0,
+            "false_positives": 0,
+            "num_gt": 19
+          },
+          "5": {
+            "name": "face-mask",
+            "precision": 1.0,
+            "recall": 0.036036,
+            "true_positives": 4,
+            "false_positives": 0,
+            "num_gt": 111
+          },
+          "6": {
+            "name": "foot",
+            "precision": 1.0,
+            "recall": 0.0,
+            "true_positives": 0,
+            "false_positives": 0,
+            "num_gt": 142
+          },
+          "7": {
+            "name": "tool",
+            "precision": 1.0,
+            "recall": 0.006702,
+            "true_positives": 5,
+            "false_positives": 0,
+            "num_gt": 746
+          },
+          "8": {
+            "name": "glasses",
+            "precision": 1.0,
+            "recall": 0.0,
+            "true_positives": 0,
+            "false_positives": 0,
+            "num_gt": 299
+          },
+          "9": {
+            "name": "gloves",
+            "precision": 0.956522,
+            "recall": 0.049887,
+            "true_positives": 22,
+            "false_positives": 1,
+            "num_gt": 441
+          },
+          "10": {
+            "name": "helmet",
+            "precision": 0.875,
+            "recall": 0.056911,
+            "true_positives": 7,
+            "false_positives": 1,
+            "num_gt": 123
+          },
+          "11": {
+            "name": "hands",
+            "precision": 0.997101,
+            "recall": 0.148468,
+            "true_positives": 344,
+            "false_positives": 1,
+            "num_gt": 2317
+          },
+          "12": {
+            "name": "head",
+            "precision": 0.990777,
+            "recall": 0.405391,
+            "true_positives": 752,
+            "false_positives": 7,
+            "num_gt": 1855
+          },
+          "13": {
+            "name": "medical-suit",
+            "precision": 1.0,
+            "recall": 0.068966,
+            "true_positives": 2,
+            "false_positives": 0,
+            "num_gt": 29
+          },
+          "14": {
+            "name": "shoes",
+            "precision": 1.0,
+            "recall": 0.01669,
+            "true_positives": 12,
+            "false_positives": 0,
+            "num_gt": 719
+          },
+          "15": {
+            "name": "safety-suit",
+            "precision": 1.0,
+            "recall": 0.0,
+            "true_positives": 0,
+            "false_positives": 0,
+            "num_gt": 33
+          },
+          "16": {
+            "name": "safety-vest",
+            "precision": 1.0,
+            "recall": 0.014925,
+            "true_positives": 1,
+            "false_positives": 0,
+            "num_gt": 67
+          }
+        }
+      },
+      {
+        "confidence": 0.9,
+        "precision": 0.979229,
+        "recall": 0.0271,
+        "f1": 0.052741,
+        "true_positives": 712,
+        "false_positives": 9,
+        "num_gt": 11507,
+        "per_class": {
+          "0": {
+            "name": "person",
+            "precision": 0.984881,
+            "recall": 0.217557,
+            "true_positives": 456,
+            "false_positives": 7,
+            "num_gt": 2096
+          },
+          "1": {
+            "name": "ear",
+            "precision": 1.0,
+            "recall": 0.0,
+            "true_positives": 0,
+            "false_positives": 0,
+            "num_gt": 1177
+          },
+          "2": {
+            "name": "ear-mufs",
+            "precision": 1.0,
+            "recall": 0.0,
+            "true_positives": 0,
+            "false_positives": 0,
+            "num_gt": 47
+          },
+          "3": {
+            "name": "face",
+            "precision": 1.0,
+            "recall": 0.007776,
+            "true_positives": 10,
+            "false_positives": 0,
+            "num_gt": 1286
+          },
+          "4": {
+            "name": "face-guard",
+            "precision": 1.0,
+            "recall": 0.0,
+            "true_positives": 0,
+            "false_positives": 0,
+            "num_gt": 19
+          },
+          "5": {
+            "name": "face-mask",
+            "precision": 1.0,
+            "recall": 0.018018,
+            "true_positives": 2,
+            "false_positives": 0,
+            "num_gt": 111
+          },
+          "6": {
+            "name": "foot",
+            "precision": 1.0,
+            "recall": 0.0,
+            "true_positives": 0,
+            "false_positives": 0,
+            "num_gt": 142
+          },
+          "7": {
+            "name": "tool",
+            "precision": 1.0,
+            "recall": 0.00134,
+            "true_positives": 1,
+            "false_positives": 0,
+            "num_gt": 746
+          },
+          "8": {
+            "name": "glasses",
+            "precision": 1.0,
+            "recall": 0.0,
+            "true_positives": 0,
+            "false_positives": 0,
+            "num_gt": 299
+          },
+          "9": {
+            "name": "gloves",
+            "precision": 1.0,
+            "recall": 0.004535,
+            "true_positives": 2,
+            "false_positives": 0,
+            "num_gt": 441
+          },
+          "10": {
+            "name": "helmet",
+            "precision": 0.666667,
+            "recall": 0.01626,
+            "true_positives": 2,
+            "false_positives": 1,
+            "num_gt": 123
+          },
+          "11": {
+            "name": "hands",
+            "precision": 1.0,
+            "recall": 0.009495,
+            "true_positives": 22,
+            "false_positives": 0,
+            "num_gt": 2317
+          },
+          "12": {
+            "name": "head",
+            "precision": 0.995349,
+            "recall": 0.115364,
+            "true_positives": 214,
+            "false_positives": 1,
+            "num_gt": 1855
+          },
+          "13": {
+            "name": "medical-suit",
+            "precision": 1.0,
+            "recall": 0.068966,
+            "true_positives": 2,
+            "false_positives": 0,
+            "num_gt": 29
+          },
+          "14": {
+            "name": "shoes",
+            "precision": 1.0,
+            "recall": 0.001391,
+            "true_positives": 1,
+            "false_positives": 0,
+            "num_gt": 719
+          },
+          "15": {
+            "name": "safety-suit",
+            "precision": 1.0,
+            "recall": 0.0,
+            "true_positives": 0,
+            "false_positives": 0,
+            "num_gt": 33
+          },
+          "16": {
+            "name": "safety-vest",
+            "precision": 1.0,
+            "recall": 0.0,
+            "true_positives": 0,
+            "false_positives": 0,
+            "num_gt": 67
+          }
+        }
+      }
+    ],
+    "verification": {
+      "recall_matches_pycocotools": true,
+      "max_difference": 0.0,
+      "tolerance": 1e-09,
+      "checked_classes": 17
+    }
+  },
+  "elapsed_s": 10.66
+}

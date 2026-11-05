@@ -1,0 +1,80 @@
+% Generado por tfm_edge.reporting.tables. No editar a mano: se regenera.
+% Requiere \usepackage{booktabs}, \usepackage{pdflscape}, \usepackage{adjustbox}.
+\ifdefined\tfmedgetitle\else\newsavebox{\tfmedgetitle}\fi
+\ifdefined\tfmedgenotes\else\newsavebox{\tfmedgenotes}\fi
+\begin{landscape}
+\begin{table}[htbp]
+  \centering
+  \sbox{\tfmedgetitle}{\parbox{\linewidth}{%
+  \caption{Calidad de cada configuración medida en workstation\_cpu, por motor de inferencia}
+  \label{tab:6_1_medidas_calidad_workstation_cpu}
+  }}%
+  \sbox{\tfmedgenotes}{%
+  \begin{minipage}{\linewidth}\footnotesize
+  mAP@50 no tiene suelo de medida medido, así que su mejor valor se marca por comparación exacta y no certifica ninguna ventaja (D-127).
+  \end{minipage}%
+  }%
+  \usebox{\tfmedgetitle}\par
+  \footnotesize
+  \begin{adjustbox}{max width=\linewidth, max totalheight=\dimexpr\textheight-\ht\tfmedgetitle-\dp\tfmedgetitle-\ht\tfmedgenotes-\dp\tfmedgenotes-6pt\relax}
+  \begin{tabular}{llllrr}
+    \toprule
+    Experimento & Técnica & Motor & Precisión & mAP@50 & mAP@50-95 \\
+    \midrule
+    l\_baseline\_default\_188b9407 & Referencia & onnxruntime & fp32 & 0,6194 & \textbf{0,4115} \\
+    l\_baseline\_default\_188b9407 & Referencia & openvino & fp32 & 0,6194 & \textbf{0,4115} \\
+    l\_baseline\_default\_188b9407 & Referencia & pytorch & fp32 & 0,6194 & \textbf{0,4115} \\
+    l\_ptq\_int8-noexcl\_4a52a7e5 & Cuantización PTQ & onnxruntime & int8 & 0,5511 & 0,3096 \\
+    l\_ptq\_int8-noexcl\_4a52a7e5 & Cuantización PTQ & openvino & int8 & 0,5653 & 0,3217 \\
+    m\_baseline\_default\_dfe22158 & Referencia & onnxruntime & fp32 & \textbf{0,6233} & \textbf{0,4093} \\
+    m\_baseline\_default\_dfe22158 & Referencia & openvino & fp32 & \textbf{0,6233} & \textbf{0,4093} \\
+    m\_baseline\_default\_dfe22158 & Referencia & pytorch & fp32 & \textbf{0,6233} & \textbf{0,4093} \\
+    m\_ptq\_int8-noexcl\_b1a6e9e7 & Cuantización PTQ & onnxruntime & int8 & 0,5127 & 0,2815 \\
+    m\_ptq\_int8-noexcl\_b1a6e9e7 & Cuantización PTQ & openvino & int8 & 0,5521 & 0,3120 \\
+    n\_baseline\_default\_fab9d45c & Referencia & onnxruntime & fp32 & 0,5242 & 0,3256 \\
+    n\_baseline\_default\_fab9d45c & Referencia & openvino & fp32 & 0,5242 & 0,3256 \\
+    n\_baseline\_default\_fab9d45c & Referencia & pytorch & fp32 & 0,5242 & 0,3256 \\
+    n\_ptq\_int8-noexcl\_a78f566a & Cuantización PTQ & onnxruntime & int8 & 0,4476 & 0,2477 \\
+    n\_ptq\_int8-noexcl\_a78f566a & Cuantización PTQ & openvino & int8 & 0,4714 & 0,2548 \\
+    s\_baseline\_default\_745e3d08 & Referencia & onnxruntime & fp32 & 0,5862 & 0,3762 \\
+    s\_baseline\_default\_745e3d08 & Referencia & openvino & fp32 & 0,5862 & 0,3762 \\
+    s\_baseline\_default\_745e3d08 & Referencia & pytorch & fp32 & 0,5862 & 0,3762 \\
+    s\_combined\_prune-bnscale-r50-ptqint8\_7712cb36 & Combinaciones & onnxruntime & int8 & 0,3894 & 0,2066 \\
+    s\_combined\_prune-bnscale-r50-ptqint8\_7712cb36 & Combinaciones & openvino & int8 & 0,4462 & 0,2436 \\
+    s\_combined\_prune-l1global-r25-ptqint8\_4a1d5adc & Combinaciones & onnxruntime & int8 & 0,4919 & 0,2703 \\
+    s\_combined\_prune-l1global-r25-ptqint8\_4a1d5adc & Combinaciones & openvino & int8 & 0,5325 & 0,2984 \\
+    s\_combined\_prune-l1global-r25-randomctl-ptqint8\_e70dc4d6 & Combinaciones & onnxruntime & int8 & 0,4786 & 0,2591 \\
+    s\_combined\_prune-l1global-r25-randomctl-ptqint8\_e70dc4d6 & Combinaciones & openvino & int8 & 0,5190 & 0,2883 \\
+    s\_combined\_prune-l1global-r50-iter4-ptqint8\_6f322ad5 & Combinaciones & onnxruntime & int8 & 0,4617 & 0,2494 \\
+    s\_combined\_prune-l1global-r50-iter4-ptqint8\_6f322ad5 & Combinaciones & openvino & int8 & 0,4922 & 0,2760 \\
+    s\_combined\_prune-l1global-r50-ptqint8\_9067dba2 & Combinaciones & onnxruntime & int8 & 0,4467 & 0,2385 \\
+    s\_combined\_prune-l1global-r50-ptqint8\_9067dba2 & Combinaciones & openvino & int8 & 0,4800 & 0,2634 \\
+    s\_combined\_prune-l1global-r50-randomctl-ptqint8\_13a9774e & Combinaciones & onnxruntime & int8 & 0,4093 & 0,2234 \\
+    s\_combined\_prune-l1global-r50-randomctl-ptqint8\_13a9774e & Combinaciones & openvino & int8 & 0,4505 & 0,2496 \\
+    s\_pruning\_bnscale\_r50\_f51fef4c & Poda estructurada & onnxruntime & fp32 & 0,4730 & 0,2865 \\
+    s\_pruning\_bnscale\_r50\_f51fef4c & Poda estructurada & openvino & fp32 & 0,4730 & 0,2865 \\
+    s\_pruning\_l1global\_r25\_4e91ddbc & Poda estructurada & onnxruntime & fp32 & 0,5686 & 0,3579 \\
+    s\_pruning\_l1global\_r25\_4e91ddbc & Poda estructurada & openvino & fp32 & 0,5686 & 0,3579 \\
+    s\_pruning\_l1global\_r25\_randomctl\_a658e5d4 & Poda estructurada & onnxruntime & fp32 & 0,5565 & 0,3479 \\
+    s\_pruning\_l1global\_r25\_randomctl\_a658e5d4 & Poda estructurada & openvino & fp32 & 0,5565 & 0,3479 \\
+    s\_pruning\_l1global\_r50\_9419b26f & Poda estructurada & onnxruntime & fp32 & 0,5094 & 0,3163 \\
+    s\_pruning\_l1global\_r50\_9419b26f & Poda estructurada & openvino & fp32 & 0,5094 & 0,3163 \\
+    s\_pruning\_l1global\_r50\_iter4\_d8fe066f & Poda estructurada & onnxruntime & fp32 & 0,5306 & 0,3311 \\
+    s\_pruning\_l1global\_r50\_iter4\_d8fe066f & Poda estructurada & openvino & fp32 & 0,5306 & 0,3311 \\
+    s\_pruning\_l1global\_r50\_randomctl\_d581bd22 & Poda estructurada & onnxruntime & fp32 & 0,4801 & 0,3003 \\
+    s\_pruning\_l1global\_r50\_randomctl\_d581bd22 & Poda estructurada & openvino & fp32 & 0,4801 & 0,3003 \\
+    s\_ptq\_int8-noexcl\_5bcd71f0 & Cuantización PTQ & onnxruntime & int8 & 0,5186 & 0,2861 \\
+    s\_ptq\_int8-noexcl\_5bcd71f0 & Cuantización PTQ & openvino & int8 & 0,5484 & 0,3100 \\
+    s\_qat\_int8-noexcl\_43300d34 & Cuantización QAT & onnxruntime & int8 & 0,4557 & 0,2478 \\
+    s\_qat\_int8-noexcl\_43300d34 & Cuantización QAT & openvino & int8 & 0,4819 & 0,2672 \\
+    s\_qat\_int8-noexcl\_4d491880 & Cuantización QAT & onnxruntime & int8 & 0,4974 & 0,2728 \\
+    s\_qat\_int8-noexcl\_4d491880 & Cuantización QAT & openvino & int8 & 0,5307 & 0,2980 \\
+    s\_qat\_int8-noexcl\_d4d403fa & Cuantización QAT & onnxruntime & int8 & 0,4979 & 0,2747 \\
+    s\_qat\_int8-noexcl\_d4d403fa & Cuantización QAT & openvino & int8 & 0,5432 & 0,3124 \\
+    \bottomrule
+  \end{tabular}
+  \end{adjustbox}
+  \par\vspace{2pt}
+  \usebox{\tfmedgenotes}
+\end{table}
+\end{landscape}

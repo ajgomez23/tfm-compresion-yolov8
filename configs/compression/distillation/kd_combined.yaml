@@ -1,0 +1,80 @@
+# Destilación de conocimiento de yolov8l a yolov8n, por respuesta y por características.
+#
+# Es la variante central del apartado 5.4. El par maestro-alumno es l y n porque la destilación
+# aporta más cuando la diferencia de capacidad es grande.
+#
+# La temperatura y la máscara del término de respuesta se midieron sobre los logits del maestro `l`
+# de este estudio. Los pesos por componente salen de la magnitud medida de cada término, para que
+# ninguno domine al principio.
+
+_base_: ../../default.yaml
+
+technique: distillation
+technique_variant: l2n_combined_t2
+
+model:
+  # El alumno; el maestro va en la sección de destilación.
+  size: n
+
+distillation:
+  teacher_size: l
+  teacher_weights: models/baselines/l_baseline_default/best.pt
+  kd_type: combined
+
+  # T=2,0 en lugar del 4,0 habitual. Sobre este maestro, a T=4 hay 10,88 clases efectivas de 17 y el
+  # fondo pasa del 0,07 % al 9,97 % de anclajes por encima de 0,1; a T=1 hay 1,12, casi una etiqueta
+  # dura. La banda útil es estrecha porque YOLOv8 usa un sigmoide por clase. Ver las ablaciones t1 y
+  # t3.
+  temperature: 2.0
+
+  # Reparto entre la pérdida de detección y las de destilación. La detección queda multiplicada por
+  # (1 - alpha), así que alpha interactúa con la tasa de aprendizaje.
+  alpha: 0.5
+
+  # Pesos por componente a partir de las magnitudes medidas a T=2 sobre un lote real (clase 3,51,
+  # caja 5,10, características 7,13, detección 5,03), para que cada término empiece en el 10 % de la
+  # pérdida de detección.
+  response_cls_weight: 0.1431
+  response_box_weight: 0.0984
+  feature_loss_weight: 0.0704
+
+  # Máscara del término de respuesta: intersección de caja de verdad y confianza del maestro. Solo
+  # con las cajas, la señal por anclaje se diluye 23 veces (0,0787 frente a 1,8501); solo con la
+  # confianza, el 8,8 % de los anclajes cae fuera de toda caja.
+  region_masking: gt_boxes_and_teacher
+  teacher_conf_threshold: 0.05
+
+  # Máscara del término de características: la de cajas. La intersección dejaría 250 anclajes sobre
+  # 8.400 posiciones, una señal espacial demasiado escasa.
+  feature_masking: gt_boxes
+
+  # Salidas P3/P4/P5 del cuello. Tienen la misma dimensión espacial en l y n y solo cambian los
+  # canales (256/64, 512/128, 512/256), así que los adaptadores son convoluciones 1x1. Comprobado en
+  # tests/test_teacher_student_features.py.
+  feature_pairs:
+    - {teacher: model.15, student: model.15}
+    - {teacher: model.18, student: model.18}
+    - {teacher: model.21, student: model.21}
+
+  # Cada canal se normaliza a media 0 y varianza 1 para que la capa con activaciones más grandes no
+  # domine el término.
+  normalize_features: true
+
+  # Los adaptadores tienen optimizador propio porque el de Ultralytics ya está construido cuando se
+  # añaden. Adam en lugar de SGD porque su gradiente es del orden de 1e-5.
+  adapter_learning_rate: 0.001
+
+  # El alumno parte del baseline `n` entrenado.
+  student_from_pretrained: true
+
+  epochs: 50
+  learning_rate: 0.005
+
+  # Sin mosaico en ninguna época, igual que el piloto de 10 épocas, la campaña de semillas y QAT.
+  # Con el 10 por defecto habría mosaico en 40 de las 50 épocas. Requiere --allow-mosaic-free.
+  close_mosaic_epochs: 50
+
+training:
+  # Sin parada temprana, para que variante y control corran las mismas épocas. Cero la desactiva en
+  # Ultralytics 8.3.253.
+  patience: 0

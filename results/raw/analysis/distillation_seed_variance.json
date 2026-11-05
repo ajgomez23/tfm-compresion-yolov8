@@ -1,0 +1,200 @@
+{
+  "reading": {
+    "verdict": "destilar ayuda, y el efecto se repite entre semillas",
+    "statement": "Con 4 semillas, destilar sube el mAP@50-95 en +0.006422 de media (IC 95 %: +0.004191 a +0.008653), y el intervalo no cruza el cero: el efecto se repite entre inicializaciones del adaptador, a flujo de datos fijo (D-151).",
+    "n_seeds": 4,
+    "seeds": [
+      42,
+      43,
+      44,
+      45
+    ],
+    "mean_delta": 0.006421761113630714,
+    "sd_delta": 0.0014022684493635437,
+    "t_critical": 3.182,
+    "ci_low": 0.004190752010693316,
+    "ci_high": 0.008652770216568111,
+    "ci_crosses_zero": false,
+    "control_mean": 0.31141300557794604,
+    "control_sd": 0.0,
+    "controls_identical": true,
+    "process_floor": 0.004579,
+    "floor_is_lower_bound": false,
+    "floor_prediction_testable": false,
+    "floor_prediction_status": "No contrastable con esta campaña (D-151). Con alpha=0 los adaptadores son inertes y son lo único que la semilla cambia (D-150): los controles son la misma ejecución, y una desviación típica de cero entre ellos no refuta ni confirma que 0,004579 sea cota inferior de la variabilidad entre entrenamientos.",
+    "floor_prediction": "reading.py afirma que 0,004579 es cota INFERIOR de la variabilidad entre entrenamientos. Se cumple si la desviación típica entre las semillas de los controles alcanza o supera esa cifra.",
+    "tail_prediction": "En la semilla 42 el efecto está entero en la cola de localización: sube mAP@50-95 y deja plano mAP@50. Se cumple si en todas las semillas |delta mAP@50| queda por debajo de |delta mAP@50-95|.",
+    "tail_prediction_holds": false,
+    "all_pairs_same_environment": false,
+    "caveats": [
+      "Se lee a flujo de datos fijo (D-150, D-151): las parejas recorren los mismos lotes con la misma augmentación, y la semilla solo cambia la inicialización de los tres adaptadores. La dispersión viene de esa única fuente de azar, así que el intervalo es más estrecho que el de una réplica con entrenamientos independientes, y nada obliga a que la dispersión que falta sea pequeña.",
+      "El confusor de D-113 sigue en pie: entre el piloto y el control cambian a la vez alpha y la tasa de aprendizaje efectiva, así que estas semillas dicen si el efecto se repite, no de cuál de las dos cosas viene.",
+      "Diez épocas no son la configuración del capítulo 5.4: son el piloto que decide si merece la pena pagar cincuenta. Y con close_mosaic=10 heredado no sacan un solo lote con mosaico (D-142), así que la receta no es la de los baselines con los que se compara el punto de partida."
+    ]
+  },
+  "pairs": [
+    {
+      "seed": 42,
+      "pilot": {
+        "experiment_id": "n_distillation_l2n_combined_t2_pilot10_f3469899",
+        "map_50": 0.5171109096473568,
+        "map_50_95": 0.3162342970521886,
+        "alpha": 0.5,
+        "environment_id": "",
+        "training_source": "entrenado en esta ejecución",
+        "preflight_recorded": true,
+        "seed_branch": 1184247825,
+        "adapter_initial_norms": {
+          "model.15": 9.198410987854004,
+          "model.18": 13.060587882995605,
+          "model.21": 13.05543041229248
+        }
+      },
+      "control": {
+        "experiment_id": "n_distillation_l2n_control_alpha0_pilot10_f0932334",
+        "map_50": 0.510145719945786,
+        "map_50_95": 0.31141300557794604,
+        "alpha": 0.0,
+        "environment_id": "",
+        "training_source": "entrenado en esta ejecución",
+        "preflight_recorded": true,
+        "seed_branch": 1184247825,
+        "adapter_initial_norms": {
+          "model.15": 9.198410987854004,
+          "model.18": 13.060587882995605,
+          "model.21": 13.05543041229248
+        }
+      },
+      "delta_map_50_95": 0.0048212914742425395,
+      "delta_map_50": 0.006965189701570895,
+      "same_environment": false,
+      "environment_state": "sin dato",
+      "effect_is_in_the_tail": false
+    },
+    {
+      "seed": 43,
+      "pilot": {
+        "experiment_id": "n_distillation_l2n_combined_t2_pilot10_4d0da8a4",
+        "map_50": 0.5122276210028472,
+        "map_50_95": 0.3173931694969411,
+        "alpha": 0.5,
+        "environment_id": "",
+        "training_source": "entrenado en esta ejecución",
+        "preflight_recorded": true,
+        "seed_branch": 478468298,
+        "adapter_initial_norms": {
+          "model.15": 9.275716781616211,
+          "model.18": 13.086075782775879,
+          "model.21": 13.077136993408203
+        }
+      },
+      "control": {
+        "experiment_id": "n_distillation_l2n_control_alpha0_pilot10_e62af2ef",
+        "map_50": 0.510145719945786,
+        "map_50_95": 0.31141300557794604,
+        "alpha": 0.0,
+        "environment_id": "",
+        "training_source": "entrenado en esta ejecución",
+        "preflight_recorded": true,
+        "seed_branch": 478468298,
+        "adapter_initial_norms": {
+          "model.15": 9.275716781616211,
+          "model.18": 13.086075782775879,
+          "model.21": 13.077136993408203
+        }
+      },
+      "delta_map_50_95": 0.0059801639189950295,
+      "delta_map_50": 0.0020819010570612972,
+      "same_environment": false,
+      "environment_state": "sin dato",
+      "effect_is_in_the_tail": true
+    },
+    {
+      "seed": 44,
+      "pilot": {
+        "experiment_id": "n_distillation_l2n_combined_t2_pilot10_c2d8bfec",
+        "map_50": 0.5178058899741322,
+        "map_50_95": 0.3195829661095877,
+        "alpha": 0.5,
+        "environment_id": "",
+        "training_source": "entrenado en esta ejecución",
+        "preflight_recorded": true,
+        "seed_branch": 945241853,
+        "adapter_initial_norms": {
+          "model.15": 9.250661849975586,
+          "model.18": 13.055488586425781,
+          "model.21": 13.086694717407227
+        }
+      },
+      "control": {
+        "experiment_id": "n_distillation_l2n_control_alpha0_pilot10_1360d87b",
+        "map_50": 0.510145719945786,
+        "map_50_95": 0.31141300557794604,
+        "alpha": 0.0,
+        "environment_id": "",
+        "training_source": "entrenado en esta ejecución",
+        "preflight_recorded": true,
+        "seed_branch": 945241853,
+        "adapter_initial_norms": {
+          "model.15": 9.250661849975586,
+          "model.18": 13.055488586425781,
+          "model.21": 13.086694717407227
+        }
+      },
+      "delta_map_50_95": 0.008169960531641651,
+      "delta_map_50": 0.0076601700283462915,
+      "same_environment": false,
+      "environment_state": "sin dato",
+      "effect_is_in_the_tail": true
+    },
+    {
+      "seed": 45,
+      "pilot": {
+        "experiment_id": "n_distillation_l2n_combined_t2_pilot10_e724d8f1",
+        "map_50": 0.5151037171766425,
+        "map_50_95": 0.3181286341075897,
+        "alpha": 0.5,
+        "environment_id": "",
+        "training_source": "entrenado en esta ejecución",
+        "preflight_recorded": true,
+        "seed_branch": 2044541333,
+        "adapter_initial_norms": {
+          "model.15": 9.233397483825684,
+          "model.18": 13.026256561279297,
+          "model.21": 13.057417869567871
+        }
+      },
+      "control": {
+        "experiment_id": "n_distillation_l2n_control_alpha0_pilot10_553d6390",
+        "map_50": 0.510145719945786,
+        "map_50_95": 0.31141300557794604,
+        "alpha": 0.0,
+        "environment_id": "",
+        "training_source": "entrenado en esta ejecución",
+        "preflight_recorded": true,
+        "seed_branch": 2044541333,
+        "adapter_initial_norms": {
+          "model.15": 9.233397483825684,
+          "model.18": 13.026256561279297,
+          "model.21": 13.057417869567871
+        }
+      },
+      "delta_map_50_95": 0.006715628529643636,
+      "delta_map_50": 0.004957997230856548,
+      "same_environment": false,
+      "environment_state": "sin dato",
+      "effect_is_in_the_tail": true
+    }
+  ],
+  "seeds_incomplete": [],
+  "source_dumps": [
+    "n_distillation_l2n_combined_t2_pilot10_4d0da8a4.json",
+    "n_distillation_l2n_combined_t2_pilot10_c2d8bfec.json",
+    "n_distillation_l2n_combined_t2_pilot10_e724d8f1.json",
+    "n_distillation_l2n_combined_t2_pilot10_f3469899.json",
+    "n_distillation_l2n_control_alpha0_pilot10_1360d87b.json",
+    "n_distillation_l2n_control_alpha0_pilot10_553d6390.json",
+    "n_distillation_l2n_control_alpha0_pilot10_e62af2ef.json",
+    "n_distillation_l2n_control_alpha0_pilot10_f0932334.json"
+  ]
+}

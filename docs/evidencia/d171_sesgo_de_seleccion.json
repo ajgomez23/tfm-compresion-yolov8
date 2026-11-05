@@ -1,0 +1,76 @@
+{
+  "decision": "D-171",
+  "que_es": "Cuatro evaluaciones canonicas (pycocotools, val, 640 px) sobre los dos checkpoints de cada brazo de la extension a 50 epocas: el best.pt que eligio el validador de Ultralytics y el de la ultima epoca. Miden el sesgo de seleccion de D-169 en las unidades en que se publica el resultado.",
+  "protocolo": {
+    "funcion": "tfm_edge.evaluation.runner.evaluate_checkpoint",
+    "evaluador": "pycocotools",
+    "split": "val",
+    "input_resolution": 640,
+    "batch_size": 16,
+    "conf_threshold": 0.001,
+    "iou_threshold": 0.7,
+    "device": "cpu",
+    "maquina": "workstation_cpu (WSL2), no la T4 de Colab"
+  },
+  "suelo_de_lectura": 0.004579,
+  "fecha": "2026-09-20",
+  "medidas": {
+    "control_best": {
+      "experiment_id": "n_distillation_l2n_control_alpha0_f5c4a70e",
+      "checkpoint": "best.pt",
+      "epoca": 49,
+      "sha256": "593aadd01d77263f7818f94def86cfab8079bcf0f55d8f921fa1c03d8b646128",
+      "bytes": 12316202,
+      "map_50_95_pycocotools": 0.32941918408773113,
+      "map_50_pycocotools": 0.5268597802302868,
+      "map_50_95_ultralytics": 0.33278,
+      "num_raw_detections": 139154,
+      "eval_time_s": 149.49,
+      "sha256_volcado_crudo": "f632a67696f23ff0ce2c4cb1cc7a6506a72f351c41c577394a13cb567b3bf991"
+    },
+    "control_last": {
+      "experiment_id": "n_distillation_l2n_control_alpha0_f5c4a70e",
+      "checkpoint": "last.pt",
+      "epoca": 50,
+      "sha256": "c841f1ef5e2e2e1fc24a044b8f140d7ca85f0baa72b07048024d3fe853208a12",
+      "bytes": 12316202,
+      "map_50_95_pycocotools": 0.3292736649306793,
+      "map_50_pycocotools": 0.5243667128863647,
+      "map_50_95_ultralytics": 0.3325,
+      "num_raw_detections": 138630,
+      "eval_time_s": 150.77,
+      "sha256_volcado_crudo": "3e9a08ee04c7e63a0eb220903fb8b7f7145c02344d5fc6938e2bc0103906712a"
+    },
+    "variante_best": {
+      "experiment_id": "n_distillation_l2n_combined_t2_ac9ff009",
+      "checkpoint": "best.pt",
+      "epoca": 42,
+      "sha256": "2020e376f9972a4eaba24b4ad45a12ca47de25625620d8083bf185ac4aebaf94",
+      "bytes": 12316138,
+      "map_50_95_pycocotools": 0.3322180987818217,
+      "map_50_pycocotools": 0.5309994857163681,
+      "map_50_95_ultralytics": 0.33839,
+      "num_raw_detections": 158526,
+      "eval_time_s": 151.0,
+      "sha256_volcado_crudo": "89d65c0145013a395b7b39927f3a7f68d99343c54b3caab893b1b11f9570e24b"
+    },
+    "variante_last": {
+      "experiment_id": "n_distillation_l2n_combined_t2_ac9ff009",
+      "checkpoint": "last.pt",
+      "epoca": 50,
+      "sha256": "c8f7c69532594f7ed42a2d6fb2be9962c90ff8095074146f00210461ce1aa99d",
+      "bytes": 12316138,
+      "map_50_95_pycocotools": 0.3330083668078689,
+      "map_50_pycocotools": 0.532458851582474,
+      "map_50_95_ultralytics": 0.33608,
+      "num_raw_detections": 154065,
+      "eval_time_s": 148.14,
+      "sha256_volcado_crudo": "c2c62a8de22d41d3e1197ca4483c1ea7e91b5c2fcd499cbcf184ca133ba35d49"
+    }
+  },
+  "referencia_colab": {
+    "que_es": "mAP@50-95 con pycocotools que cada sesion de Colab inscribio en quality_metrics.csv, sobre el mismo best.pt y en T4. Es el control de escala: si la medida local no lo reproduce, no se lee nada mas.",
+    "control_best": 0.329426,
+    "variante_best": 0.33222
+  }
+}

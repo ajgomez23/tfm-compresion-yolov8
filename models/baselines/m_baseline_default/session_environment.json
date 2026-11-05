@@ -1,0 +1,162 @@
+[
+  {
+    "gpu_nvidia_smi": "Tesla T4, 15360 MiB, 580.82.07",
+    "gpu_torch": "Tesla T4",
+    "gpu_memory_gib": 14.56,
+    "cpu_logicos": 2,
+    "cpu_fisicos": 1,
+    "ram_gib": 12.7,
+    "torch": "2.11.0+cu128",
+    "cuda": "12.8"
+  },
+  {
+    "gpu_nvidia_smi": "Tesla T4, 15360 MiB, 580.82.07",
+    "gpu_torch": "Tesla T4",
+    "gpu_memory_gib": 14.56,
+    "cpu_logicos": 8,
+    "cpu_fisicos": 4,
+    "ram_gib": 51.0,
+    "torch": "2.8.0+cu128",
+    "cuda": "12.8"
+  },
+  {
+    "gpu_nvidia_smi": "Tesla T4, 15360 MiB, 580.82.07",
+    "gpu_torch": "Tesla T4",
+    "gpu_memory_gib": 14.56,
+    "cpu_logicos": 8,
+    "cpu_fisicos": 4,
+    "ram_gib": 51.0,
+    "torch": "2.8.0+cu128",
+    "cuda": "12.8"
+  },
+  {
+    "gpu_nvidia_smi": "Tesla T4, 15360 MiB, 580.82.07",
+    "gpu_torch": "Tesla T4",
+    "gpu_memory_gib": 14.56,
+    "cpu_logicos": 8,
+    "cpu_fisicos": 4,
+    "ram_gib": 51.0,
+    "torch": "2.8.0+cu128",
+    "cuda": "12.8"
+  },
+  {
+    "gpu_nvidia_smi": "Tesla T4, 15360 MiB, 580.82.07",
+    "gpu_torch": "Tesla T4",
+    "gpu_memory_gib": 14.56,
+    "cpu_logicos": 8,
+    "cpu_fisicos": 4,
+    "ram_gib": 51.0,
+    "torch": "2.8.0+cu128",
+    "cuda": "12.8"
+  },
+  {
+    "gpu_nvidia_smi": "Tesla T4, 15360 MiB, 580.82.07",
+    "gpu_torch": "Tesla T4",
+    "gpu_memory_gib": 14.56,
+    "cpu_logicos": 8,
+    "cpu_fisicos": 4,
+    "ram_gib": 51.0,
+    "torch": "2.8.0+cu128",
+    "cuda": "12.8"
+  },
+  {
+    "gpu_nvidia_smi": "Tesla T4, 15360 MiB, 580.82.07",
+    "gpu_torch": "Tesla T4",
+    "gpu_memory_gib": 14.56,
+    "cpu_logicos": 8,
+    "cpu_fisicos": 4,
+    "ram_gib": 51.0,
+    "torch": "2.8.0+cu128",
+    "cuda": "12.8"
+  },
+  {
+    "gpu_nvidia_smi": "Tesla T4, 15360 MiB, 580.82.07",
+    "gpu_torch": "Tesla T4",
+    "gpu_memory_gib": 14.56,
+    "cpu_logicos": 8,
+    "cpu_fisicos": 4,
+    "ram_gib": 51.0,
+    "torch": "2.8.0+cu128",
+    "cuda": "12.8"
+  },
+  {
+    "gpu_nvidia_smi": "Tesla T4, 15360 MiB, 580.82.07",
+    "gpu_torch": "Tesla T4",
+    "gpu_memory_gib": 14.56,
+    "cpu_logicos": 8,
+    "cpu_fisicos": 4,
+    "ram_gib": 51.0,
+    "torch": "2.8.0+cu128",
+    "cuda": "12.8"
+  },
+  {
+    "gpu_nvidia_smi": "Tesla T4, 15360 MiB, 580.82.07",
+    "gpu_torch": "Tesla T4",
+    "gpu_memory_gib": 14.56,
+    "cpu_logicos": 8,
+    "cpu_fisicos": 4,
+    "ram_gib": 51.0,
+    "torch": "2.8.0+cu128",
+    "cuda": "12.8"
+  },
+  {
+    "gpu_nvidia_smi": "Tesla T4, 15360 MiB, 580.82.07",
+    "gpu_torch": "Tesla T4",
+    "gpu_memory_gib": 14.56,
+    "cpu_logicos": 8,
+    "cpu_fisicos": 4,
+    "ram_gib": 51.0,
+    "torch": "2.8.0+cu128",
+    "cuda": "12.8"
+  },
+  {
+    "gpu_nvidia_smi": "Tesla T4, 15360 MiB, 580.82.07",
+    "gpu_torch": "Tesla T4",
+    "gpu_memory_gib": 14.56,
+    "cpu_logicos": 8,
+    "cpu_fisicos": 4,
+    "ram_gib": 51.0,
+    "torch": "2.8.0+cu128",
+    "cuda": "12.8"
+  },
+  {
+    "gpu_nvidia_smi": "Tesla T4, 15360 MiB, 580.82.07",
+    "gpu_torch": "Tesla T4",
+    "gpu_memory_gib": 14.56,
+    "cpu_logicos": 8,
+    "cpu_fisicos": 4,
+    "ram_gib": 51.0,
+    "torch": "2.8.0+cu128",
+    "cuda": "12.8"
+  },
+  {
+    "gpu_nvidia_smi": "Tesla T4, 15360 MiB, 580.82.07",
+    "gpu_torch": "Tesla T4",
+    "gpu_memory_gib": 14.56,
+    "cpu_logicos": 8,
+    "cpu_fisicos": 4,
+    "ram_gib": 51.0,
+    "torch": "2.8.0+cu128",
+    "cuda": "12.8"
+  },
+  {
+    "gpu_nvidia_smi": "Tesla T4, 15360 MiB, 580.82.07",
+    "gpu_torch": "Tesla T4",
+    "gpu_memory_gib": 14.56,
+    "cpu_logicos": 8,
+    "cpu_fisicos": 4,
+    "ram_gib": 51.0,
+    "torch": "2.8.0+cu128",
+    "cuda": "12.8"
+  },
+  {
+    "gpu_nvidia_smi": "Tesla T4, 15360 MiB, 580.82.07",
+    "gpu_torch": "Tesla T4",
+    "gpu_memory_gib": 14.56,
+    "cpu_logicos": 8,
+    "cpu_fisicos": 4,
+    "ram_gib": 51.0,
+    "torch": "2.8.0+cu128",
+    "cuda": "12.8"
+  }
+]

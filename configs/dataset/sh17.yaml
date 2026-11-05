@@ -1,0 +1,38 @@
+# Configuración del dataset SH17.
+#
+# SH17: A Dataset for Human Safety and Personal Protective Equipment Detection in Manufacturing
+# Industry. Hafiz Mughees Ahmad y Afshin Rahimi, Journal of Safety Science and Resilience, 2024.
+# doi:10.1016/j.jnlssr.2024.09.002
+#
+#   Fuente oficial : https://github.com/ahmadmughees/SH17dataset
+#   Distribución   : https://www.kaggle.com/datasets/mugheesahmad/sh17-dataset-for-ppe-detection
+#   Licencia       : CC BY-NC-SA 4.0 (uso no comercial). El uso debe respetar también la licencia
+#                    de Pexels, de donde proceden las imágenes. Ver docs/SH17_ATTRIBUTIONS.md.
+#
+# Cifras declaradas por los autores; el script 03 las recalcula sobre los datos:
+#
+#   8.099 imágenes, 75.994 instancias, 17 clases.
+#   Resoluciones entre 1920x1002 y 8192x5462.
+
+_base_: ../default.yaml
+
+dataset:
+  name: sh17
+  num_classes: 17
+
+  # Fuente única de los nombres de clase. El orden es el de sh17.yaml del repositorio oficial, que
+  # usan los ficheros de etiquetas, y no el del README, que es distinto.
+  class_names_file: configs/dataset/sh17_classes.json
+
+  split_ratios:
+    train: 0.70
+    val: 0.15
+    test: 0.15
+
+  # SH17 está muy desequilibrado ('person' aparece en casi todas las imágenes y 'ear-mufs' es rara)
+  # y cada imagen tiene varias clases, así que la estratificación es multietiqueta a nivel de
+  # imagen.
+  stratified: true
+  split_seed: 42
+
+  smoke_test_images: 64

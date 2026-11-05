@@ -1,0 +1,9 @@
+{
+  "epochs": 100,
+  "warmup_epochs": 3.0,
+  "close_mosaic_epochs": 10,
+  "initial_lr": 0.01,
+  "final_lr_fraction": 0.01,
+  "patience": 30,
+  "checkpoint_every_epochs": 1
+}

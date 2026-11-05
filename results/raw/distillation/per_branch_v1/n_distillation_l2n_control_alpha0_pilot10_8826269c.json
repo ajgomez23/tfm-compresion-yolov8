@@ -1,0 +1,234 @@
+{
+  "experiment_id": "n_distillation_l2n_control_alpha0_pilot10_8826269c",
+  "is_control": true,
+  "student_checkpoint": "/content/tfm-edge-object-detection/models/baselines/n_baseline_default/best.pt",
+  "teacher_checkpoint": "/content/tfm-edge-object-detection/models/baselines/l_baseline_default/best.pt",
+  "config_path": "configs/compression/distillation/kd_pilot_10ep_control.yaml",
+  "smoke_test": false,
+  "seed_base": 42,
+  "seed_branch": 1184247825,
+  "seeding_scheme": "per_branch_v1",
+  "warmup_epochs": 0.0,
+  "effective_config": {
+    "teacher_size": "l",
+    "teacher_weights": "models/baselines/l_baseline_default/best.pt",
+    "kd_type": "combined",
+    "temperature": 2.0,
+    "alpha": 0.0,
+    "response_cls_weight": 0.1431,
+    "response_box_weight": 0.0984,
+    "feature_loss_weight": 0.0704,
+    "feature_pairs": [
+      {
+        "teacher": "model.15",
+        "student": "model.15"
+      },
+      {
+        "teacher": "model.18",
+        "student": "model.18"
+      },
+      {
+        "teacher": "model.21",
+        "student": "model.21"
+      }
+    ],
+    "region_masking": "gt_boxes_and_teacher",
+    "feature_masking": "gt_boxes",
+    "teacher_conf_threshold": 0.05,
+    "normalize_features": true,
+    "adapter_learning_rate": 0.001,
+    "student_from_pretrained": true,
+    "epochs": 10,
+    "learning_rate": 0.005
+  },
+  "preflight": null,
+  "metrics": {
+    "map_50": 0.510145719945786,
+    "map_50_95": 0.31141300557794604
+  },
+  "training_source": "reutilizado de disco (--reuse-run)",
+  "reused_training": {
+    "run_dir": "/content/drive/MyDrive/tfm-edge/distillation/n_distillation_l2n_control_alpha0_pilot10_8826269c/distill",
+    "best_checkpoint": "/content/drive/MyDrive/tfm-edge/distillation/n_distillation_l2n_control_alpha0_pilot10_8826269c/distill/weights/best.pt",
+    "last_checkpoint": "/content/drive/MyDrive/tfm-edge/distillation/n_distillation_l2n_control_alpha0_pilot10_8826269c/distill/weights/last.pt",
+    "components_csv": "/content/drive/MyDrive/tfm-edge/distillation/n_distillation_l2n_control_alpha0_pilot10_8826269c/distill/distillation_components.csv",
+    "closed_epochs": 10,
+    "steps_in_closed_epochs": 3550,
+    "adapter_grad_resolution": "media por época; el paso a paso no está en disco",
+    "not_recoverable": [
+      "las normas de partida de los adaptadores: el CSV empieza al final de la primera época, no antes de la primera",
+      "el número de parámetros de los adaptadores: se sueltan al terminar (9.4.2)",
+      "la norma del gradiente paso a paso: el CSV guarda la media por época"
+    ]
+  },
+  "steps": null,
+  "adapter_params": null,
+  "adapter_initial_norms": null,
+  "adapter_final_norms": null,
+  "adapters_learned": null,
+  "steps_in_closed_epochs": 3550,
+  "adapter_norms_first_epoch": {
+    "model.15": 9.245892524719238,
+    "model.18": 13.026564598083496,
+    "model.21": 13.077003479003906
+  },
+  "adapter_norms_last_epoch": {
+    "model.15": 9.245892524719238,
+    "model.18": 13.026564598083496,
+    "model.21": 13.077003479003906
+  },
+  "adapter_norms_moved": false,
+  "adapter_grad_always_zero": true,
+  "epoch_components": [
+    {
+      "epoch": 0,
+      "steps": 355,
+      "response_cls": 0.5154602629198155,
+      "response_box": 0.29372953843902533,
+      "features": 0.4953485713878148,
+      "detection": 47.42907160369443,
+      "total": 47.42907160369443,
+      "marked_anchors": 1278.5154929577466,
+      "adapter_norm_model.15": 9.245892524719238,
+      "adapter_norm_model.18": 13.026564598083496,
+      "adapter_norm_model.21": 13.077003479003906,
+      "adapter_grad_norm": 0.0
+    },
+    {
+      "epoch": 1,
+      "steps": 355,
+      "response_cls": 0.47779654726176196,
+      "response_box": 0.301479853248932,
+      "features": 0.4917667311681828,
+      "detection": 47.90879409145302,
+      "total": 47.90879409145302,
+      "marked_anchors": 1279.8985915492958,
+      "adapter_norm_model.15": 9.245892524719238,
+      "adapter_norm_model.18": 13.026564598083496,
+      "adapter_norm_model.21": 13.077003479003906,
+      "adapter_grad_norm": 0.0
+    },
+    {
+      "epoch": 2,
+      "steps": 355,
+      "response_cls": 0.46980526430506103,
+      "response_box": 0.2910714798829925,
+      "features": 0.4929976978772123,
+      "detection": 47.09144866835903,
+      "total": 47.09144866835903,
+      "marked_anchors": 1281.9464788732394,
+      "adapter_norm_model.15": 9.245892524719238,
+      "adapter_norm_model.18": 13.026564598083496,
+      "adapter_norm_model.21": 13.077003479003906,
+      "adapter_grad_norm": 0.0
+    },
+    {
+      "epoch": 3,
+      "steps": 355,
+      "response_cls": 0.4759273855619028,
+      "response_box": 0.2859395012469359,
+      "features": 0.4926057896143954,
+      "detection": 46.748751261536505,
+      "total": 46.748751261536505,
+      "marked_anchors": 1282.4760563380282,
+      "adapter_norm_model.15": 9.245892524719238,
+      "adapter_norm_model.18": 13.026564598083496,
+      "adapter_norm_model.21": 13.077003479003906,
+      "adapter_grad_norm": 0.0
+    },
+    {
+      "epoch": 4,
+      "steps": 355,
+      "response_cls": 0.4782929607680146,
+      "response_box": 0.2782415797592888,
+      "features": 0.4911590828022487,
+      "detection": 46.00285336669062,
+      "total": 46.00285336669062,
+      "marked_anchors": 1279.2169014084507,
+      "adapter_norm_model.15": 9.245892524719238,
+      "adapter_norm_model.18": 13.026564598083496,
+      "adapter_norm_model.21": 13.077003479003906,
+      "adapter_grad_norm": 0.0
+    },
+    {
+      "epoch": 5,
+      "steps": 355,
+      "response_cls": 0.4816283499690848,
+      "response_box": 0.2717897918022854,
+      "features": 0.4924702569632463,
+      "detection": 45.4297944619622,
+      "total": 45.4297944619622,
+      "marked_anchors": 1283.6591549295774,
+      "adapter_norm_model.15": 9.245892524719238,
+      "adapter_norm_model.18": 13.026564598083496,
+      "adapter_norm_model.21": 13.077003479003906,
+      "adapter_grad_norm": 0.0
+    },
+    {
+      "epoch": 6,
+      "steps": 355,
+      "response_cls": 0.47793423734920126,
+      "response_box": 0.25776566972195264,
+      "features": 0.4923472720972249,
+      "detection": 44.6390276304433,
+      "total": 44.6390276304433,
+      "marked_anchors": 1285.2901408450705,
+      "adapter_norm_model.15": 9.245892524719238,
+      "adapter_norm_model.18": 13.026564598083496,
+      "adapter_norm_model.21": 13.077003479003906,
+      "adapter_grad_norm": 0.0
+    },
+    {
+      "epoch": 7,
+      "steps": 355,
+      "response_cls": 0.5006787067567798,
+      "response_box": 0.2528191905626109,
+      "features": 0.4920060826019502,
+      "detection": 43.978096927051816,
+      "total": 43.978096927051816,
+      "marked_anchors": 1282.687323943662,
+      "adapter_norm_model.15": 9.245892524719238,
+      "adapter_norm_model.18": 13.026564598083496,
+      "adapter_norm_model.21": 13.077003479003906,
+      "adapter_grad_norm": 0.0
+    },
+    {
+      "epoch": 8,
+      "steps": 355,
+      "response_cls": 0.4804496385681797,
+      "response_box": 0.24455497197701898,
+      "features": 0.49124085046875643,
+      "detection": 43.436397434288345,
+      "total": 43.436397434288345,
+      "marked_anchors": 1278.3352112676057,
+      "adapter_norm_model.15": 9.245892524719238,
+      "adapter_norm_model.18": 13.026564598083496,
+      "adapter_norm_model.21": 13.077003479003906,
+      "adapter_grad_norm": 0.0
+    },
+    {
+      "epoch": 9,
+      "steps": 355,
+      "response_cls": 0.4881187079657971,
+      "response_box": 0.23776578097276285,
+      "features": 0.4907675011057249,
+      "detection": 42.562507774460485,
+      "total": 42.562507774460485,
+      "marked_anchors": 1285.056338028169,
+      "adapter_norm_model.15": 9.245892524719238,
+      "adapter_norm_model.18": 13.026564598083496,
+      "adapter_norm_model.21": 13.077003479003906,
+      "adapter_grad_norm": 0.0
+    }
+  ],
+  "cost": {
+    "wall_time_s": 3842.55,
+    "gpu_hours": 1.0674,
+    "device": "cuda:0",
+    "gpu_name": "Tesla T4",
+    "epochs_completed": 10,
+    "peak_gpu_memory_mb": 6496.0,
+    "execution_context": "google_colab+container",
+    "interrupted": false
+  }
+}

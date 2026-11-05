@@ -1,0 +1,302 @@
+{
+  "device_id": "workstation_cpu",
+  "dry_run": false,
+  "figures": {
+    "skipped": true
+  },
+  "figures_by_chapter": {
+    "1": [
+      "fig_1_1_muestra_sh17.pdf",
+      "fig_1_1_problema_epi_en_el_borde.pdf",
+      "fig_1_1_tecnicas_de_compresion.pdf",
+      "fig_1_2_espacio_de_decision.pdf",
+      "fig_1_2_resultado_frontera_por_motor_workstation_cpu.pdf",
+      "fig_1_3_flujo_del_estudio.pdf"
+    ],
+    "3": [
+      "fig_3_2_ejemplos_anotados.pdf",
+      "fig_3_3_distribucion_clases_particion.pdf",
+      "fig_3_3_letterbox_vs_estirado.pdf",
+      "fig_3_4_clase_por_tamano_inference_res.pdf",
+      "fig_3_4_clase_por_tamano_original_res.pdf",
+      "fig_3_4_coocurrencia_condicional.pdf",
+      "fig_3_4_coocurrencia_de_clases.pdf",
+      "fig_3_4_distribucion_de_areas.pdf",
+      "fig_3_4_distribucion_de_clases.pdf",
+      "fig_3_4_distribucion_de_tamanos_dos_criterios.pdf"
+    ],
+    "4": [
+      "fig_4_1_sesgo_seleccion_best_pt.pdf",
+      "fig_4_2_cadena_causas_qat.pdf",
+      "fig_4_3_flujo_experimental.pdf",
+      "fig_4_3_suelo_error_latencia.pdf",
+      "fig_4_5_cobertura_perfiles_motores.pdf"
+    ],
+    "5": [
+      "fig_5_1_curvas_entrenamiento.pdf",
+      "fig_5_3_map_vs_nivel_por_familia.pdf",
+      "fig_5_4_comparativa_por_tecnica.pdf",
+      "fig_5_5_degradacion_por_clase_onnxruntime.pdf",
+      "fig_5_5_degradacion_por_clase_openvino.pdf",
+      "fig_5_5_degradacion_por_clase_pytorch.pdf",
+      "fig_5_5_degradacion_por_tamano.pdf",
+      "fig_5_5_tipos_de_error.pdf",
+      "fig_5_6_coste_frente_a_ganancia.pdf"
+    ],
+    "6": [
+      "fig_6_2_perdida_map_por_compresion.pdf",
+      "fig_6_4_dominaciones_perdidas_por_suelo_workstation_cpu.pdf",
+      "fig_6_4_frontera_3obj_por_motor_workstation_cpu.pdf",
+      "fig_6_4_frontera_map5095_p50_por_motor_workstation_cpu.pdf",
+      "fig_6_4_frontera_map5095_p50_workstation_cpu.pdf",
+      "fig_6_4_frontera_map5095_p95_memoria_workstation_cpu.pdf",
+      "fig_6_4_frontera_map50_p50_workstation_cpu.pdf",
+      "fig_6_4_miembros_por_tecnica_workstation_cpu.pdf",
+      "fig_6_4_n_frente_a_compresiones_s_workstation_cpu.pdf",
+      "fig_6_7_validacion_frente_a_prueba.pdf"
+    ]
+  },
+  "figures_on_disk": [
+    "fig_1_1_muestra_sh17.pdf",
+    "fig_1_1_problema_epi_en_el_borde.pdf",
+    "fig_1_1_tecnicas_de_compresion.pdf",
+    "fig_1_2_espacio_de_decision.pdf",
+    "fig_1_2_resultado_frontera_por_motor_workstation_cpu.pdf",
+    "fig_1_3_flujo_del_estudio.pdf",
+    "fig_3_2_ejemplos_anotados.pdf",
+    "fig_3_3_distribucion_clases_particion.pdf",
+    "fig_3_3_letterbox_vs_estirado.pdf",
+    "fig_3_4_clase_por_tamano_inference_res.pdf",
+    "fig_3_4_clase_por_tamano_original_res.pdf",
+    "fig_3_4_coocurrencia_condicional.pdf",
+    "fig_3_4_coocurrencia_de_clases.pdf",
+    "fig_3_4_distribucion_de_areas.pdf",
+    "fig_3_4_distribucion_de_clases.pdf",
+    "fig_3_4_distribucion_de_tamanos_dos_criterios.pdf",
+    "fig_4_1_sesgo_seleccion_best_pt.pdf",
+    "fig_4_2_cadena_causas_qat.pdf",
+    "fig_4_3_flujo_experimental.pdf",
+    "fig_4_3_suelo_error_latencia.pdf",
+    "fig_4_5_cobertura_perfiles_motores.pdf",
+    "fig_5_1_curvas_entrenamiento.pdf",
+    "fig_5_3_map_vs_nivel_por_familia.pdf",
+    "fig_5_4_comparativa_por_tecnica.pdf",
+    "fig_5_5_degradacion_por_clase_onnxruntime.pdf",
+    "fig_5_5_degradacion_por_clase_openvino.pdf",
+    "fig_5_5_degradacion_por_clase_pytorch.pdf",
+    "fig_5_5_degradacion_por_tamano.pdf",
+    "fig_5_5_tipos_de_error.pdf",
+    "fig_5_6_coste_frente_a_ganancia.pdf",
+    "fig_6_2_perdida_map_por_compresion.pdf",
+    "fig_6_4_dominaciones_perdidas_por_suelo_workstation_cpu.pdf",
+    "fig_6_4_frontera_3obj_por_motor_workstation_cpu.pdf",
+    "fig_6_4_frontera_map5095_p50_por_motor_workstation_cpu.pdf",
+    "fig_6_4_frontera_map5095_p50_workstation_cpu.pdf",
+    "fig_6_4_frontera_map5095_p95_memoria_workstation_cpu.pdf",
+    "fig_6_4_frontera_map50_p50_workstation_cpu.pdf",
+    "fig_6_4_miembros_por_tecnica_workstation_cpu.pdf",
+    "fig_6_4_n_frente_a_compresiones_s_workstation_cpu.pdf",
+    "fig_6_7_validacion_frente_a_prueba.pdf"
+  ],
+  "pending": [],
+  "pending_verifications": [
+    "Este paso no compila los .tex que escribe. Los tests compilan tablas de prueba con pdflatex cuando está instalado, y las de la campaña se compilaron y se miraron a mano el 18/09/2026; si cambian las filas, hay que volver a compilarlas y mirarlas (D-130).",
+    "Las tablas van apaisadas y reducidas hasta caber en una página: con cincuenta filas quedan entre 6,4 y 6,6 pt de letra. Ese PDF sirve para verificar; la memoria se monta en Word a partir del XLSX, que no se reduce (D-130).",
+    "Las figuras se han revisado abriéndolas, pero no hay comprobación automática de solapamientos de texto ni de legibilidad en escala de grises (D-129, D-131)."
+  ],
+  "tables": [
+    {
+      "automatic_notes": [],
+      "basename": "tab_6_1_medidas_calidad_workstation_cpu",
+      "best_marked": {
+        "map_50": [
+          5,
+          6,
+          7
+        ],
+        "map_50_95": [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7
+        ]
+      },
+      "caption": "Calidad de cada configuración medida en workstation_cpu, por motor de inferencia",
+      "columns": [
+        "experiment_id",
+        "technique",
+        "runtime",
+        "precision",
+        "map_50",
+        "map_50_95"
+      ],
+      "columns_without_distinction": [],
+      "files": {
+        "csv": "results/tables/tab_6_1_medidas_calidad_workstation_cpu.csv",
+        "tex": "results/tables/tab_6_1_medidas_calidad_workstation_cpu.tex",
+        "xlsx": "results/tables/tab_6_1_medidas_calidad_workstation_cpu.xlsx"
+      },
+      "num_rows": 50
+    },
+    {
+      "automatic_notes": [],
+      "basename": "tab_6_1_medidas_despliegue_workstation_cpu",
+      "best_marked": {
+        "artifact_size_mb": [
+          13
+        ],
+        "latency_p50_ms": [
+          14
+        ],
+        "latency_p95_ms": [
+          14
+        ],
+        "peak_host_memory_mb": [
+          13
+        ],
+        "throughput_img_s": [
+          14
+        ]
+      },
+      "caption": "Despliegue de cada configuración medida en workstation_cpu, por motor de inferencia",
+      "columns": [
+        "experiment_id",
+        "technique",
+        "runtime",
+        "precision",
+        "latency_p50_ms",
+        "latency_p95_ms",
+        "throughput_img_s",
+        "peak_host_memory_mb",
+        "artifact_size_mb"
+      ],
+      "columns_without_distinction": [],
+      "files": {
+        "csv": "results/tables/tab_6_1_medidas_despliegue_workstation_cpu.csv",
+        "tex": "results/tables/tab_6_1_medidas_despliegue_workstation_cpu.tex",
+        "xlsx": "results/tables/tab_6_1_medidas_despliegue_workstation_cpu.xlsx"
+      },
+      "num_rows": 50
+    },
+    {
+      "automatic_notes": [],
+      "basename": "tab_6_4_frontera_spec_3d_map5095_p95_memoria_workstation_cpu",
+      "best_marked": {
+        "distance_to_ideal": [
+          0
+        ],
+        "latency_p95_ms": [
+          38
+        ],
+        "map_50_95": [
+          29,
+          33,
+          37,
+          47,
+          48,
+          49
+        ],
+        "peak_host_memory_mb": [
+          41
+        ]
+      },
+      "caption": "Situación de cada configuración respecto a la frontera de Pareto en workstation_cpu, vista «spec_3d_map5095_p95_memoria»",
+      "columns": [
+        "experiment_id",
+        "technique",
+        "runtime",
+        "precision",
+        "map_50_95",
+        "latency_p95_ms",
+        "peak_host_memory_mb",
+        "frontier",
+        "frontier_runtime",
+        "distance_to_ideal"
+      ],
+      "columns_without_distinction": [],
+      "files": {
+        "csv": "results/tables/tab_6_4_frontera_spec_3d_map5095_p95_memoria_workstation_cpu.csv",
+        "tex": "results/tables/tab_6_4_frontera_spec_3d_map5095_p95_memoria_workstation_cpu.tex",
+        "xlsx": "results/tables/tab_6_4_frontera_spec_3d_map5095_p95_memoria_workstation_cpu.xlsx"
+      },
+      "num_rows": 50
+    },
+    {
+      "automatic_notes": [],
+      "basename": "tab_6_4_frontera_plano_map50_p50_workstation_cpu",
+      "best_marked": {
+        "distance_to_ideal": [
+          0
+        ],
+        "latency_p50_ms": [
+          38
+        ],
+        "map_50": [
+          14,
+          17,
+          26
+        ]
+      },
+      "caption": "Situación de cada configuración respecto a la frontera de Pareto en workstation_cpu, vista «plano_map50_p50»",
+      "columns": [
+        "experiment_id",
+        "technique",
+        "runtime",
+        "precision",
+        "map_50",
+        "latency_p50_ms",
+        "frontier",
+        "frontier_runtime",
+        "distance_to_ideal"
+      ],
+      "columns_without_distinction": [],
+      "files": {
+        "csv": "results/tables/tab_6_4_frontera_plano_map50_p50_workstation_cpu.csv",
+        "tex": "results/tables/tab_6_4_frontera_plano_map50_p50_workstation_cpu.tex",
+        "xlsx": "results/tables/tab_6_4_frontera_plano_map50_p50_workstation_cpu.xlsx"
+      },
+      "num_rows": 50
+    },
+    {
+      "automatic_notes": [],
+      "basename": "tab_6_4_frontera_plano_map5095_p50_workstation_cpu",
+      "best_marked": {
+        "distance_to_ideal": [
+          0
+        ],
+        "latency_p50_ms": [
+          38
+        ],
+        "map_50_95": [
+          9,
+          13,
+          19,
+          45,
+          46,
+          48
+        ]
+      },
+      "caption": "Situación de cada configuración respecto a la frontera de Pareto en workstation_cpu, vista «plano_map5095_p50»",
+      "columns": [
+        "experiment_id",
+        "technique",
+        "runtime",
+        "precision",
+        "map_50_95",
+        "latency_p50_ms",
+        "frontier",
+        "frontier_runtime",
+        "distance_to_ideal"
+      ],
+      "columns_without_distinction": [],
+      "files": {
+        "csv": "results/tables/tab_6_4_frontera_plano_map5095_p50_workstation_cpu.csv",
+        "tex": "results/tables/tab_6_4_frontera_plano_map5095_p50_workstation_cpu.tex",
+        "xlsx": "results/tables/tab_6_4_frontera_plano_map5095_p50_workstation_cpu.xlsx"
+      },
+      "num_rows": 50
+    }
+  ]
+}

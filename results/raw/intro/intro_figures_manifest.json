@@ -1,0 +1,112 @@
+{
+  "figures": {
+    "espacio_de_decision": {
+      "files": {
+        "pdf": "results/figures/fig_1_2_espacio_de_decision.pdf",
+        "png": "results/figures/fig_1_2_espacio_de_decision.png"
+      }
+    },
+    "flujo_del_estudio": {
+      "files": {
+        "pdf": "results/figures/fig_1_3_flujo_del_estudio.pdf",
+        "png": "results/figures/fig_1_3_flujo_del_estudio.png"
+      }
+    },
+    "muestra_sh17": {
+      "files": {
+        "pdf": "results/figures/fig_1_1_muestra_sh17.pdf",
+        "png": "results/figures/fig_1_1_muestra_sh17.png"
+      },
+      "images": [
+        {
+          "blurred": false,
+          "blurred_boxes": 0,
+          "classes": [
+            "face-guard",
+            "glasses",
+            "gloves",
+            "head",
+            "person",
+            "safety-vest"
+          ],
+          "image": "pexels-photo-13930482.jpeg",
+          "license_dataset": "CC BY-NC-SA 4.0 (SH17)",
+          "license_figura": "CC BY-NC-SA 4.0, obra derivada",
+          "license_origen": "Licencia de Pexels",
+          "photographer": "Tuğba Yıldırım",
+          "source": "https://www.pexels.com/photo/a-construction-worker-welding-a-steel-bar-13930482/"
+        },
+        {
+          "blurred": false,
+          "blurred_boxes": 0,
+          "classes": [
+            "ear",
+            "gloves",
+            "head",
+            "helmet",
+            "person",
+            "safety-vest"
+          ],
+          "image": "pexels-photo-2760241.jpeg",
+          "license_dataset": "CC BY-NC-SA 4.0 (SH17)",
+          "license_figura": "CC BY-NC-SA 4.0, obra derivada",
+          "license_origen": "Licencia de Pexels",
+          "photographer": "Kateryna Babaieva",
+          "source": "https://www.pexels.com/photo/man-wearing-orange-hard-hat-2760241/"
+        },
+        {
+          "blurred": false,
+          "blurred_boxes": 0,
+          "classes": [
+            "face-mask",
+            "glasses",
+            "gloves",
+            "head",
+            "medical-suit",
+            "person",
+            "shoes"
+          ],
+          "image": "pexels-photo-209230.jpeg",
+          "license_dataset": "CC BY-NC-SA 4.0 (SH17)",
+          "license_figura": "CC BY-NC-SA 4.0, obra derivada",
+          "license_origen": "Licencia de Pexels",
+          "photographer": "Pixabay",
+          "source": "https://www.pexels.com/photo/action-adult-boots-boxes-209230/"
+        },
+        {
+          "blurred": false,
+          "blurred_boxes": 0,
+          "classes": [
+            "ear",
+            "face",
+            "glasses",
+            "gloves",
+            "head",
+            "helmet",
+            "person",
+            "tool"
+          ],
+          "image": "pexels-photo-14793021.jpeg",
+          "license_dataset": "CC BY-NC-SA 4.0 (SH17)",
+          "license_figura": "CC BY-NC-SA 4.0, obra derivada",
+          "license_origen": "Licencia de Pexels",
+          "photographer": "Aan Amrin",
+          "source": "https://www.pexels.com/photo/a-man-doing-welding-14793021/"
+        }
+      ]
+    },
+    "problema_epi_en_el_borde": {
+      "files": {
+        "pdf": "results/figures/fig_1_1_problema_epi_en_el_borde.pdf",
+        "png": "results/figures/fig_1_1_problema_epi_en_el_borde.png"
+      }
+    },
+    "tecnicas_de_compresion": {
+      "files": {
+        "pdf": "results/figures/fig_1_1_tecnicas_de_compresion.pdf",
+        "png": "results/figures/fig_1_1_tecnicas_de_compresion.png"
+      }
+    }
+  },
+  "skipped": {}
+}

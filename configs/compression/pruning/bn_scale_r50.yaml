@@ -1,0 +1,11 @@
+# Poda estructurada por el escalado gamma de la normalización, ratio 50 %.
+#
+# Mismo ratio y reparto que l1_global_r50; solo cambia el criterio de importancia. La poda aleatoria
+# al mismo ratio la genera compare_against_random() a partir de esta configuración.
+
+_base_: l1_global_r50.yaml
+
+technique_variant: bnscale_r50
+
+pruning:
+  criterion: bn_gamma

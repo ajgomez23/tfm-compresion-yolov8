@@ -1,0 +1,39 @@
+# Poda estructurada, norma L1, reparto global, ratio 50 %.
+#
+# Variante central del apartado 5.3, que se compara con el baseline y con la poda aleatoria al mismo
+# ratio. `ratio` es lo que se pide: podar un canal de salida arrastra las entradas que dependen de
+# él, así que la reducción medida es mayor. Las dos cifras se registran por separado.
+
+_base_: ../../default.yaml
+
+technique: pruning
+technique_variant: l1global_r50
+
+pruning:
+  criterion: l1
+  ratio: 0.50
+  distribution: global
+
+  # La cabeza de detección no se poda porque cambiaría el número de salidas. Se protege el módulo
+  # entero, incluida la proyección dfl, que tiene un solo canal de salida.
+  protected_layers:
+    - model.22
+
+  # Mínimo de canales por capa. torch-pruning solo limita por ratio, así que se comprueba después de
+  # podar y la campaña aborta si no se cumple.
+  min_channels: 8
+
+  # Una sola etapa; la variante iterativa está en iterative_r50_4steps.yaml (apartado 9.3.4).
+  iterative_steps: 1
+
+  # En la campaña inscrita finetune_learning_rate no llegó al optimizador: Ultralytics usó `auto`,
+  # que ignora `lr0`, y las seis ramas entrenaron con SGD desde 0,01, con calentamiento y
+  # decaimiento hasta 4,3e-4. Las cifras son comparables entre sí, pero una campaña nueva no
+  # reproduciría esa curva, porque ahora el optimizador se pasa explícito.
+  #
+  # 30 épocas y 1e-3 son los valores por defecto del esquema. Con 116,5 s por época del baseline en
+  # una Tesla T4, son 58 min por variante como máximo, porque el modelo podado tiene entre un 39 % y
+  # un 69 % menos parámetros. La medida del bucle (1,45 min/época) se queda corta frente a la de
+  # extremo a extremo (1,94) por la validación, la escritura en Drive y el cierre del mosaico.
+  #
+  # Sin reajuste esta configuración deja un mAP@50-95 de 2,4e-07, frente a 0,3762 del baseline.

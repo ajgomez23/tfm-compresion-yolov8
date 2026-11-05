@@ -1,0 +1,51 @@
+experiment_id,technique,runtime,precision,latency_p50_ms,latency_p95_ms,throughput_img_s,peak_host_memory_mb,artifact_size_mb
+l_baseline_default_188b9407,Referencia,onnxruntime,fp32,704.9157,726.2578,1.41,809.406,174.761935
+l_baseline_default_188b9407,Referencia,openvino,fp32,708.296,757.408,1.42,843.336,174.920507
+l_baseline_default_188b9407,Referencia,pytorch,fp32,826.0139,864.9137,1.16,721.332,175.062138
+l_ptq_int8-noexcl_4a52a7e5,Cuantización PTQ,onnxruntime,int8,293.3968,312.2522,3.42,536.859,44.485103
+l_ptq_int8-noexcl_4a52a7e5,Cuantización PTQ,openvino,int8,329.584,358.8695,2.96,571.145,44.631127
+m_baseline_default_dfe22158,Referencia,onnxruntime,fp32,350.4465,362.9969,2.87,664.992,103.660641
+m_baseline_default_dfe22158,Referencia,openvino,fp32,367.6264,403.6268,2.75,675.668,103.781539
+m_baseline_default_dfe22158,Referencia,pytorch,fp32,454.6437,479.505,2.2,586.926,103.858194
+m_ptq_int8-noexcl_b1a6e9e7,Cuantización PTQ,onnxruntime,int8,162.8844,177.9546,6.47,471.398,26.534982
+m_ptq_int8-noexcl_b1a6e9e7,Cuantización PTQ,openvino,int8,162.6528,182.0728,5.93,524.57,26.675306
+n_baseline_default_fab9d45c,Referencia,onnxruntime,fp32,53.2729,58.472,19.7,445.348,12.276945
+n_baseline_default_fab9d45c,Referencia,openvino,fp32,44.8115,47.7799,22.48,468.109,12.3592
+n_baseline_default_fab9d45c,Referencia,pytorch,fp32,79.179,85.3397,12.73,417.59,12.316074
+n_ptq_int8-noexcl_a78f566a,Cuantización PTQ,onnxruntime,int8,30.0546,34.8966,35.89,411.195,3.438124
+n_ptq_int8-noexcl_a78f566a,Cuantización PTQ,openvino,int8,25.6084,27.4694,40.93,462.973,3.6148
+s_baseline_default_745e3d08,Referencia,onnxruntime,fp32,144.132,155.1496,7.02,536.191,44.769973
+s_baseline_default_745e3d08,Referencia,openvino,fp32,134.2438,147.4246,7.51,545.984,44.852482
+s_baseline_default_745e3d08,Referencia,pytorch,fp32,203.8891,217.2733,4.87,478.387,44.868896
+s_combined_prune-bnscale-r50-ptqint8_7712cb36,Combinaciones,onnxruntime,int8,43.0575,48.7713,24.29,430.23,4.057292
+s_combined_prune-bnscale-r50-ptqint8_7712cb36,Combinaciones,openvino,int8,35.4794,38.2038,30.51,463.133,4.231081
+s_combined_prune-l1global-r25-ptqint8_4a1d5adc,Combinaciones,onnxruntime,int8,66.9954,74.3596,15.2,433.328,7.260155
+s_combined_prune-l1global-r25-ptqint8_4a1d5adc,Combinaciones,openvino,int8,55.9581,58.6205,19.51,470.098,7.413921
+s_combined_prune-l1global-r25-randomctl-ptqint8_e70dc4d6,Combinaciones,onnxruntime,int8,61.5336,68.2115,16.63,433.516,7.316491
+s_combined_prune-l1global-r25-randomctl-ptqint8_e70dc4d6,Combinaciones,openvino,int8,50.3066,53.2097,21.19,469.754,7.470757
+s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5,Combinaciones,onnxruntime,int8,47.5047,53.7371,22.08,431.098,4.157364
+s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5,Combinaciones,openvino,int8,39.3646,41.4075,26.45,463.293,4.330293
+s_combined_prune-l1global-r50-ptqint8_9067dba2,Combinaciones,onnxruntime,int8,45.0749,50.5514,22.81,430.703,4.063576
+s_combined_prune-l1global-r50-ptqint8_9067dba2,Combinaciones,openvino,int8,35.4919,37.6474,29.36,463.062,4.236856
+s_combined_prune-l1global-r50-randomctl-ptqint8_13a9774e,Combinaciones,onnxruntime,int8,42.3687,48.3095,24.56,430.086,4.078651
+s_combined_prune-l1global-r50-randomctl-ptqint8_13a9774e,Combinaciones,openvino,int8,34.293,36.498,30.3,463.184,4.252189
+s_pruning_bnscale_r50_f51fef4c,Poda estructurada,onnxruntime,fp32,80.2087,85.364,12.89,454.527,14.671448
+s_pruning_bnscale_r50_f51fef4c,Poda estructurada,openvino,fp32,64.649,68.8069,15.59,491.719,14.753941
+s_pruning_l1global_r25_4e91ddbc,Poda estructurada,onnxruntime,fp32,122.7169,130.9012,8.32,483.344,27.337951
+s_pruning_l1global_r25_4e91ddbc,Poda estructurada,openvino,fp32,110.4585,117.5556,9.36,515.777,27.420588
+s_pruning_l1global_r25_randomctl_a658e5d4,Poda estructurada,onnxruntime,fp32,111.2425,118.2173,9.18,474.195,27.568622
+s_pruning_l1global_r25_randomctl_a658e5d4,Poda estructurada,openvino,fp32,98.5692,105.1532,10.27,517.957,27.651162
+s_pruning_l1global_r50_9419b26f,Poda estructurada,onnxruntime,fp32,80.4303,86.7704,12.57,460.691,14.696592
+s_pruning_l1global_r50_9419b26f,Poda estructurada,openvino,fp32,63.4413,67.5626,16.56,487.652,14.77876
+s_pruning_l1global_r50_iter4_d8fe066f,Poda estructurada,onnxruntime,fp32,86.3515,92.1892,12.1,454.594,15.064717
+s_pruning_l1global_r50_iter4_d8fe066f,Poda estructurada,openvino,fp32,73.3439,77.2217,14.1,493.895,15.147265
+s_pruning_l1global_r50_randomctl_d581bd22,Poda estructurada,onnxruntime,fp32,74.9582,81.714,13.58,453.531,14.757212
+s_pruning_l1global_r50_randomctl_d581bd22,Poda estructurada,openvino,fp32,62.8196,66.2374,16.4,492.953,14.839591
+s_ptq_int8-noexcl_5bcd71f0,Cuantización PTQ,onnxruntime,int8,67.5694,75.7453,15.15,434.605,11.638675
+s_ptq_int8-noexcl_5bcd71f0,Cuantización PTQ,openvino,int8,70.5537,75.825,14.77,485.0,11.772532
+s_qat_int8-noexcl_43300d34,Cuantización QAT,onnxruntime,int8,45.2895,50.8418,23.0,430.938,4.063577
+s_qat_int8-noexcl_43300d34,Cuantización QAT,openvino,int8,35.7216,38.1727,30.53,462.891,4.236836
+s_qat_int8-noexcl_4d491880,Cuantización QAT,onnxruntime,int8,65.7955,73.7982,15.17,433.246,7.260155
+s_qat_int8-noexcl_4d491880,Cuantización QAT,openvino,int8,56.365,59.3958,18.33,469.844,7.413469
+s_qat_int8-noexcl_d4d403fa,Cuantización QAT,onnxruntime,int8,71.0929,79.929,14.42,435.277,11.638676
+s_qat_int8-noexcl_d4d403fa,Cuantización QAT,openvino,int8,72.7711,76.1197,14.23,484.398,11.77254

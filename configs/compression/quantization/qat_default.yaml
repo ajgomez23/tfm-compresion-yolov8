@@ -1,0 +1,45 @@
+# Afinado consciente de la cuantización (QAT) del baseline yolov8s.
+#
+# Produce pesos FP32 afinados con cuantización simulada, no un modelo INT8. El INT8 lo materializa
+# después cada runtime por el mismo camino y con la misma calibración que la rama PTQ. La conversión
+# eager de PyTorch no es posible en YOLOv8 porque no hay kernel cuantizado para SiLU.
+
+_base_: ../../default.yaml
+
+technique: qat
+technique_variant: int8-noexcl
+
+quantization:
+  mode: qat
+  precision: int8
+  scheme: symmetric
+  weight_granularity: per_channel
+  activation_granularity: per_tensor
+  calibration_method: minmax
+
+  # Mismo conjunto de calibración que la rama PTQ inscrita (s_ptq_int8-noexcl_5bcd71f0, 128
+  # imágenes, hash a27c6f11fb1865fd); compare_with_qat() lo comprueba.
+  calibration_size: 128
+
+  # Sin exclusiones, igual que la PTQ, para que las dos ramas sean comparables.
+  excluded_layers: []
+
+  # 10 épocas, el 10 % del entrenamiento del baseline (models/baselines/s_baseline_default/
+  # schedule.json), suficiente para que un modelo ya convergido se adapte al ruido de cuantización.
+  # Con 116,5 s por época del baseline en T4 son unos 19,4 min como mínimo: el modelo preparado
+  # lleva 64 observadores de peso y 121 de activación, y el coste real queda en el volcado de la
+  # campaña.
+  qat_epochs: 10
+
+  # 1e-4 es donde terminó el planificador del baseline (lr0=0,01 y lrf=0,01), así que el afinado
+  # continúa desde ese punto. El Trainer pasa el optimizador explícitamente y comprueba en cada
+  # entrenamiento que arranca con esta tasa.
+  qat_learning_rate: 0.0001
+
+  # Los observadores de rango se congelan en las dos últimas épocas (índice 8 de 0..9) para que los
+  # pesos se ajusten a rangos estables, que son los que usará el INT8.
+  freeze_observers_epoch: 8
+
+  # Tiene que ser null: en YOLOv8 sin fusionar no hay ConvBn2d que congelar, y pedirlo aborta la
+  # campaña.
+  freeze_bn_stats_epoch: null

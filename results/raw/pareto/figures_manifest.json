@@ -1,0 +1,1643 @@
+{
+  "checked_against_step_26": true,
+  "engine_figures": {
+    "dominaciones_perdidas_por_suelo_workstation_cpu": {
+      "figure": "dominaciones_perdidas_por_suelo_workstation_cpu",
+      "summary": {
+        "counts": [
+          {
+            "group": "dispositivo",
+            "lost": 6,
+            "robust": 207,
+            "strict": 213,
+            "view": "plano_map5095_p50"
+          },
+          {
+            "group": "dispositivo",
+            "lost": 33,
+            "robust": 188,
+            "strict": 221,
+            "view": "plano_map50_p50"
+          },
+          {
+            "group": "dispositivo",
+            "lost": 1,
+            "robust": 88,
+            "strict": 89,
+            "view": "spec_3d_map5095_p95_memoria"
+          },
+          {
+            "group": "onnxruntime",
+            "lost": 1,
+            "robust": 29,
+            "strict": 30,
+            "view": "plano_map5095_p50"
+          },
+          {
+            "group": "onnxruntime",
+            "lost": 5,
+            "robust": 30,
+            "strict": 35,
+            "view": "plano_map50_p50"
+          },
+          {
+            "group": "onnxruntime",
+            "lost": 1,
+            "robust": 21,
+            "strict": 22,
+            "view": "spec_3d_map5095_p95_memoria"
+          },
+          {
+            "group": "openvino",
+            "lost": 1,
+            "robust": 30,
+            "strict": 31,
+            "view": "plano_map5095_p50"
+          },
+          {
+            "group": "openvino",
+            "lost": 7,
+            "robust": 28,
+            "strict": 35,
+            "view": "plano_map50_p50"
+          },
+          {
+            "group": "openvino",
+            "lost": 0,
+            "robust": 27,
+            "strict": 27,
+            "view": "spec_3d_map5095_p95_memoria"
+          }
+        ],
+        "groups": [
+          "dispositivo",
+          "onnxruntime",
+          "openvino"
+        ],
+        "views": [
+          "plano_map5095_p50",
+          "plano_map50_p50",
+          "spec_3d_map5095_p95_memoria"
+        ]
+      },
+      "views": [
+        "plano_map5095_p50",
+        "plano_map50_p50",
+        "spec_3d_map5095_p95_memoria"
+      ]
+    },
+    "frontera_3obj_por_motor_workstation_cpu": {
+      "figure": "frontera_3obj_por_motor_workstation_cpu",
+      "summary": {
+        "device_id": "workstation_cpu",
+        "runtimes": {
+          "onnxruntime": {
+            "dominated": [
+              "Aleatoria r50",
+              "Aleatoria r50 + PTQ",
+              "BN r50",
+              "BN r50 + PTQ",
+              "L1 r50",
+              "L1 r50 + PTQ",
+              "l PTQ",
+              "m PTQ",
+              "s QAT"
+            ],
+            "floors": [
+              {
+                "floor": 0.14722041432136712,
+                "kind": "relativo",
+                "objective": "latencia p95"
+              },
+              {
+                "floor": 0.004579,
+                "kind": "absoluto",
+                "objective": "mAP@50-95"
+              },
+              {
+                "floor": 0.0107601557761114,
+                "kind": "relativo",
+                "objective": "memoria pico"
+              }
+            ],
+            "members": [
+              {
+                "label": "n PTQ",
+                "latency_p95_ms": 34.8966,
+                "map_50_95": 0.247739,
+                "peak_host_memory_mb": 411.195,
+                "point": "n_ptq_int8-noexcl_a78f566a [onnxruntime/int8]"
+              },
+              {
+                "label": "L1 r50 + QAT",
+                "latency_p95_ms": 50.8418,
+                "map_50_95": 0.247754,
+                "peak_host_memory_mb": 430.938,
+                "point": "s_qat_int8-noexcl_43300d34 [onnxruntime/int8]"
+              },
+              {
+                "label": "Iterativa r50 + PTQ",
+                "latency_p95_ms": 53.7371,
+                "map_50_95": 0.249358,
+                "peak_host_memory_mb": 431.098,
+                "point": "s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5 [onnxruntime/int8]"
+              },
+              {
+                "label": "Aleatoria r25 + PTQ",
+                "latency_p95_ms": 68.2115,
+                "map_50_95": 0.259057,
+                "peak_host_memory_mb": 433.516,
+                "point": "s_combined_prune-l1global-r25-randomctl-ptqint8_e70dc4d6 [onnxruntime/int8]"
+              },
+              {
+                "label": "L1 r25 + PTQ",
+                "latency_p95_ms": 74.3596,
+                "map_50_95": 0.270323,
+                "peak_host_memory_mb": 433.328,
+                "point": "s_combined_prune-l1global-r25-ptqint8_4a1d5adc [onnxruntime/int8]"
+              },
+              {
+                "label": "L1 r25 + QAT",
+                "latency_p95_ms": 73.7982,
+                "map_50_95": 0.272785,
+                "peak_host_memory_mb": 433.246,
+                "point": "s_qat_int8-noexcl_4d491880 [onnxruntime/int8]"
+              },
+              {
+                "label": "s PTQ",
+                "latency_p95_ms": 75.7453,
+                "map_50_95": 0.286091,
+                "peak_host_memory_mb": 434.605,
+                "point": "s_ptq_int8-noexcl_5bcd71f0 [onnxruntime/int8]"
+              },
+              {
+                "label": "n FP32",
+                "latency_p95_ms": 58.472,
+                "map_50_95": 0.325635,
+                "peak_host_memory_mb": 445.348,
+                "point": "n_baseline_default_fab9d45c [onnxruntime/fp32]"
+              },
+              {
+                "label": "Iterativa r50",
+                "latency_p95_ms": 92.1892,
+                "map_50_95": 0.331078,
+                "peak_host_memory_mb": 454.594,
+                "point": "s_pruning_l1global_r50_iter4_d8fe066f [onnxruntime/fp32]"
+              },
+              {
+                "label": "Aleatoria r25",
+                "latency_p95_ms": 118.2173,
+                "map_50_95": 0.347942,
+                "peak_host_memory_mb": 474.195,
+                "point": "s_pruning_l1global_r25_randomctl_a658e5d4 [onnxruntime/fp32]"
+              },
+              {
+                "label": "L1 r25",
+                "latency_p95_ms": 130.9012,
+                "map_50_95": 0.357923,
+                "peak_host_memory_mb": 483.344,
+                "point": "s_pruning_l1global_r25_4e91ddbc [onnxruntime/fp32]"
+              },
+              {
+                "label": "s FP32",
+                "latency_p95_ms": 155.1496,
+                "map_50_95": 0.376214,
+                "peak_host_memory_mb": 536.191,
+                "point": "s_baseline_default_745e3d08 [onnxruntime/fp32]"
+              },
+              {
+                "label": "m FP32",
+                "latency_p95_ms": 362.9969,
+                "map_50_95": 0.409316,
+                "peak_host_memory_mb": 664.992,
+                "point": "m_baseline_default_dfe22158 [onnxruntime/fp32]"
+              },
+              {
+                "label": "l FP32",
+                "latency_p95_ms": 726.2578,
+                "map_50_95": 0.41148,
+                "peak_host_memory_mb": 809.406,
+                "point": "l_baseline_default_188b9407 [onnxruntime/fp32]"
+              }
+            ],
+            "num_points": 23,
+            "numbering": {
+              "Aleatoria r25": 10,
+              "Aleatoria r25 + PTQ": 5,
+              "Iterativa r50": 9,
+              "Iterativa r50 + PTQ": 3,
+              "L1 r25": 11,
+              "L1 r25 + PTQ": 7,
+              "L1 r25 + QAT": 6,
+              "L1 r50 + QAT": 2,
+              "l FP32": 14,
+              "m FP32": 13,
+              "n FP32": 4,
+              "n PTQ": 1,
+              "s FP32": 12,
+              "s PTQ": 8
+            },
+            "robust_only": [
+              "L1 r25 + PTQ"
+            ]
+          },
+          "openvino": {
+            "dominated": [
+              "Aleatoria r25 + PTQ",
+              "Aleatoria r50",
+              "Aleatoria r50 + PTQ",
+              "BN r50",
+              "BN r50 + PTQ",
+              "L1 r25 + PTQ",
+              "L1 r25 + QAT",
+              "L1 r50",
+              "l PTQ",
+              "m PTQ",
+              "s PTQ",
+              "s QAT"
+            ],
+            "floors": [
+              {
+                "floor": 0.14722041432136712,
+                "kind": "relativo",
+                "objective": "latencia p95"
+              },
+              {
+                "floor": 0.004579,
+                "kind": "absoluto",
+                "objective": "mAP@50-95"
+              },
+              {
+                "floor": 0.0107601557761114,
+                "kind": "relativo",
+                "objective": "memoria pico"
+              }
+            ],
+            "members": [
+              {
+                "label": "n PTQ",
+                "latency_p95_ms": 27.4694,
+                "map_50_95": 0.254759,
+                "peak_host_memory_mb": 462.973,
+                "point": "n_ptq_int8-noexcl_a78f566a [openvino/int8]"
+              },
+              {
+                "label": "L1 r50 + PTQ",
+                "latency_p95_ms": 37.6474,
+                "map_50_95": 0.263447,
+                "peak_host_memory_mb": 463.062,
+                "point": "s_combined_prune-l1global-r50-ptqint8_9067dba2 [openvino/int8]"
+              },
+              {
+                "label": "L1 r50 + QAT",
+                "latency_p95_ms": 38.1727,
+                "map_50_95": 0.267243,
+                "peak_host_memory_mb": 462.891,
+                "point": "s_qat_int8-noexcl_43300d34 [openvino/int8]"
+              },
+              {
+                "label": "Iterativa r50 + PTQ",
+                "latency_p95_ms": 41.4075,
+                "map_50_95": 0.275993,
+                "peak_host_memory_mb": 463.293,
+                "point": "s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5 [openvino/int8]"
+              },
+              {
+                "label": "n FP32",
+                "latency_p95_ms": 47.7799,
+                "map_50_95": 0.325635,
+                "peak_host_memory_mb": 468.109,
+                "point": "n_baseline_default_fab9d45c [openvino/fp32]"
+              },
+              {
+                "label": "Iterativa r50",
+                "latency_p95_ms": 77.2217,
+                "map_50_95": 0.331078,
+                "peak_host_memory_mb": 493.895,
+                "point": "s_pruning_l1global_r50_iter4_d8fe066f [openvino/fp32]"
+              },
+              {
+                "label": "Aleatoria r25",
+                "latency_p95_ms": 105.1532,
+                "map_50_95": 0.347943,
+                "peak_host_memory_mb": 517.957,
+                "point": "s_pruning_l1global_r25_randomctl_a658e5d4 [openvino/fp32]"
+              },
+              {
+                "label": "L1 r25",
+                "latency_p95_ms": 117.5556,
+                "map_50_95": 0.357922,
+                "peak_host_memory_mb": 515.777,
+                "point": "s_pruning_l1global_r25_4e91ddbc [openvino/fp32]"
+              },
+              {
+                "label": "s FP32",
+                "latency_p95_ms": 147.4246,
+                "map_50_95": 0.376214,
+                "peak_host_memory_mb": 545.984,
+                "point": "s_baseline_default_745e3d08 [openvino/fp32]"
+              },
+              {
+                "label": "m FP32",
+                "latency_p95_ms": 403.6268,
+                "map_50_95": 0.409313,
+                "peak_host_memory_mb": 675.668,
+                "point": "m_baseline_default_dfe22158 [openvino/fp32]"
+              },
+              {
+                "label": "l FP32",
+                "latency_p95_ms": 757.408,
+                "map_50_95": 0.41148,
+                "peak_host_memory_mb": 843.336,
+                "point": "l_baseline_default_188b9407 [openvino/fp32]"
+              }
+            ],
+            "num_points": 23,
+            "numbering": {
+              "Aleatoria r25": 7,
+              "Iterativa r50": 6,
+              "Iterativa r50 + PTQ": 4,
+              "L1 r25": 8,
+              "L1 r50 + PTQ": 2,
+              "L1 r50 + QAT": 3,
+              "l FP32": 11,
+              "m FP32": 10,
+              "n FP32": 5,
+              "n PTQ": 1,
+              "s FP32": 9
+            },
+            "robust_only": []
+          }
+        }
+      },
+      "views": [
+        "spec_3d_map5095_p95_memoria"
+      ]
+    },
+    "frontera_map5095_p50_por_motor_workstation_cpu": {
+      "figure": "frontera_map5095_p50_por_motor_workstation_cpu",
+      "summary": {
+        "device_id": "workstation_cpu",
+        "runtimes": {
+          "onnxruntime": {
+            "dominated": [
+              "Aleatoria r25 + PTQ",
+              "Aleatoria r50",
+              "Aleatoria r50 + PTQ",
+              "BN r50",
+              "BN r50 + PTQ",
+              "L1 r25 + PTQ",
+              "L1 r25 + QAT",
+              "L1 r50",
+              "L1 r50 + PTQ",
+              "l PTQ",
+              "m PTQ",
+              "s PTQ",
+              "s QAT"
+            ],
+            "floors": [
+              {
+                "floor": 0.092649714815871,
+                "kind": "relativo",
+                "objective": "latencia p50"
+              },
+              {
+                "floor": 0.004579,
+                "kind": "absoluto",
+                "objective": "mAP@50-95"
+              }
+            ],
+            "labels": [
+              {
+                "dx_pt": -17.21,
+                "offset_pt": -9.28,
+                "side": "left",
+                "text": "n PTQ"
+              },
+              {
+                "dx_pt": -48.25,
+                "offset_pt": 9.28,
+                "side": "left",
+                "text": "L1 r50 + QAT"
+              },
+              {
+                "dx_pt": 3.0,
+                "offset_pt": -9.28,
+                "side": "right",
+                "text": "Iterativa r50 + PTQ"
+              },
+              {
+                "dx_pt": -20.32,
+                "offset_pt": 9.28,
+                "side": "left",
+                "text": "n FP32"
+              },
+              {
+                "dx_pt": -38.81,
+                "offset_pt": 9.28,
+                "side": "left",
+                "text": "Iterativa r50"
+              },
+              {
+                "dx_pt": -40.53,
+                "offset_pt": 9.28,
+                "side": "left",
+                "text": "Aleatoria r25"
+              },
+              {
+                "dx_pt": -18.85,
+                "offset_pt": 10.0,
+                "side": "left",
+                "text": "L1 r25"
+              },
+              {
+                "dx_pt": -19.34,
+                "offset_pt": 9.28,
+                "side": "left",
+                "text": "s FP32"
+              },
+              {
+                "dx_pt": -28.28,
+                "offset_pt": -9.28,
+                "side": "left",
+                "text": "m FP32"
+              },
+              {
+                "dx_pt": -18.11,
+                "offset_pt": -9.28,
+                "side": "left",
+                "text": "l FP32"
+              }
+            ],
+            "members": [
+              {
+                "label": "n PTQ",
+                "latency_p50_ms": 30.0546,
+                "map_50_95": 0.247739,
+                "point": "n_ptq_int8-noexcl_a78f566a [onnxruntime/int8]"
+              },
+              {
+                "label": "L1 r50 + QAT",
+                "latency_p50_ms": 45.2895,
+                "map_50_95": 0.247754,
+                "point": "s_qat_int8-noexcl_43300d34 [onnxruntime/int8]"
+              },
+              {
+                "label": "Iterativa r50 + PTQ",
+                "latency_p50_ms": 47.5047,
+                "map_50_95": 0.249358,
+                "point": "s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5 [onnxruntime/int8]"
+              },
+              {
+                "label": "n FP32",
+                "latency_p50_ms": 53.2729,
+                "map_50_95": 0.325635,
+                "point": "n_baseline_default_fab9d45c [onnxruntime/fp32]"
+              },
+              {
+                "label": "Iterativa r50",
+                "latency_p50_ms": 86.3515,
+                "map_50_95": 0.331078,
+                "point": "s_pruning_l1global_r50_iter4_d8fe066f [onnxruntime/fp32]"
+              },
+              {
+                "label": "Aleatoria r25",
+                "latency_p50_ms": 111.2425,
+                "map_50_95": 0.347942,
+                "point": "s_pruning_l1global_r25_randomctl_a658e5d4 [onnxruntime/fp32]"
+              },
+              {
+                "label": "L1 r25",
+                "latency_p50_ms": 122.7169,
+                "map_50_95": 0.357923,
+                "point": "s_pruning_l1global_r25_4e91ddbc [onnxruntime/fp32]"
+              },
+              {
+                "label": "s FP32",
+                "latency_p50_ms": 144.132,
+                "map_50_95": 0.376214,
+                "point": "s_baseline_default_745e3d08 [onnxruntime/fp32]"
+              },
+              {
+                "label": "m FP32",
+                "latency_p50_ms": 350.4465,
+                "map_50_95": 0.409316,
+                "point": "m_baseline_default_dfe22158 [onnxruntime/fp32]"
+              },
+              {
+                "label": "l FP32",
+                "latency_p50_ms": 704.9157,
+                "map_50_95": 0.41148,
+                "point": "l_baseline_default_188b9407 [onnxruntime/fp32]"
+              }
+            ],
+            "num_points": 23,
+            "robust_only": []
+          },
+          "openvino": {
+            "dominated": [
+              "Aleatoria r25 + PTQ",
+              "Aleatoria r50",
+              "Aleatoria r50 + PTQ",
+              "BN r50",
+              "BN r50 + PTQ",
+              "L1 r25 + PTQ",
+              "L1 r25 + QAT",
+              "L1 r50",
+              "l PTQ",
+              "m PTQ",
+              "s PTQ",
+              "s QAT"
+            ],
+            "floors": [
+              {
+                "floor": 0.092649714815871,
+                "kind": "relativo",
+                "objective": "latencia p50"
+              },
+              {
+                "floor": 0.004579,
+                "kind": "absoluto",
+                "objective": "mAP@50-95"
+              }
+            ],
+            "labels": [
+              {
+                "dx_pt": -17.21,
+                "offset_pt": -9.28,
+                "side": "left",
+                "text": "n PTQ"
+              },
+              {
+                "dx_pt": -54.25,
+                "offset_pt": 2.6,
+                "side": "left",
+                "text": "L1 r50 + PTQ"
+              },
+              {
+                "dx_pt": -42.25,
+                "offset_pt": 9.28,
+                "side": "left",
+                "text": "L1 r50 + QAT"
+              },
+              {
+                "dx_pt": -62.21,
+                "offset_pt": 10.94,
+                "side": "left",
+                "text": "Iterativa r50 + PTQ"
+              },
+              {
+                "dx_pt": -20.32,
+                "offset_pt": 9.28,
+                "side": "left",
+                "text": "n FP32"
+              },
+              {
+                "dx_pt": -38.81,
+                "offset_pt": 9.28,
+                "side": "left",
+                "text": "Iterativa r50"
+              },
+              {
+                "dx_pt": -40.53,
+                "offset_pt": 9.28,
+                "side": "left",
+                "text": "Aleatoria r25"
+              },
+              {
+                "dx_pt": -18.85,
+                "offset_pt": 10.0,
+                "side": "left",
+                "text": "L1 r25"
+              },
+              {
+                "dx_pt": -19.34,
+                "offset_pt": 9.28,
+                "side": "left",
+                "text": "s FP32"
+              },
+              {
+                "dx_pt": -28.28,
+                "offset_pt": -9.28,
+                "side": "left",
+                "text": "m FP32"
+              },
+              {
+                "dx_pt": -18.11,
+                "offset_pt": -9.28,
+                "side": "left",
+                "text": "l FP32"
+              }
+            ],
+            "members": [
+              {
+                "label": "n PTQ",
+                "latency_p50_ms": 25.6084,
+                "map_50_95": 0.254759,
+                "point": "n_ptq_int8-noexcl_a78f566a [openvino/int8]"
+              },
+              {
+                "label": "L1 r50 + PTQ",
+                "latency_p50_ms": 35.4919,
+                "map_50_95": 0.263447,
+                "point": "s_combined_prune-l1global-r50-ptqint8_9067dba2 [openvino/int8]"
+              },
+              {
+                "label": "L1 r50 + QAT",
+                "latency_p50_ms": 35.7216,
+                "map_50_95": 0.267243,
+                "point": "s_qat_int8-noexcl_43300d34 [openvino/int8]"
+              },
+              {
+                "label": "Iterativa r50 + PTQ",
+                "latency_p50_ms": 39.3646,
+                "map_50_95": 0.275993,
+                "point": "s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5 [openvino/int8]"
+              },
+              {
+                "label": "n FP32",
+                "latency_p50_ms": 44.8115,
+                "map_50_95": 0.325635,
+                "point": "n_baseline_default_fab9d45c [openvino/fp32]"
+              },
+              {
+                "label": "Iterativa r50",
+                "latency_p50_ms": 73.3439,
+                "map_50_95": 0.331078,
+                "point": "s_pruning_l1global_r50_iter4_d8fe066f [openvino/fp32]"
+              },
+              {
+                "label": "Aleatoria r25",
+                "latency_p50_ms": 98.5692,
+                "map_50_95": 0.347943,
+                "point": "s_pruning_l1global_r25_randomctl_a658e5d4 [openvino/fp32]"
+              },
+              {
+                "label": "L1 r25",
+                "latency_p50_ms": 110.4585,
+                "map_50_95": 0.357922,
+                "point": "s_pruning_l1global_r25_4e91ddbc [openvino/fp32]"
+              },
+              {
+                "label": "s FP32",
+                "latency_p50_ms": 134.2438,
+                "map_50_95": 0.376214,
+                "point": "s_baseline_default_745e3d08 [openvino/fp32]"
+              },
+              {
+                "label": "m FP32",
+                "latency_p50_ms": 367.6264,
+                "map_50_95": 0.409313,
+                "point": "m_baseline_default_dfe22158 [openvino/fp32]"
+              },
+              {
+                "label": "l FP32",
+                "latency_p50_ms": 708.296,
+                "map_50_95": 0.41148,
+                "point": "l_baseline_default_188b9407 [openvino/fp32]"
+              }
+            ],
+            "num_points": 23,
+            "robust_only": []
+          }
+        }
+      },
+      "views": [
+        "plano_map5095_p50"
+      ]
+    },
+    "miembros_por_tecnica_workstation_cpu": {
+      "figure": "miembros_por_tecnica_workstation_cpu",
+      "summary": {
+        "columns": [
+          "plano_map5095_p50/onnxruntime",
+          "plano_map5095_p50/openvino",
+          "plano_map50_p50/onnxruntime",
+          "plano_map50_p50/openvino",
+          "spec_3d_map5095_p95_memoria/onnxruntime",
+          "spec_3d_map5095_p95_memoria/openvino"
+        ],
+        "never_member": [
+          "Aleatoria r50",
+          "Aleatoria r50 + PTQ",
+          "BN r50",
+          "BN r50 + PTQ",
+          "L1 r50",
+          "l PTQ",
+          "m PTQ"
+        ],
+        "rows": [
+          {
+            "category": "baseline",
+            "control": false,
+            "label": "n FP32",
+            "states": {
+              "plano_map5095_p50/onnxruntime": "estricta",
+              "plano_map5095_p50/openvino": "estricta",
+              "plano_map50_p50/onnxruntime": "estricta",
+              "plano_map50_p50/openvino": "estricta",
+              "spec_3d_map5095_p95_memoria/onnxruntime": "estricta",
+              "spec_3d_map5095_p95_memoria/openvino": "estricta"
+            }
+          },
+          {
+            "category": "baseline",
+            "control": false,
+            "label": "s FP32",
+            "states": {
+              "plano_map5095_p50/onnxruntime": "estricta",
+              "plano_map5095_p50/openvino": "estricta",
+              "plano_map50_p50/onnxruntime": "estricta",
+              "plano_map50_p50/openvino": "estricta",
+              "spec_3d_map5095_p95_memoria/onnxruntime": "estricta",
+              "spec_3d_map5095_p95_memoria/openvino": "estricta"
+            }
+          },
+          {
+            "category": "baseline",
+            "control": false,
+            "label": "m FP32",
+            "states": {
+              "plano_map5095_p50/onnxruntime": "estricta",
+              "plano_map5095_p50/openvino": "estricta",
+              "plano_map50_p50/onnxruntime": "estricta",
+              "plano_map50_p50/openvino": "estricta",
+              "spec_3d_map5095_p95_memoria/onnxruntime": "estricta",
+              "spec_3d_map5095_p95_memoria/openvino": "estricta"
+            }
+          },
+          {
+            "category": "baseline",
+            "control": false,
+            "label": "l FP32",
+            "states": {
+              "plano_map5095_p50/onnxruntime": "estricta",
+              "plano_map5095_p50/openvino": "estricta",
+              "plano_map50_p50/onnxruntime": "dominado",
+              "plano_map50_p50/openvino": "dominado",
+              "spec_3d_map5095_p95_memoria/onnxruntime": "estricta",
+              "spec_3d_map5095_p95_memoria/openvino": "estricta"
+            }
+          },
+          {
+            "category": "pruning",
+            "control": true,
+            "label": "Aleatoria r25",
+            "states": {
+              "plano_map5095_p50/onnxruntime": "estricta",
+              "plano_map5095_p50/openvino": "estricta",
+              "plano_map50_p50/onnxruntime": "estricta",
+              "plano_map50_p50/openvino": "estricta",
+              "spec_3d_map5095_p95_memoria/onnxruntime": "estricta",
+              "spec_3d_map5095_p95_memoria/openvino": "estricta"
+            }
+          },
+          {
+            "category": "pruning",
+            "control": true,
+            "label": "Aleatoria r50",
+            "states": {
+              "plano_map5095_p50/onnxruntime": "dominado",
+              "plano_map5095_p50/openvino": "dominado",
+              "plano_map50_p50/onnxruntime": "dominado",
+              "plano_map50_p50/openvino": "dominado",
+              "spec_3d_map5095_p95_memoria/onnxruntime": "dominado",
+              "spec_3d_map5095_p95_memoria/openvino": "dominado"
+            }
+          },
+          {
+            "category": "pruning",
+            "control": false,
+            "label": "BN r50",
+            "states": {
+              "plano_map5095_p50/onnxruntime": "dominado",
+              "plano_map5095_p50/openvino": "dominado",
+              "plano_map50_p50/onnxruntime": "dominado",
+              "plano_map50_p50/openvino": "dominado",
+              "spec_3d_map5095_p95_memoria/onnxruntime": "dominado",
+              "spec_3d_map5095_p95_memoria/openvino": "dominado"
+            }
+          },
+          {
+            "category": "pruning",
+            "control": false,
+            "label": "Iterativa r50",
+            "states": {
+              "plano_map5095_p50/onnxruntime": "estricta",
+              "plano_map5095_p50/openvino": "estricta",
+              "plano_map50_p50/onnxruntime": "estricta",
+              "plano_map50_p50/openvino": "dominado",
+              "spec_3d_map5095_p95_memoria/onnxruntime": "estricta",
+              "spec_3d_map5095_p95_memoria/openvino": "estricta"
+            }
+          },
+          {
+            "category": "pruning",
+            "control": false,
+            "label": "L1 r25",
+            "states": {
+              "plano_map5095_p50/onnxruntime": "estricta",
+              "plano_map5095_p50/openvino": "estricta",
+              "plano_map50_p50/onnxruntime": "estricta",
+              "plano_map50_p50/openvino": "estricta",
+              "spec_3d_map5095_p95_memoria/onnxruntime": "estricta",
+              "spec_3d_map5095_p95_memoria/openvino": "estricta"
+            }
+          },
+          {
+            "category": "pruning",
+            "control": false,
+            "label": "L1 r50",
+            "states": {
+              "plano_map5095_p50/onnxruntime": "dominado",
+              "plano_map5095_p50/openvino": "dominado",
+              "plano_map50_p50/onnxruntime": "dominado",
+              "plano_map50_p50/openvino": "dominado",
+              "spec_3d_map5095_p95_memoria/onnxruntime": "dominado",
+              "spec_3d_map5095_p95_memoria/openvino": "dominado"
+            }
+          },
+          {
+            "category": "ptq",
+            "control": false,
+            "label": "n PTQ",
+            "states": {
+              "plano_map5095_p50/onnxruntime": "estricta",
+              "plano_map5095_p50/openvino": "estricta",
+              "plano_map50_p50/onnxruntime": "estricta",
+              "plano_map50_p50/openvino": "estricta",
+              "spec_3d_map5095_p95_memoria/onnxruntime": "estricta",
+              "spec_3d_map5095_p95_memoria/openvino": "estricta"
+            }
+          },
+          {
+            "category": "ptq",
+            "control": false,
+            "label": "s PTQ",
+            "states": {
+              "plano_map5095_p50/onnxruntime": "dominado",
+              "plano_map5095_p50/openvino": "dominado",
+              "plano_map50_p50/onnxruntime": "dominado",
+              "plano_map50_p50/openvino": "estricta",
+              "spec_3d_map5095_p95_memoria/onnxruntime": "estricta",
+              "spec_3d_map5095_p95_memoria/openvino": "dominado"
+            }
+          },
+          {
+            "category": "ptq",
+            "control": false,
+            "label": "m PTQ",
+            "states": {
+              "plano_map5095_p50/onnxruntime": "dominado",
+              "plano_map5095_p50/openvino": "dominado",
+              "plano_map50_p50/onnxruntime": "dominado",
+              "plano_map50_p50/openvino": "dominado",
+              "spec_3d_map5095_p95_memoria/onnxruntime": "dominado",
+              "spec_3d_map5095_p95_memoria/openvino": "dominado"
+            }
+          },
+          {
+            "category": "ptq",
+            "control": false,
+            "label": "l PTQ",
+            "states": {
+              "plano_map5095_p50/onnxruntime": "dominado",
+              "plano_map5095_p50/openvino": "dominado",
+              "plano_map50_p50/onnxruntime": "dominado",
+              "plano_map50_p50/openvino": "dominado",
+              "spec_3d_map5095_p95_memoria/onnxruntime": "dominado",
+              "spec_3d_map5095_p95_memoria/openvino": "dominado"
+            }
+          },
+          {
+            "category": "qat",
+            "control": false,
+            "label": "s QAT",
+            "states": {
+              "plano_map5095_p50/onnxruntime": "dominado",
+              "plano_map5095_p50/openvino": "dominado",
+              "plano_map50_p50/onnxruntime": "dominado",
+              "plano_map50_p50/openvino": "solo robusta",
+              "spec_3d_map5095_p95_memoria/onnxruntime": "dominado",
+              "spec_3d_map5095_p95_memoria/openvino": "dominado"
+            }
+          },
+          {
+            "category": "combined",
+            "control": true,
+            "label": "Aleatoria r25 + PTQ",
+            "states": {
+              "plano_map5095_p50/onnxruntime": "dominado",
+              "plano_map5095_p50/openvino": "dominado",
+              "plano_map50_p50/onnxruntime": "dominado",
+              "plano_map50_p50/openvino": "dominado",
+              "spec_3d_map5095_p95_memoria/onnxruntime": "estricta",
+              "spec_3d_map5095_p95_memoria/openvino": "dominado"
+            }
+          },
+          {
+            "category": "combined",
+            "control": true,
+            "label": "Aleatoria r50 + PTQ",
+            "states": {
+              "plano_map5095_p50/onnxruntime": "dominado",
+              "plano_map5095_p50/openvino": "dominado",
+              "plano_map50_p50/onnxruntime": "dominado",
+              "plano_map50_p50/openvino": "dominado",
+              "spec_3d_map5095_p95_memoria/onnxruntime": "dominado",
+              "spec_3d_map5095_p95_memoria/openvino": "dominado"
+            }
+          },
+          {
+            "category": "combined",
+            "control": false,
+            "label": "BN r50 + PTQ",
+            "states": {
+              "plano_map5095_p50/onnxruntime": "dominado",
+              "plano_map5095_p50/openvino": "dominado",
+              "plano_map50_p50/onnxruntime": "dominado",
+              "plano_map50_p50/openvino": "dominado",
+              "spec_3d_map5095_p95_memoria/onnxruntime": "dominado",
+              "spec_3d_map5095_p95_memoria/openvino": "dominado"
+            }
+          },
+          {
+            "category": "combined",
+            "control": false,
+            "label": "Iterativa r50 + PTQ",
+            "states": {
+              "plano_map5095_p50/onnxruntime": "estricta",
+              "plano_map5095_p50/openvino": "estricta",
+              "plano_map50_p50/onnxruntime": "estricta",
+              "plano_map50_p50/openvino": "estricta",
+              "spec_3d_map5095_p95_memoria/onnxruntime": "estricta",
+              "spec_3d_map5095_p95_memoria/openvino": "estricta"
+            }
+          },
+          {
+            "category": "combined",
+            "control": false,
+            "label": "L1 r25 + PTQ",
+            "states": {
+              "plano_map5095_p50/onnxruntime": "dominado",
+              "plano_map5095_p50/openvino": "dominado",
+              "plano_map50_p50/onnxruntime": "dominado",
+              "plano_map50_p50/openvino": "estricta",
+              "spec_3d_map5095_p95_memoria/onnxruntime": "solo robusta",
+              "spec_3d_map5095_p95_memoria/openvino": "dominado"
+            }
+          },
+          {
+            "category": "combined",
+            "control": false,
+            "label": "L1 r50 + PTQ",
+            "states": {
+              "plano_map5095_p50/onnxruntime": "dominado",
+              "plano_map5095_p50/openvino": "estricta",
+              "plano_map50_p50/onnxruntime": "dominado",
+              "plano_map50_p50/openvino": "estricta",
+              "spec_3d_map5095_p95_memoria/onnxruntime": "dominado",
+              "spec_3d_map5095_p95_memoria/openvino": "estricta"
+            }
+          },
+          {
+            "category": "pruning_qat",
+            "control": false,
+            "label": "L1 r25 + QAT",
+            "states": {
+              "plano_map5095_p50/onnxruntime": "dominado",
+              "plano_map5095_p50/openvino": "dominado",
+              "plano_map50_p50/onnxruntime": "dominado",
+              "plano_map50_p50/openvino": "solo robusta",
+              "spec_3d_map5095_p95_memoria/onnxruntime": "estricta",
+              "spec_3d_map5095_p95_memoria/openvino": "dominado"
+            }
+          },
+          {
+            "category": "pruning_qat",
+            "control": false,
+            "label": "L1 r50 + QAT",
+            "states": {
+              "plano_map5095_p50/onnxruntime": "estricta",
+              "plano_map5095_p50/openvino": "estricta",
+              "plano_map50_p50/onnxruntime": "estricta",
+              "plano_map50_p50/openvino": "estricta",
+              "spec_3d_map5095_p95_memoria/onnxruntime": "estricta",
+              "spec_3d_map5095_p95_memoria/openvino": "estricta"
+            }
+          }
+        ]
+      },
+      "views": [
+        "plano_map5095_p50",
+        "plano_map50_p50",
+        "spec_3d_map5095_p95_memoria"
+      ]
+    },
+    "n_frente_a_compresiones_s_workstation_cpu": {
+      "figure": "n_frente_a_compresiones_s_workstation_cpu",
+      "summary": {
+        "device_id": "workstation_cpu",
+        "runtimes": {
+          "onnxruntime": {
+            "blocked_below_floor": [
+              {
+                "column": "map_50_95",
+                "deficit": 0.0016190000000000093,
+                "objective": "mAP@50-95",
+                "point": "Iterativa r50 + PTQ",
+                "reference": "n PTQ",
+                "threshold": 0.004579
+              },
+              {
+                "column": "map_50_95",
+                "deficit": 1.5000000000015001e-05,
+                "objective": "mAP@50-95",
+                "point": "L1 r50 + QAT",
+                "reference": "n PTQ",
+                "threshold": 0.004579
+              }
+            ],
+            "dominated_by": {
+              "n FP32": [
+                "Aleatoria r25 + PTQ",
+                "Aleatoria r50",
+                "BN r50",
+                "L1 r25 + PTQ",
+                "L1 r25 + QAT",
+                "L1 r50",
+                "s PTQ",
+                "s QAT"
+              ],
+              "n PTQ": [
+                "Aleatoria r50 + PTQ",
+                "BN r50 + PTQ",
+                "L1 r50 + PTQ"
+              ]
+            },
+            "floors": [
+              {
+                "floor": 0.092649714815871,
+                "kind": "relativo",
+                "objective": "latencia p50"
+              },
+              {
+                "floor": 0.004579,
+                "kind": "absoluto",
+                "objective": "mAP@50-95"
+              }
+            ],
+            "references": [
+              "n FP32",
+              "n PTQ"
+            ],
+            "small_members": [
+              "Aleatoria r25",
+              "Iterativa r50",
+              "Iterativa r50 + PTQ",
+              "L1 r25",
+              "L1 r50 + QAT",
+              "s FP32"
+            ]
+          },
+          "openvino": {
+            "blocked_below_floor": [],
+            "dominated_by": {
+              "n FP32": [
+                "Aleatoria r25 + PTQ",
+                "Aleatoria r50",
+                "BN r50",
+                "L1 r25 + PTQ",
+                "L1 r25 + QAT",
+                "L1 r50",
+                "s PTQ",
+                "s QAT"
+              ],
+              "n PTQ": [
+                "Aleatoria r50 + PTQ",
+                "BN r50 + PTQ"
+              ]
+            },
+            "floors": [
+              {
+                "floor": 0.092649714815871,
+                "kind": "relativo",
+                "objective": "latencia p50"
+              },
+              {
+                "floor": 0.004579,
+                "kind": "absoluto",
+                "objective": "mAP@50-95"
+              }
+            ],
+            "references": [
+              "n FP32",
+              "n PTQ"
+            ],
+            "small_members": [
+              "Aleatoria r25",
+              "Iterativa r50",
+              "Iterativa r50 + PTQ",
+              "L1 r25",
+              "L1 r50 + PTQ",
+              "L1 r50 + QAT",
+              "s FP32"
+            ]
+          }
+        }
+      },
+      "views": [
+        "plano_map5095_p50"
+      ]
+    }
+  },
+  "intro_figures": {
+    "resultado_frontera_por_motor_workstation_cpu": {
+      "figure": "resultado_frontera_por_motor_workstation_cpu",
+      "summary": {
+        "device_id": "workstation_cpu",
+        "runtimes": {
+          "onnxruntime": {
+            "labelled": [
+              "n PTQ",
+              "n FP32",
+              "L1 r25",
+              "s FP32",
+              "m FP32",
+              "l FP32"
+            ],
+            "labels": [
+              {
+                "dx_pt": -19.01,
+                "offset_pt": -9.61,
+                "side": "left",
+                "text": "n PTQ"
+              },
+              {
+                "dx_pt": -22.28,
+                "offset_pt": 9.61,
+                "side": "left",
+                "text": "n FP32"
+              },
+              {
+                "dx_pt": -20.65,
+                "offset_pt": 9.61,
+                "side": "left",
+                "text": "L1 r25"
+              },
+              {
+                "dx_pt": -21.38,
+                "offset_pt": 9.61,
+                "side": "left",
+                "text": "s FP32"
+              },
+              {
+                "dx_pt": -30.41,
+                "offset_pt": -9.61,
+                "side": "left",
+                "text": "m FP32"
+              },
+              {
+                "dx_pt": -20.07,
+                "offset_pt": -9.61,
+                "side": "left",
+                "text": "l FP32"
+              },
+              {
+                "dx_pt": -90.76,
+                "offset_pt": 14.12,
+                "side": "left",
+                "text": "poda r50 con cuantización"
+              }
+            ],
+            "members": [
+              "Aleatoria r25",
+              "Iterativa r50",
+              "Iterativa r50 + PTQ",
+              "L1 r25",
+              "L1 r50 + QAT",
+              "l FP32",
+              "m FP32",
+              "n FP32",
+              "n PTQ",
+              "s FP32"
+            ],
+            "zone": [
+              "Iterativa r50 + PTQ",
+              "L1 r50 + QAT"
+            ]
+          },
+          "openvino": {
+            "labelled": [
+              "n PTQ",
+              "n FP32",
+              "L1 r25",
+              "s FP32",
+              "m FP32",
+              "l FP32"
+            ],
+            "labels": [
+              {
+                "dx_pt": -19.01,
+                "offset_pt": 9.61,
+                "side": "left",
+                "text": "n PTQ"
+              },
+              {
+                "dx_pt": -22.28,
+                "offset_pt": 9.61,
+                "side": "left",
+                "text": "n FP32"
+              },
+              {
+                "dx_pt": -20.65,
+                "offset_pt": 9.61,
+                "side": "left",
+                "text": "L1 r25"
+              },
+              {
+                "dx_pt": -21.38,
+                "offset_pt": 9.61,
+                "side": "left",
+                "text": "s FP32"
+              },
+              {
+                "dx_pt": -30.41,
+                "offset_pt": -9.61,
+                "side": "left",
+                "text": "m FP32"
+              },
+              {
+                "dx_pt": -20.07,
+                "offset_pt": -9.61,
+                "side": "left",
+                "text": "l FP32"
+              },
+              {
+                "dx_pt": 3.0,
+                "offset_pt": -17.64,
+                "side": "right",
+                "text": "poda r50 con cuantización"
+              }
+            ],
+            "members": [
+              "Aleatoria r25",
+              "Iterativa r50",
+              "Iterativa r50 + PTQ",
+              "L1 r25",
+              "L1 r50 + PTQ",
+              "L1 r50 + QAT",
+              "l FP32",
+              "m FP32",
+              "n FP32",
+              "n PTQ",
+              "s FP32"
+            ],
+            "zone": [
+              "Iterativa r50 + PTQ",
+              "L1 r50 + PTQ",
+              "L1 r50 + QAT"
+            ]
+          }
+        }
+      },
+      "views": [
+        "plano_map5095_p50"
+      ]
+    }
+  },
+  "views": {
+    "plano_map5095_p50": {
+      "workstation_cpu": {
+        "dominations_lost_to_floor": 6,
+        "figure": "frontera_map5095_p50_workstation_cpu",
+        "frontier_robust": [
+          "l_baseline_default_188b9407 [onnxruntime/fp32]",
+          "l_baseline_default_188b9407 [openvino/fp32]",
+          "m_baseline_default_dfe22158 [onnxruntime/fp32]",
+          "m_baseline_default_dfe22158 [openvino/fp32]",
+          "n_baseline_default_fab9d45c [openvino/fp32]",
+          "n_ptq_int8-noexcl_a78f566a [openvino/int8]",
+          "s_baseline_default_745e3d08 [onnxruntime/fp32]",
+          "s_baseline_default_745e3d08 [openvino/fp32]",
+          "s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5 [openvino/int8]",
+          "s_combined_prune-l1global-r50-ptqint8_9067dba2 [openvino/int8]",
+          "s_pruning_l1global_r25_4e91ddbc [onnxruntime/fp32]",
+          "s_pruning_l1global_r25_4e91ddbc [openvino/fp32]",
+          "s_pruning_l1global_r25_randomctl_a658e5d4 [openvino/fp32]",
+          "s_pruning_l1global_r50_iter4_d8fe066f [openvino/fp32]",
+          "s_qat_int8-noexcl_43300d34 [openvino/int8]"
+        ],
+        "frontier_strict": [
+          "l_baseline_default_188b9407 [onnxruntime/fp32]",
+          "m_baseline_default_dfe22158 [onnxruntime/fp32]",
+          "n_baseline_default_fab9d45c [openvino/fp32]",
+          "n_ptq_int8-noexcl_a78f566a [openvino/int8]",
+          "s_baseline_default_745e3d08 [openvino/fp32]",
+          "s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5 [openvino/int8]",
+          "s_combined_prune-l1global-r50-ptqint8_9067dba2 [openvino/int8]",
+          "s_pruning_l1global_r25_4e91ddbc [onnxruntime/fp32]",
+          "s_pruning_l1global_r25_4e91ddbc [openvino/fp32]",
+          "s_pruning_l1global_r25_randomctl_a658e5d4 [openvino/fp32]",
+          "s_pruning_l1global_r50_iter4_d8fe066f [openvino/fp32]",
+          "s_qat_int8-noexcl_43300d34 [openvino/int8]"
+        ],
+        "num_points": 50,
+        "panels": {
+          "__dispositivo__": {
+            "cross_session": [],
+            "cross_session_floor_drawn": false,
+            "dominated_marked": [],
+            "families": [
+              "baseline",
+              "combined",
+              "pruning",
+              "ptq",
+              "qat"
+            ],
+            "floor_anchor": 425.81115,
+            "indistinguishable_drawn": 11,
+            "num_points": 50,
+            "reference_environment": "af4650a76eb8",
+            "robust_only": [
+              "s_baseline_default_745e3d08 [onnxruntime/fp32]",
+              "m_baseline_default_dfe22158 [openvino/fp32]",
+              "l_baseline_default_188b9407 [openvino/fp32]"
+            ]
+          },
+          "onnxruntime": {
+            "cross_session": [],
+            "cross_session_floor_drawn": false,
+            "dominated_marked": [],
+            "families": [
+              "baseline",
+              "combined",
+              "pruning",
+              "ptq",
+              "qat"
+            ],
+            "floor_anchor": 425.81115,
+            "indistinguishable_drawn": 4,
+            "num_points": 23,
+            "reference_environment": "af4650a76eb8",
+            "robust_only": []
+          },
+          "openvino": {
+            "cross_session": [],
+            "cross_session_floor_drawn": false,
+            "dominated_marked": [],
+            "families": [
+              "baseline",
+              "combined",
+              "pruning",
+              "ptq",
+              "qat"
+            ],
+            "floor_anchor": 425.81115,
+            "indistinguishable_drawn": 3,
+            "num_points": 23,
+            "reference_environment": "af4650a76eb8",
+            "robust_only": []
+          },
+          "pytorch": {
+            "cross_session": [],
+            "cross_session_floor_drawn": false,
+            "dominated_marked": [],
+            "families": [
+              "baseline"
+            ],
+            "floor_anchor": 425.81115,
+            "indistinguishable_drawn": 0,
+            "num_points": 4,
+            "reference_environment": "af4650a76eb8",
+            "robust_only": []
+          }
+        }
+      }
+    },
+    "plano_map50_p50": {
+      "workstation_cpu": {
+        "dominations_lost_to_floor": 33,
+        "figure": "frontera_map50_p50_workstation_cpu",
+        "frontier_robust": [
+          "m_baseline_default_dfe22158 [onnxruntime/fp32]",
+          "m_baseline_default_dfe22158 [openvino/fp32]",
+          "n_baseline_default_fab9d45c [openvino/fp32]",
+          "n_ptq_int8-noexcl_a78f566a [openvino/int8]",
+          "s_baseline_default_745e3d08 [onnxruntime/fp32]",
+          "s_baseline_default_745e3d08 [openvino/fp32]",
+          "s_combined_prune-l1global-r25-ptqint8_4a1d5adc [openvino/int8]",
+          "s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5 [openvino/int8]",
+          "s_combined_prune-l1global-r50-ptqint8_9067dba2 [openvino/int8]",
+          "s_pruning_l1global_r25_4e91ddbc [openvino/fp32]",
+          "s_pruning_l1global_r25_randomctl_a658e5d4 [openvino/fp32]",
+          "s_ptq_int8-noexcl_5bcd71f0 [openvino/int8]",
+          "s_qat_int8-noexcl_43300d34 [openvino/int8]",
+          "s_qat_int8-noexcl_4d491880 [openvino/int8]",
+          "s_qat_int8-noexcl_d4d403fa [openvino/int8]"
+        ],
+        "frontier_strict": [
+          "m_baseline_default_dfe22158 [onnxruntime/fp32]",
+          "n_baseline_default_fab9d45c [openvino/fp32]",
+          "n_ptq_int8-noexcl_a78f566a [openvino/int8]",
+          "s_baseline_default_745e3d08 [openvino/fp32]",
+          "s_combined_prune-l1global-r25-ptqint8_4a1d5adc [openvino/int8]",
+          "s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5 [openvino/int8]",
+          "s_combined_prune-l1global-r50-ptqint8_9067dba2 [openvino/int8]",
+          "s_pruning_l1global_r25_4e91ddbc [openvino/fp32]",
+          "s_pruning_l1global_r25_randomctl_a658e5d4 [openvino/fp32]",
+          "s_ptq_int8-noexcl_5bcd71f0 [openvino/int8]",
+          "s_qat_int8-noexcl_43300d34 [openvino/int8]"
+        ],
+        "num_points": 50,
+        "panels": {
+          "__dispositivo__": {
+            "cross_session": [],
+            "cross_session_floor_drawn": false,
+            "dominated_marked": [],
+            "families": [
+              "baseline",
+              "combined",
+              "pruning",
+              "ptq",
+              "qat"
+            ],
+            "floor_anchor": 425.81115,
+            "indistinguishable_drawn": 3,
+            "num_points": 50,
+            "reference_environment": "af4650a76eb8",
+            "robust_only": [
+              "s_qat_int8-noexcl_4d491880 [openvino/int8]",
+              "s_qat_int8-noexcl_d4d403fa [openvino/int8]",
+              "s_baseline_default_745e3d08 [onnxruntime/fp32]",
+              "m_baseline_default_dfe22158 [openvino/fp32]"
+            ]
+          },
+          "onnxruntime": {
+            "cross_session": [],
+            "cross_session_floor_drawn": false,
+            "dominated_marked": [],
+            "families": [
+              "baseline",
+              "combined",
+              "pruning",
+              "ptq",
+              "qat"
+            ],
+            "floor_anchor": 425.81115,
+            "indistinguishable_drawn": 0,
+            "num_points": 23,
+            "reference_environment": "af4650a76eb8",
+            "robust_only": []
+          },
+          "openvino": {
+            "cross_session": [],
+            "cross_session_floor_drawn": false,
+            "dominated_marked": [],
+            "families": [
+              "baseline",
+              "combined",
+              "pruning",
+              "ptq",
+              "qat"
+            ],
+            "floor_anchor": 425.81115,
+            "indistinguishable_drawn": 0,
+            "num_points": 23,
+            "reference_environment": "af4650a76eb8",
+            "robust_only": [
+              "s_qat_int8-noexcl_4d491880 [openvino/int8]",
+              "s_qat_int8-noexcl_d4d403fa [openvino/int8]"
+            ]
+          },
+          "pytorch": {
+            "cross_session": [],
+            "cross_session_floor_drawn": false,
+            "dominated_marked": [],
+            "families": [
+              "baseline"
+            ],
+            "floor_anchor": 425.81115,
+            "indistinguishable_drawn": 0,
+            "num_points": 4,
+            "reference_environment": "af4650a76eb8",
+            "robust_only": []
+          }
+        }
+      }
+    },
+    "spec_3d_map5095_p95_memoria": {
+      "workstation_cpu": {
+        "dominations_lost_to_floor": 1,
+        "figure": "frontera_map5095_p95_memoria_workstation_cpu",
+        "frontier_robust": [
+          "l_baseline_default_188b9407 [onnxruntime/fp32]",
+          "l_baseline_default_188b9407 [pytorch/fp32]",
+          "m_baseline_default_dfe22158 [onnxruntime/fp32]",
+          "m_baseline_default_dfe22158 [pytorch/fp32]",
+          "n_baseline_default_fab9d45c [onnxruntime/fp32]",
+          "n_baseline_default_fab9d45c [openvino/fp32]",
+          "n_baseline_default_fab9d45c [pytorch/fp32]",
+          "n_ptq_int8-noexcl_a78f566a [onnxruntime/int8]",
+          "n_ptq_int8-noexcl_a78f566a [openvino/int8]",
+          "s_baseline_default_745e3d08 [onnxruntime/fp32]",
+          "s_baseline_default_745e3d08 [openvino/fp32]",
+          "s_baseline_default_745e3d08 [pytorch/fp32]",
+          "s_combined_prune-l1global-r25-ptqint8_4a1d5adc [onnxruntime/int8]",
+          "s_combined_prune-l1global-r25-randomctl-ptqint8_e70dc4d6 [onnxruntime/int8]",
+          "s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5 [onnxruntime/int8]",
+          "s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5 [openvino/int8]",
+          "s_combined_prune-l1global-r50-ptqint8_9067dba2 [openvino/int8]",
+          "s_pruning_l1global_r25_4e91ddbc [onnxruntime/fp32]",
+          "s_pruning_l1global_r25_4e91ddbc [openvino/fp32]",
+          "s_pruning_l1global_r25_randomctl_a658e5d4 [onnxruntime/fp32]",
+          "s_pruning_l1global_r25_randomctl_a658e5d4 [openvino/fp32]",
+          "s_pruning_l1global_r50_iter4_d8fe066f [onnxruntime/fp32]",
+          "s_pruning_l1global_r50_iter4_d8fe066f [openvino/fp32]",
+          "s_ptq_int8-noexcl_5bcd71f0 [onnxruntime/int8]",
+          "s_qat_int8-noexcl_43300d34 [onnxruntime/int8]",
+          "s_qat_int8-noexcl_43300d34 [openvino/int8]",
+          "s_qat_int8-noexcl_4d491880 [onnxruntime/int8]"
+        ],
+        "frontier_strict": [
+          "l_baseline_default_188b9407 [onnxruntime/fp32]",
+          "l_baseline_default_188b9407 [pytorch/fp32]",
+          "m_baseline_default_dfe22158 [onnxruntime/fp32]",
+          "m_baseline_default_dfe22158 [pytorch/fp32]",
+          "n_baseline_default_fab9d45c [onnxruntime/fp32]",
+          "n_baseline_default_fab9d45c [openvino/fp32]",
+          "n_baseline_default_fab9d45c [pytorch/fp32]",
+          "n_ptq_int8-noexcl_a78f566a [onnxruntime/int8]",
+          "n_ptq_int8-noexcl_a78f566a [openvino/int8]",
+          "s_baseline_default_745e3d08 [onnxruntime/fp32]",
+          "s_baseline_default_745e3d08 [openvino/fp32]",
+          "s_baseline_default_745e3d08 [pytorch/fp32]",
+          "s_combined_prune-l1global-r25-randomctl-ptqint8_e70dc4d6 [onnxruntime/int8]",
+          "s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5 [onnxruntime/int8]",
+          "s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5 [openvino/int8]",
+          "s_combined_prune-l1global-r50-ptqint8_9067dba2 [openvino/int8]",
+          "s_pruning_l1global_r25_4e91ddbc [onnxruntime/fp32]",
+          "s_pruning_l1global_r25_4e91ddbc [openvino/fp32]",
+          "s_pruning_l1global_r25_randomctl_a658e5d4 [onnxruntime/fp32]",
+          "s_pruning_l1global_r25_randomctl_a658e5d4 [openvino/fp32]",
+          "s_pruning_l1global_r50_iter4_d8fe066f [onnxruntime/fp32]",
+          "s_pruning_l1global_r50_iter4_d8fe066f [openvino/fp32]",
+          "s_ptq_int8-noexcl_5bcd71f0 [onnxruntime/int8]",
+          "s_qat_int8-noexcl_43300d34 [onnxruntime/int8]",
+          "s_qat_int8-noexcl_43300d34 [openvino/int8]",
+          "s_qat_int8-noexcl_4d491880 [onnxruntime/int8]"
+        ],
+        "num_points": 50,
+        "panels": {
+          "__dispositivo__": {
+            "cross_session": [],
+            "cross_session_floor_drawn": false,
+            "dominated_marked": [
+              "l_baseline_default_188b9407 [openvino/fp32]",
+              "l_ptq_int8-noexcl_4a52a7e5 [onnxruntime/int8]",
+              "l_ptq_int8-noexcl_4a52a7e5 [openvino/int8]",
+              "m_baseline_default_dfe22158 [openvino/fp32]",
+              "m_ptq_int8-noexcl_b1a6e9e7 [onnxruntime/int8]",
+              "m_ptq_int8-noexcl_b1a6e9e7 [openvino/int8]",
+              "s_combined_prune-bnscale-r50-ptqint8_7712cb36 [onnxruntime/int8]",
+              "s_combined_prune-bnscale-r50-ptqint8_7712cb36 [openvino/int8]",
+              "s_combined_prune-l1global-r25-ptqint8_4a1d5adc [openvino/int8]",
+              "s_combined_prune-l1global-r25-randomctl-ptqint8_e70dc4d6 [openvino/int8]",
+              "s_combined_prune-l1global-r50-ptqint8_9067dba2 [onnxruntime/int8]",
+              "s_combined_prune-l1global-r50-randomctl-ptqint8_13a9774e [onnxruntime/int8]",
+              "s_combined_prune-l1global-r50-randomctl-ptqint8_13a9774e [openvino/int8]",
+              "s_pruning_bnscale_r50_f51fef4c [onnxruntime/fp32]",
+              "s_pruning_bnscale_r50_f51fef4c [openvino/fp32]",
+              "s_pruning_l1global_r50_9419b26f [onnxruntime/fp32]",
+              "s_pruning_l1global_r50_9419b26f [openvino/fp32]",
+              "s_pruning_l1global_r50_randomctl_d581bd22 [onnxruntime/fp32]",
+              "s_pruning_l1global_r50_randomctl_d581bd22 [openvino/fp32]",
+              "s_ptq_int8-noexcl_5bcd71f0 [openvino/int8]",
+              "s_qat_int8-noexcl_4d491880 [openvino/int8]",
+              "s_qat_int8-noexcl_d4d403fa [onnxruntime/int8]",
+              "s_qat_int8-noexcl_d4d403fa [openvino/int8]"
+            ],
+            "families": [
+              "baseline",
+              "combined",
+              "pruning",
+              "ptq",
+              "qat"
+            ],
+            "floor_anchor": 446.19155,
+            "indistinguishable_drawn": 8,
+            "memory_range": [
+              411.195,
+              843.336
+            ],
+            "num_points": 50,
+            "reference_environment": "af4650a76eb8",
+            "robust_only": [
+              "s_combined_prune-l1global-r25-ptqint8_4a1d5adc [onnxruntime/int8]"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

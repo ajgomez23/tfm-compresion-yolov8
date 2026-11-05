@@ -1,0 +1,22 @@
+{
+  "experiment_id": "s_pruning_l1global_r50_iter4_d8fe066f",
+  "decision": "D-185",
+  "tramos_en_orden": [
+    "finetune_step1",
+    "finetune_step2",
+    "finetune_step3",
+    "finetune"
+  ],
+  "wall_time_s_por_tramo": {
+    "finetune_step1": 637.86,
+    "finetune_step2": 600.25,
+    "finetune_step3": 559.1,
+    "finetune": 2830.26
+  },
+  "training_time_s_antes": "2830.26",
+  "training_time_s_despues": "4627.47",
+  "training_epochs_antes": "30",
+  "training_epochs_despues": "45",
+  "sumando_final_en_el_volcado": "results/raw/pruning/s_pruning_l1global_r50_iter4_d8fe066f.json :: finetune.cost.wall_time_s",
+  "por_que_no_estan_en_models": "models/ esta en .gitignore: sin esta copia un clon limpio no puede comprobar la suma"
+}

@@ -1,0 +1,31 @@
+# Perfil no válido para medir latencia. Existe para que el protocolo rechace la medida con un error
+# explícito en lugar de producir números no comparables.
+device_id: cloud_gpu
+description: >-
+  Instancia de nube compartida (Google Colab, T4), usada para entrenar y para
+  parte de la evaluacion de calidad (filas de quality_metrics.csv con entorno
+  google_colab+container); nunca para exportar, cuantizar ni medir latencia o
+  memoria. La validacion del pipeline en servicios gestionados (AWS SageMaker)
+  salio del alcance y no se ejecuto.
+device_type: cuda
+valid_for_measurement: false
+invalid_reason: >-
+  Instancia compartida cuyo hardware cambia entre sesiones. Los percentiles de
+  latencia (p95, p99) son la parte mas sensible a la contencion, y son justo los
+  que interesan al hablar de despliegue en el borde: aqui medirian a los vecinos.
+  Colab entrena y evalua calidad (SageMaker no llego a usarse); la
+  latencia se mide en el hardware fisico del autor.
+available: true
+requires_temperature: true
+num_threads: null
+cpu_affinity: []
+backends:
+  - pytorch
+warmup_iterations: 50
+measure_iterations: 300
+repetitions: 3
+throughput_batch_sizes: [1, 2, 4, 8, 16]
+latency_representative: false
+notes: >-
+  Que valid_for_measurement sea false NO impide entrenar ni evaluar calidad
+  aqui: el mAP no depende de la contencion. Solo prohibe medir latencia.

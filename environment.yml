@@ -1,0 +1,25 @@
+# Entorno conda de referencia del proyecto.
+#
+#     conda env create -f environment.yml
+#     conda activate tfm-edge
+#     pip install -e .
+#     python scripts/00_setup_check.py
+#
+# Python 3.11 es la versión de referencia, con buena cobertura en la cadena de exportación (ONNX,
+# OpenVINO, TensorFlow para TFLite). El código admite 3.10 o superior.
+#
+# torch se instala con pip y no desde este fichero, porque la variante (CPU, cu121, cu124...)
+# depende del driver de la máquina; ver README.md.
+name: tfm-edge
+
+channels:
+  - conda-forge
+
+dependencies:
+  - python=3.11
+  - pip
+
+  # Compiladores y utilidades para construir algunas ruedas (por ejemplo pycocotools) sin depender
+  # del sistema anfitrión.
+  - pip:
+      - -r requirements.txt

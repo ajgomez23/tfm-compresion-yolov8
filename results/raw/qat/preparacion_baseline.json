@@ -1,0 +1,44 @@
+{
+  "preparation": {
+    "num_weight_observers": 64,
+    "num_activation_observers": 121,
+    "excluded_modules": [],
+    "qengine": "x86",
+    "gradient_flows": true,
+    "config": {
+      "qengine": "x86",
+      "excluded_modules": [],
+      "exclude_head": false,
+      "freeze_observers_epoch": null,
+      "freeze_bn_epoch": null
+    }
+  },
+  "prepare_seconds": 2.39,
+  "parameters": {
+    "original": 11142179,
+    "prepared": 11142179,
+    "stripped": 11142179
+  },
+  "weights_roundtrip": {
+    "tensors_compared": 355,
+    "tensors_missing": 0,
+    "tensors_differing": 0,
+    "max_abs_diff": 0.0
+  },
+  "forward_roundtrip": {
+    "shape": [
+      1,
+      21,
+      8400
+    ],
+    "max_abs_diff": 0.0
+  },
+  "observers_exercised": {
+    "before_forward": false,
+    "after_forward": true
+  },
+  "freeze_bn_raises": true,
+  "observer_callbacks": [
+    "on_train_epoch_start"
+  ]
+}

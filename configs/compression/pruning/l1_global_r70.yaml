@@ -1,0 +1,11 @@
+# Poda estructurada, norma L1, reparto global, ratio 70 %.
+#
+# Punto alto de la curva. Con capas de 16 canales, un 70 % puede dejar alguna por debajo del mínimo;
+# si la campaña aborta, eso marca el límite estructural de la arquitectura.
+
+_base_: l1_global_r50.yaml
+
+technique_variant: l1global_r70
+
+pruning:
+  ratio: 0.70

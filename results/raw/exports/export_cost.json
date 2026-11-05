@@ -1,0 +1,1605 @@
+{
+  "column": "export_time_s",
+  "filled": [
+    {
+      "artifact": "results/exports/combined/s_combined_prune-bnscale-r50-ptqint8_7712cb36/s_combined_prune-bnscale-r50-ptqint8_7712cb36_fp32_openvino/s_combined_prune-bnscale-r50-ptqint8_7712cb36_fp32.xml",
+      "key": {
+        "batch_size": "1",
+        "device_id": "workstation_cpu",
+        "experiment_id": "s_pruning_bnscale_r50_f51fef4c",
+        "precision": "fp32",
+        "runtime": "openvino"
+      },
+      "label": "s_pruning_bnscale_r50_f51fef4c/openvino/fp32/workstation_cpu/1",
+      "seconds": 1.79,
+      "steps": [
+        {
+          "artifact": "results/exports/combined/s_combined_prune-bnscale-r50-ptqint8_7712cb36/s_combined_prune-bnscale-r50-ptqint8_7712cb36_fp32_openvino/s_combined_prune-bnscale-r50-ptqint8_7712cb36_fp32.xml",
+          "dump": "results/exports/combined/s_combined_prune-bnscale-r50-ptqint8_7712cb36/s_combined_prune-bnscale-r50-ptqint8_7712cb36_combined.json",
+          "kind": "export",
+          "seconds": 0.71,
+          "source": "results/exports/combined/s_combined_prune-bnscale-r50-ptqint8_7712cb36/s_combined_prune-bnscale-r50-ptqint8_7712cb36_fp32.onnx",
+          "status": "ok",
+          "target": "openvino"
+        },
+        {
+          "artifact": "results/exports/combined/s_combined_prune-bnscale-r50-ptqint8_7712cb36/s_combined_prune-bnscale-r50-ptqint8_7712cb36_fp32.onnx",
+          "dump": "results/exports/combined/s_combined_prune-bnscale-r50-ptqint8_7712cb36/s_combined_prune-bnscale-r50-ptqint8_7712cb36_combined.json",
+          "kind": "export",
+          "seconds": 1.08,
+          "source": null,
+          "status": "ok",
+          "target": "onnx"
+        }
+      ]
+    },
+    {
+      "artifact": "results/exports/combined/s_combined_prune-bnscale-r50-ptqint8_7712cb36/s_combined_prune-bnscale-r50-ptqint8_7712cb36_fp32.onnx",
+      "key": {
+        "batch_size": "1",
+        "device_id": "workstation_cpu",
+        "experiment_id": "s_pruning_bnscale_r50_f51fef4c",
+        "precision": "fp32",
+        "runtime": "onnxruntime"
+      },
+      "label": "s_pruning_bnscale_r50_f51fef4c/onnxruntime/fp32/workstation_cpu/1",
+      "seconds": 1.08,
+      "steps": [
+        {
+          "artifact": "results/exports/combined/s_combined_prune-bnscale-r50-ptqint8_7712cb36/s_combined_prune-bnscale-r50-ptqint8_7712cb36_fp32.onnx",
+          "dump": "results/exports/combined/s_combined_prune-bnscale-r50-ptqint8_7712cb36/s_combined_prune-bnscale-r50-ptqint8_7712cb36_combined.json",
+          "kind": "export",
+          "seconds": 1.08,
+          "source": null,
+          "status": "ok",
+          "target": "onnx"
+        }
+      ]
+    },
+    {
+      "artifact": "results/exports/n_baseline_default_ptq/n_baseline_default_fp32_openvino/n_baseline_default_fp32.xml",
+      "key": {
+        "batch_size": "1",
+        "device_id": "workstation_cpu",
+        "experiment_id": "n_baseline_default_fab9d45c",
+        "precision": "fp32",
+        "runtime": "openvino"
+      },
+      "label": "n_baseline_default_fab9d45c/openvino/fp32/workstation_cpu/1",
+      "seconds": 3.54,
+      "steps": [
+        {
+          "artifact": "results/exports/n_baseline_default_ptq/n_baseline_default_fp32_openvino/n_baseline_default_fp32.xml",
+          "dump": "results/exports/n_baseline_default_ptq/n_baseline_default_ptq.json",
+          "kind": "export",
+          "seconds": 0.89,
+          "source": "results/exports/n_baseline_default_ptq/n_baseline_default_fp32.onnx",
+          "status": "ok",
+          "target": "openvino"
+        },
+        {
+          "artifact": "results/exports/n_baseline_default_ptq/n_baseline_default_fp32.onnx",
+          "dump": "results/exports/n_baseline_default_ptq/n_baseline_default_ptq.json",
+          "kind": "export",
+          "seconds": 2.65,
+          "source": null,
+          "status": "ok",
+          "target": "onnx"
+        }
+      ]
+    },
+    {
+      "artifact": "results/exports/combined/s_combined_prune-l1global-r50-ptqint8_9067dba2/s_combined_prune-l1global-r50-ptqint8_9067dba2_int8_openvino/s_combined_prune-l1global-r50-ptqint8_9067dba2_int8.xml",
+      "key": {
+        "batch_size": "1",
+        "device_id": "workstation_cpu",
+        "experiment_id": "s_combined_prune-l1global-r50-ptqint8_9067dba2",
+        "precision": "int8",
+        "runtime": "openvino"
+      },
+      "label": "s_combined_prune-l1global-r50-ptqint8_9067dba2/openvino/int8/workstation_cpu/1",
+      "seconds": 24.38,
+      "steps": [
+        {
+          "artifact": "results/exports/combined/s_combined_prune-l1global-r50-ptqint8_9067dba2/s_combined_prune-l1global-r50-ptqint8_9067dba2_int8_openvino/s_combined_prune-l1global-r50-ptqint8_9067dba2_int8.xml",
+          "dump": "results/exports/combined/s_combined_prune-l1global-r50-ptqint8_9067dba2/s_combined_prune-l1global-r50-ptqint8_9067dba2_combined.json",
+          "kind": "quantize",
+          "seconds": 21.88,
+          "source": "results/exports/combined/s_combined_prune-l1global-r50-ptqint8_9067dba2/s_combined_prune-l1global-r50-ptqint8_9067dba2_fp32_openvino/s_combined_prune-l1global-r50-ptqint8_9067dba2_fp32.xml",
+          "status": "ok",
+          "target": "openvino"
+        },
+        {
+          "artifact": "results/exports/combined/s_combined_prune-l1global-r50-ptqint8_9067dba2/s_combined_prune-l1global-r50-ptqint8_9067dba2_fp32_openvino/s_combined_prune-l1global-r50-ptqint8_9067dba2_fp32.xml",
+          "dump": "results/exports/combined/s_combined_prune-l1global-r50-ptqint8_9067dba2/s_combined_prune-l1global-r50-ptqint8_9067dba2_combined.json",
+          "kind": "export",
+          "seconds": 0.55,
+          "source": "results/exports/combined/s_combined_prune-l1global-r50-ptqint8_9067dba2/s_combined_prune-l1global-r50-ptqint8_9067dba2_fp32.onnx",
+          "status": "ok",
+          "target": "openvino"
+        },
+        {
+          "artifact": "results/exports/combined/s_combined_prune-l1global-r50-ptqint8_9067dba2/s_combined_prune-l1global-r50-ptqint8_9067dba2_fp32.onnx",
+          "dump": "results/exports/combined/s_combined_prune-l1global-r50-ptqint8_9067dba2/s_combined_prune-l1global-r50-ptqint8_9067dba2_combined.json",
+          "kind": "export",
+          "seconds": 1.95,
+          "source": null,
+          "status": "ok",
+          "target": "onnx"
+        }
+      ]
+    },
+    {
+      "artifact": "results/exports/combined/s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5/s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5_fp32.onnx",
+      "key": {
+        "batch_size": "1",
+        "device_id": "workstation_cpu",
+        "experiment_id": "s_pruning_l1global_r50_iter4_d8fe066f",
+        "precision": "fp32",
+        "runtime": "onnxruntime"
+      },
+      "label": "s_pruning_l1global_r50_iter4_d8fe066f/onnxruntime/fp32/workstation_cpu/1",
+      "seconds": 1.11,
+      "steps": [
+        {
+          "artifact": "results/exports/combined/s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5/s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5_fp32.onnx",
+          "dump": "results/exports/combined/s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5/s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5_combined.json",
+          "kind": "export",
+          "seconds": 1.11,
+          "source": null,
+          "status": "ok",
+          "target": "onnx"
+        }
+      ]
+    },
+    {
+      "artifact": "results/exports/m_baseline_default_ptq/m_baseline_default_fp32.onnx",
+      "key": {
+        "batch_size": "1",
+        "device_id": "workstation_cpu",
+        "experiment_id": "m_baseline_default_dfe22158",
+        "precision": "fp32",
+        "runtime": "onnxruntime"
+      },
+      "label": "m_baseline_default_dfe22158/onnxruntime/fp32/workstation_cpu/1",
+      "seconds": 5.96,
+      "steps": [
+        {
+          "artifact": "results/exports/m_baseline_default_ptq/m_baseline_default_fp32.onnx",
+          "dump": "results/exports/m_baseline_default_ptq/m_baseline_default_ptq.json",
+          "kind": "export",
+          "seconds": 5.96,
+          "source": null,
+          "status": "ok",
+          "target": "onnx"
+        }
+      ]
+    },
+    {
+      "artifact": "results/exports/combined/s_combined_prune-l1global-r25-ptqint8_4a1d5adc/s_combined_prune-l1global-r25-ptqint8_4a1d5adc_fp32.onnx",
+      "key": {
+        "batch_size": "1",
+        "device_id": "workstation_cpu",
+        "experiment_id": "s_pruning_l1global_r25_4e91ddbc",
+        "precision": "fp32",
+        "runtime": "onnxruntime"
+      },
+      "label": "s_pruning_l1global_r25_4e91ddbc/onnxruntime/fp32/workstation_cpu/1",
+      "seconds": 1.24,
+      "steps": [
+        {
+          "artifact": "results/exports/combined/s_combined_prune-l1global-r25-ptqint8_4a1d5adc/s_combined_prune-l1global-r25-ptqint8_4a1d5adc_fp32.onnx",
+          "dump": "results/exports/combined/s_combined_prune-l1global-r25-ptqint8_4a1d5adc/s_combined_prune-l1global-r25-ptqint8_4a1d5adc_combined.json",
+          "kind": "export",
+          "seconds": 1.24,
+          "source": null,
+          "status": "ok",
+          "target": "onnx"
+        }
+      ]
+    },
+    {
+      "artifact": "results/exports/l_baseline_default_ptq/l_baseline_default_int8_onnxruntime.onnx",
+      "key": {
+        "batch_size": "1",
+        "device_id": "workstation_cpu",
+        "experiment_id": "l_ptq_int8-noexcl_4a52a7e5",
+        "precision": "int8",
+        "runtime": "onnxruntime"
+      },
+      "label": "l_ptq_int8-noexcl_4a52a7e5/onnxruntime/int8/workstation_cpu/1",
+      "seconds": 215.08,
+      "steps": [
+        {
+          "artifact": "results/exports/l_baseline_default_ptq/l_baseline_default_int8_onnxruntime.onnx",
+          "dump": "results/exports/l_baseline_default_ptq/l_baseline_default_ptq.json",
+          "kind": "quantize",
+          "seconds": 203.75,
+          "source": "results/exports/l_baseline_default_ptq/l_baseline_default_fp32.onnx",
+          "status": "ok",
+          "target": "onnxruntime"
+        },
+        {
+          "artifact": "results/exports/l_baseline_default_ptq/l_baseline_default_fp32.onnx",
+          "dump": "results/exports/l_baseline_default_ptq/l_baseline_default_ptq.json",
+          "kind": "export",
+          "seconds": 11.33,
+          "source": null,
+          "status": "ok",
+          "target": "onnx"
+        }
+      ]
+    },
+    {
+      "artifact": "results/exports/s_baseline_default_ptq/s_baseline_default_int8_onnxruntime.onnx",
+      "key": {
+        "batch_size": "1",
+        "device_id": "workstation_cpu",
+        "experiment_id": "s_ptq_int8-noexcl_5bcd71f0",
+        "precision": "int8",
+        "runtime": "onnxruntime"
+      },
+      "label": "s_ptq_int8-noexcl_5bcd71f0/onnxruntime/int8/workstation_cpu/1",
+      "seconds": 36.07,
+      "steps": [
+        {
+          "artifact": "results/exports/s_baseline_default_ptq/s_baseline_default_int8_onnxruntime.onnx",
+          "dump": "results/exports/s_baseline_default_ptq/s_baseline_default_ptq.json",
+          "kind": "quantize",
+          "seconds": 34.03,
+          "source": "results/exports/s_baseline_default_ptq/s_baseline_default_fp32.onnx",
+          "status": "ok",
+          "target": "onnxruntime"
+        },
+        {
+          "artifact": "results/exports/s_baseline_default_ptq/s_baseline_default_fp32.onnx",
+          "dump": "results/exports/s_baseline_default_ptq/s_baseline_default_ptq.json",
+          "kind": "export",
+          "seconds": 2.04,
+          "source": null,
+          "status": "ok",
+          "target": "onnx"
+        }
+      ]
+    },
+    {
+      "artifact": "results/exports/combined/s_combined_prune-l1global-r50-ptqint8_9067dba2/s_combined_prune-l1global-r50-ptqint8_9067dba2_fp32.onnx",
+      "key": {
+        "batch_size": "1",
+        "device_id": "workstation_cpu",
+        "experiment_id": "s_pruning_l1global_r50_9419b26f",
+        "precision": "fp32",
+        "runtime": "onnxruntime"
+      },
+      "label": "s_pruning_l1global_r50_9419b26f/onnxruntime/fp32/workstation_cpu/1",
+      "seconds": 1.95,
+      "steps": [
+        {
+          "artifact": "results/exports/combined/s_combined_prune-l1global-r50-ptqint8_9067dba2/s_combined_prune-l1global-r50-ptqint8_9067dba2_fp32.onnx",
+          "dump": "results/exports/combined/s_combined_prune-l1global-r50-ptqint8_9067dba2/s_combined_prune-l1global-r50-ptqint8_9067dba2_combined.json",
+          "kind": "export",
+          "seconds": 1.95,
+          "source": null,
+          "status": "ok",
+          "target": "onnx"
+        }
+      ]
+    },
+    {
+      "artifact": "results/exports/combined/s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5/s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5_int8_openvino/s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5_int8.xml",
+      "key": {
+        "batch_size": "1",
+        "device_id": "workstation_cpu",
+        "experiment_id": "s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5",
+        "precision": "int8",
+        "runtime": "openvino"
+      },
+      "label": "s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5/openvino/int8/workstation_cpu/1",
+      "seconds": 24.94,
+      "steps": [
+        {
+          "artifact": "results/exports/combined/s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5/s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5_int8_openvino/s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5_int8.xml",
+          "dump": "results/exports/combined/s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5/s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5_combined.json",
+          "kind": "quantize",
+          "seconds": 23.07,
+          "source": "results/exports/combined/s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5/s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5_fp32_openvino/s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5_fp32.xml",
+          "status": "ok",
+          "target": "openvino"
+        },
+        {
+          "artifact": "results/exports/combined/s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5/s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5_fp32_openvino/s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5_fp32.xml",
+          "dump": "results/exports/combined/s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5/s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5_combined.json",
+          "kind": "export",
+          "seconds": 0.76,
+          "source": "results/exports/combined/s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5/s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5_fp32.onnx",
+          "status": "ok",
+          "target": "openvino"
+        },
+        {
+          "artifact": "results/exports/combined/s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5/s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5_fp32.onnx",
+          "dump": "results/exports/combined/s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5/s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5_combined.json",
+          "kind": "export",
+          "seconds": 1.11,
+          "source": null,
+          "status": "ok",
+          "target": "onnx"
+        }
+      ]
+    },
+    {
+      "artifact": "results/exports/combined/s_combined_prune-l1global-r50-ptqint8_9067dba2/s_combined_prune-l1global-r50-ptqint8_9067dba2_int8_onnxruntime.onnx",
+      "key": {
+        "batch_size": "1",
+        "device_id": "workstation_cpu",
+        "experiment_id": "s_combined_prune-l1global-r50-ptqint8_9067dba2",
+        "precision": "int8",
+        "runtime": "onnxruntime"
+      },
+      "label": "s_combined_prune-l1global-r50-ptqint8_9067dba2/onnxruntime/int8/workstation_cpu/1",
+      "seconds": 20.75,
+      "steps": [
+        {
+          "artifact": "results/exports/combined/s_combined_prune-l1global-r50-ptqint8_9067dba2/s_combined_prune-l1global-r50-ptqint8_9067dba2_int8_onnxruntime.onnx",
+          "dump": "results/exports/combined/s_combined_prune-l1global-r50-ptqint8_9067dba2/s_combined_prune-l1global-r50-ptqint8_9067dba2_combined.json",
+          "kind": "quantize",
+          "seconds": 18.8,
+          "source": "results/exports/combined/s_combined_prune-l1global-r50-ptqint8_9067dba2/s_combined_prune-l1global-r50-ptqint8_9067dba2_fp32.onnx",
+          "status": "ok",
+          "target": "onnxruntime"
+        },
+        {
+          "artifact": "results/exports/combined/s_combined_prune-l1global-r50-ptqint8_9067dba2/s_combined_prune-l1global-r50-ptqint8_9067dba2_fp32.onnx",
+          "dump": "results/exports/combined/s_combined_prune-l1global-r50-ptqint8_9067dba2/s_combined_prune-l1global-r50-ptqint8_9067dba2_combined.json",
+          "kind": "export",
+          "seconds": 1.95,
+          "source": null,
+          "status": "ok",
+          "target": "onnx"
+        }
+      ]
+    },
+    {
+      "artifact": "results/exports/combined/s_combined_prune-bnscale-r50-ptqint8_7712cb36/s_combined_prune-bnscale-r50-ptqint8_7712cb36_int8_onnxruntime.onnx",
+      "key": {
+        "batch_size": "1",
+        "device_id": "workstation_cpu",
+        "experiment_id": "s_combined_prune-bnscale-r50-ptqint8_7712cb36",
+        "precision": "int8",
+        "runtime": "onnxruntime"
+      },
+      "label": "s_combined_prune-bnscale-r50-ptqint8_7712cb36/onnxruntime/int8/workstation_cpu/1",
+      "seconds": 20.83,
+      "steps": [
+        {
+          "artifact": "results/exports/combined/s_combined_prune-bnscale-r50-ptqint8_7712cb36/s_combined_prune-bnscale-r50-ptqint8_7712cb36_int8_onnxruntime.onnx",
+          "dump": "results/exports/combined/s_combined_prune-bnscale-r50-ptqint8_7712cb36/s_combined_prune-bnscale-r50-ptqint8_7712cb36_combined.json",
+          "kind": "quantize",
+          "seconds": 19.75,
+          "source": "results/exports/combined/s_combined_prune-bnscale-r50-ptqint8_7712cb36/s_combined_prune-bnscale-r50-ptqint8_7712cb36_fp32.onnx",
+          "status": "ok",
+          "target": "onnxruntime"
+        },
+        {
+          "artifact": "results/exports/combined/s_combined_prune-bnscale-r50-ptqint8_7712cb36/s_combined_prune-bnscale-r50-ptqint8_7712cb36_fp32.onnx",
+          "dump": "results/exports/combined/s_combined_prune-bnscale-r50-ptqint8_7712cb36/s_combined_prune-bnscale-r50-ptqint8_7712cb36_combined.json",
+          "kind": "export",
+          "seconds": 1.08,
+          "source": null,
+          "status": "ok",
+          "target": "onnx"
+        }
+      ]
+    },
+    {
+      "artifact": "results/exports/combined/s_combined_prune-l1global-r50-ptqint8_9067dba2/s_combined_prune-l1global-r50-ptqint8_9067dba2_fp32_openvino/s_combined_prune-l1global-r50-ptqint8_9067dba2_fp32.xml",
+      "key": {
+        "batch_size": "1",
+        "device_id": "workstation_cpu",
+        "experiment_id": "s_pruning_l1global_r50_9419b26f",
+        "precision": "fp32",
+        "runtime": "openvino"
+      },
+      "label": "s_pruning_l1global_r50_9419b26f/openvino/fp32/workstation_cpu/1",
+      "seconds": 2.5,
+      "steps": [
+        {
+          "artifact": "results/exports/combined/s_combined_prune-l1global-r50-ptqint8_9067dba2/s_combined_prune-l1global-r50-ptqint8_9067dba2_fp32_openvino/s_combined_prune-l1global-r50-ptqint8_9067dba2_fp32.xml",
+          "dump": "results/exports/combined/s_combined_prune-l1global-r50-ptqint8_9067dba2/s_combined_prune-l1global-r50-ptqint8_9067dba2_combined.json",
+          "kind": "export",
+          "seconds": 0.55,
+          "source": "results/exports/combined/s_combined_prune-l1global-r50-ptqint8_9067dba2/s_combined_prune-l1global-r50-ptqint8_9067dba2_fp32.onnx",
+          "status": "ok",
+          "target": "openvino"
+        },
+        {
+          "artifact": "results/exports/combined/s_combined_prune-l1global-r50-ptqint8_9067dba2/s_combined_prune-l1global-r50-ptqint8_9067dba2_fp32.onnx",
+          "dump": "results/exports/combined/s_combined_prune-l1global-r50-ptqint8_9067dba2/s_combined_prune-l1global-r50-ptqint8_9067dba2_combined.json",
+          "kind": "export",
+          "seconds": 1.95,
+          "source": null,
+          "status": "ok",
+          "target": "onnx"
+        }
+      ]
+    },
+    {
+      "artifact": "results/exports/m_baseline_default_ptq/m_baseline_default_fp32_openvino/m_baseline_default_fp32.xml",
+      "key": {
+        "batch_size": "1",
+        "device_id": "workstation_cpu",
+        "experiment_id": "m_baseline_default_dfe22158",
+        "precision": "fp32",
+        "runtime": "openvino"
+      },
+      "label": "m_baseline_default_dfe22158/openvino/fp32/workstation_cpu/1",
+      "seconds": 7.15,
+      "steps": [
+        {
+          "artifact": "results/exports/m_baseline_default_ptq/m_baseline_default_fp32_openvino/m_baseline_default_fp32.xml",
+          "dump": "results/exports/m_baseline_default_ptq/m_baseline_default_ptq.json",
+          "kind": "export",
+          "seconds": 1.19,
+          "source": "results/exports/m_baseline_default_ptq/m_baseline_default_fp32.onnx",
+          "status": "ok",
+          "target": "openvino"
+        },
+        {
+          "artifact": "results/exports/m_baseline_default_ptq/m_baseline_default_fp32.onnx",
+          "dump": "results/exports/m_baseline_default_ptq/m_baseline_default_ptq.json",
+          "kind": "export",
+          "seconds": 5.96,
+          "source": null,
+          "status": "ok",
+          "target": "onnx"
+        }
+      ]
+    },
+    {
+      "artifact": "results/exports/combined/s_combined_prune-l1global-r50-randomctl-ptqint8_13a9774e/s_combined_prune-l1global-r50-randomctl-ptqint8_13a9774e_fp32.onnx",
+      "key": {
+        "batch_size": "1",
+        "device_id": "workstation_cpu",
+        "experiment_id": "s_pruning_l1global_r50_randomctl_d581bd22",
+        "precision": "fp32",
+        "runtime": "onnxruntime"
+      },
+      "label": "s_pruning_l1global_r50_randomctl_d581bd22/onnxruntime/fp32/workstation_cpu/1",
+      "seconds": 0.95,
+      "steps": [
+        {
+          "artifact": "results/exports/combined/s_combined_prune-l1global-r50-randomctl-ptqint8_13a9774e/s_combined_prune-l1global-r50-randomctl-ptqint8_13a9774e_fp32.onnx",
+          "dump": "results/exports/combined/s_combined_prune-l1global-r50-randomctl-ptqint8_13a9774e/s_combined_prune-l1global-r50-randomctl-ptqint8_13a9774e_combined.json",
+          "kind": "export",
+          "seconds": 0.95,
+          "source": null,
+          "status": "ok",
+          "target": "onnx"
+        }
+      ]
+    },
+    {
+      "artifact": "results/exports/l_baseline_default_ptq/l_baseline_default_int8_openvino/l_baseline_default_int8.xml",
+      "key": {
+        "batch_size": "1",
+        "device_id": "workstation_cpu",
+        "experiment_id": "l_ptq_int8-noexcl_4a52a7e5",
+        "precision": "int8",
+        "runtime": "openvino"
+      },
+      "label": "l_ptq_int8-noexcl_4a52a7e5/openvino/int8/workstation_cpu/1",
+      "seconds": 210.04,
+      "steps": [
+        {
+          "artifact": "results/exports/l_baseline_default_ptq/l_baseline_default_int8_openvino/l_baseline_default_int8.xml",
+          "dump": "results/exports/l_baseline_default_ptq/l_baseline_default_ptq.json",
+          "kind": "quantize",
+          "seconds": 195.85,
+          "source": "results/exports/l_baseline_default_ptq/l_baseline_default_fp32_openvino/l_baseline_default_fp32.xml",
+          "status": "ok",
+          "target": "openvino"
+        },
+        {
+          "artifact": "results/exports/l_baseline_default_ptq/l_baseline_default_fp32_openvino/l_baseline_default_fp32.xml",
+          "dump": "results/exports/l_baseline_default_ptq/l_baseline_default_ptq.json",
+          "kind": "export",
+          "seconds": 2.86,
+          "source": "results/exports/l_baseline_default_ptq/l_baseline_default_fp32.onnx",
+          "status": "ok",
+          "target": "openvino"
+        },
+        {
+          "artifact": "results/exports/l_baseline_default_ptq/l_baseline_default_fp32.onnx",
+          "dump": "results/exports/l_baseline_default_ptq/l_baseline_default_ptq.json",
+          "kind": "export",
+          "seconds": 11.33,
+          "source": null,
+          "status": "ok",
+          "target": "onnx"
+        }
+      ]
+    },
+    {
+      "artifact": "results/exports/s_qat_int8-noexcl_d4d403fa_qat/s_qat_int8-noexcl_d4d403fa_int8_openvino/s_qat_int8-noexcl_d4d403fa_int8.xml",
+      "key": {
+        "batch_size": "1",
+        "device_id": "workstation_cpu",
+        "experiment_id": "s_qat_int8-noexcl_d4d403fa",
+        "precision": "int8",
+        "runtime": "openvino"
+      },
+      "label": "s_qat_int8-noexcl_d4d403fa/openvino/int8/workstation_cpu/1",
+      "seconds": 39.75,
+      "steps": [
+        {
+          "artifact": "results/exports/s_qat_int8-noexcl_d4d403fa_qat/s_qat_int8-noexcl_d4d403fa_int8_openvino/s_qat_int8-noexcl_d4d403fa_int8.xml",
+          "dump": "results/exports/s_qat_int8-noexcl_d4d403fa_qat/s_qat_int8-noexcl_d4d403fa_qat_int8.json",
+          "kind": "quantize",
+          "seconds": 36.51,
+          "source": "results/exports/s_qat_int8-noexcl_d4d403fa_qat/s_qat_int8-noexcl_d4d403fa_fp32_openvino/s_qat_int8-noexcl_d4d403fa_fp32.xml",
+          "status": "ok",
+          "target": "openvino"
+        },
+        {
+          "artifact": "results/exports/s_qat_int8-noexcl_d4d403fa_qat/s_qat_int8-noexcl_d4d403fa_fp32_openvino/s_qat_int8-noexcl_d4d403fa_fp32.xml",
+          "dump": "results/exports/s_qat_int8-noexcl_d4d403fa_qat/s_qat_int8-noexcl_d4d403fa_qat_int8.json",
+          "kind": "export",
+          "seconds": 0.69,
+          "source": "results/exports/s_qat_int8-noexcl_d4d403fa_qat/s_qat_int8-noexcl_d4d403fa_fp32.onnx",
+          "status": "ok",
+          "target": "openvino"
+        },
+        {
+          "artifact": "results/exports/s_qat_int8-noexcl_d4d403fa_qat/s_qat_int8-noexcl_d4d403fa_fp32.onnx",
+          "dump": "results/exports/s_qat_int8-noexcl_d4d403fa_qat/s_qat_int8-noexcl_d4d403fa_qat_int8.json",
+          "kind": "export",
+          "seconds": 2.55,
+          "source": null,
+          "status": "ok",
+          "target": "onnx"
+        }
+      ]
+    },
+    {
+      "artifact": "results/exports/combined/s_combined_prune-l1global-r25-randomctl-ptqint8_e70dc4d6/s_combined_prune-l1global-r25-randomctl-ptqint8_e70dc4d6_fp32.onnx",
+      "key": {
+        "batch_size": "1",
+        "device_id": "workstation_cpu",
+        "experiment_id": "s_pruning_l1global_r25_randomctl_a658e5d4",
+        "precision": "fp32",
+        "runtime": "onnxruntime"
+      },
+      "label": "s_pruning_l1global_r25_randomctl_a658e5d4/onnxruntime/fp32/workstation_cpu/1",
+      "seconds": 1.26,
+      "steps": [
+        {
+          "artifact": "results/exports/combined/s_combined_prune-l1global-r25-randomctl-ptqint8_e70dc4d6/s_combined_prune-l1global-r25-randomctl-ptqint8_e70dc4d6_fp32.onnx",
+          "dump": "results/exports/combined/s_combined_prune-l1global-r25-randomctl-ptqint8_e70dc4d6/s_combined_prune-l1global-r25-randomctl-ptqint8_e70dc4d6_combined.json",
+          "kind": "export",
+          "seconds": 1.26,
+          "source": null,
+          "status": "ok",
+          "target": "onnx"
+        }
+      ]
+    },
+    {
+      "artifact": "results/exports/combined/s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5/s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5_int8_onnxruntime.onnx",
+      "key": {
+        "batch_size": "1",
+        "device_id": "workstation_cpu",
+        "experiment_id": "s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5",
+        "precision": "int8",
+        "runtime": "onnxruntime"
+      },
+      "label": "s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5/onnxruntime/int8/workstation_cpu/1",
+      "seconds": 21.96,
+      "steps": [
+        {
+          "artifact": "results/exports/combined/s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5/s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5_int8_onnxruntime.onnx",
+          "dump": "results/exports/combined/s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5/s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5_combined.json",
+          "kind": "quantize",
+          "seconds": 20.85,
+          "source": "results/exports/combined/s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5/s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5_fp32.onnx",
+          "status": "ok",
+          "target": "onnxruntime"
+        },
+        {
+          "artifact": "results/exports/combined/s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5/s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5_fp32.onnx",
+          "dump": "results/exports/combined/s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5/s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5_combined.json",
+          "kind": "export",
+          "seconds": 1.11,
+          "source": null,
+          "status": "ok",
+          "target": "onnx"
+        }
+      ]
+    },
+    {
+      "artifact": "results/exports/s_qat_int8-noexcl_43300d34_qat/s_qat_int8-noexcl_43300d34_int8_onnxruntime.onnx",
+      "key": {
+        "batch_size": "1",
+        "device_id": "workstation_cpu",
+        "experiment_id": "s_qat_int8-noexcl_43300d34",
+        "precision": "int8",
+        "runtime": "onnxruntime"
+      },
+      "label": "s_qat_int8-noexcl_43300d34/onnxruntime/int8/workstation_cpu/1",
+      "seconds": 23.08,
+      "steps": [
+        {
+          "artifact": "results/exports/s_qat_int8-noexcl_43300d34_qat/s_qat_int8-noexcl_43300d34_int8_onnxruntime.onnx",
+          "dump": "results/exports/s_qat_int8-noexcl_43300d34_qat/s_qat_int8-noexcl_43300d34_qat_int8.json",
+          "kind": "quantize",
+          "seconds": 21.13,
+          "source": "results/exports/s_qat_int8-noexcl_43300d34_qat/s_qat_int8-noexcl_43300d34_fp32.onnx",
+          "status": "ok",
+          "target": "onnxruntime"
+        },
+        {
+          "artifact": "results/exports/s_qat_int8-noexcl_43300d34_qat/s_qat_int8-noexcl_43300d34_fp32.onnx",
+          "dump": "results/exports/s_qat_int8-noexcl_43300d34_qat/s_qat_int8-noexcl_43300d34_qat_int8.json",
+          "kind": "export",
+          "seconds": 1.95,
+          "source": null,
+          "status": "ok",
+          "target": "onnx"
+        }
+      ]
+    },
+    {
+      "artifact": "results/exports/n_baseline_default_ptq/n_baseline_default_fp32.onnx",
+      "key": {
+        "batch_size": "1",
+        "device_id": "workstation_cpu",
+        "experiment_id": "n_baseline_default_fab9d45c",
+        "precision": "fp32",
+        "runtime": "onnxruntime"
+      },
+      "label": "n_baseline_default_fab9d45c/onnxruntime/fp32/workstation_cpu/1",
+      "seconds": 2.65,
+      "steps": [
+        {
+          "artifact": "results/exports/n_baseline_default_ptq/n_baseline_default_fp32.onnx",
+          "dump": "results/exports/n_baseline_default_ptq/n_baseline_default_ptq.json",
+          "kind": "export",
+          "seconds": 2.65,
+          "source": null,
+          "status": "ok",
+          "target": "onnx"
+        }
+      ]
+    },
+    {
+      "artifact": "results/exports/combined/s_combined_prune-l1global-r25-ptqint8_4a1d5adc/s_combined_prune-l1global-r25-ptqint8_4a1d5adc_int8_onnxruntime.onnx",
+      "key": {
+        "batch_size": "1",
+        "device_id": "workstation_cpu",
+        "experiment_id": "s_combined_prune-l1global-r25-ptqint8_4a1d5adc",
+        "precision": "int8",
+        "runtime": "onnxruntime"
+      },
+      "label": "s_combined_prune-l1global-r25-ptqint8_4a1d5adc/onnxruntime/int8/workstation_cpu/1",
+      "seconds": 30.36,
+      "steps": [
+        {
+          "artifact": "results/exports/combined/s_combined_prune-l1global-r25-ptqint8_4a1d5adc/s_combined_prune-l1global-r25-ptqint8_4a1d5adc_int8_onnxruntime.onnx",
+          "dump": "results/exports/combined/s_combined_prune-l1global-r25-ptqint8_4a1d5adc/s_combined_prune-l1global-r25-ptqint8_4a1d5adc_combined.json",
+          "kind": "quantize",
+          "seconds": 29.12,
+          "source": "results/exports/combined/s_combined_prune-l1global-r25-ptqint8_4a1d5adc/s_combined_prune-l1global-r25-ptqint8_4a1d5adc_fp32.onnx",
+          "status": "ok",
+          "target": "onnxruntime"
+        },
+        {
+          "artifact": "results/exports/combined/s_combined_prune-l1global-r25-ptqint8_4a1d5adc/s_combined_prune-l1global-r25-ptqint8_4a1d5adc_fp32.onnx",
+          "dump": "results/exports/combined/s_combined_prune-l1global-r25-ptqint8_4a1d5adc/s_combined_prune-l1global-r25-ptqint8_4a1d5adc_combined.json",
+          "kind": "export",
+          "seconds": 1.24,
+          "source": null,
+          "status": "ok",
+          "target": "onnx"
+        }
+      ]
+    },
+    {
+      "artifact": "results/exports/combined/s_combined_prune-l1global-r25-ptqint8_4a1d5adc/s_combined_prune-l1global-r25-ptqint8_4a1d5adc_int8_openvino/s_combined_prune-l1global-r25-ptqint8_4a1d5adc_int8.xml",
+      "key": {
+        "batch_size": "1",
+        "device_id": "workstation_cpu",
+        "experiment_id": "s_combined_prune-l1global-r25-ptqint8_4a1d5adc",
+        "precision": "int8",
+        "runtime": "openvino"
+      },
+      "label": "s_combined_prune-l1global-r25-ptqint8_4a1d5adc/openvino/int8/workstation_cpu/1",
+      "seconds": 33.63,
+      "steps": [
+        {
+          "artifact": "results/exports/combined/s_combined_prune-l1global-r25-ptqint8_4a1d5adc/s_combined_prune-l1global-r25-ptqint8_4a1d5adc_int8_openvino/s_combined_prune-l1global-r25-ptqint8_4a1d5adc_int8.xml",
+          "dump": "results/exports/combined/s_combined_prune-l1global-r25-ptqint8_4a1d5adc/s_combined_prune-l1global-r25-ptqint8_4a1d5adc_combined.json",
+          "kind": "quantize",
+          "seconds": 31.77,
+          "source": "results/exports/combined/s_combined_prune-l1global-r25-ptqint8_4a1d5adc/s_combined_prune-l1global-r25-ptqint8_4a1d5adc_fp32_openvino/s_combined_prune-l1global-r25-ptqint8_4a1d5adc_fp32.xml",
+          "status": "ok",
+          "target": "openvino"
+        },
+        {
+          "artifact": "results/exports/combined/s_combined_prune-l1global-r25-ptqint8_4a1d5adc/s_combined_prune-l1global-r25-ptqint8_4a1d5adc_fp32_openvino/s_combined_prune-l1global-r25-ptqint8_4a1d5adc_fp32.xml",
+          "dump": "results/exports/combined/s_combined_prune-l1global-r25-ptqint8_4a1d5adc/s_combined_prune-l1global-r25-ptqint8_4a1d5adc_combined.json",
+          "kind": "export",
+          "seconds": 0.62,
+          "source": "results/exports/combined/s_combined_prune-l1global-r25-ptqint8_4a1d5adc/s_combined_prune-l1global-r25-ptqint8_4a1d5adc_fp32.onnx",
+          "status": "ok",
+          "target": "openvino"
+        },
+        {
+          "artifact": "results/exports/combined/s_combined_prune-l1global-r25-ptqint8_4a1d5adc/s_combined_prune-l1global-r25-ptqint8_4a1d5adc_fp32.onnx",
+          "dump": "results/exports/combined/s_combined_prune-l1global-r25-ptqint8_4a1d5adc/s_combined_prune-l1global-r25-ptqint8_4a1d5adc_combined.json",
+          "kind": "export",
+          "seconds": 1.24,
+          "source": null,
+          "status": "ok",
+          "target": "onnx"
+        }
+      ]
+    },
+    {
+      "artifact": "results/exports/s_baseline_default_ptq/s_baseline_default_int8_openvino/s_baseline_default_int8.xml",
+      "key": {
+        "batch_size": "1",
+        "device_id": "workstation_cpu",
+        "experiment_id": "s_ptq_int8-noexcl_5bcd71f0",
+        "precision": "int8",
+        "runtime": "openvino"
+      },
+      "label": "s_ptq_int8-noexcl_5bcd71f0/openvino/int8/workstation_cpu/1",
+      "seconds": 40.41,
+      "steps": [
+        {
+          "artifact": "results/exports/s_baseline_default_ptq/s_baseline_default_int8_openvino/s_baseline_default_int8.xml",
+          "dump": "results/exports/s_baseline_default_ptq/s_baseline_default_ptq.json",
+          "kind": "quantize",
+          "seconds": 37.67,
+          "source": "results/exports/s_baseline_default_ptq/s_baseline_default_fp32_openvino/s_baseline_default_fp32.xml",
+          "status": "ok",
+          "target": "openvino"
+        },
+        {
+          "artifact": "results/exports/s_baseline_default_ptq/s_baseline_default_fp32_openvino/s_baseline_default_fp32.xml",
+          "dump": "results/exports/s_baseline_default_ptq/s_baseline_default_ptq.json",
+          "kind": "export",
+          "seconds": 0.7,
+          "source": "results/exports/s_baseline_default_ptq/s_baseline_default_fp32.onnx",
+          "status": "ok",
+          "target": "openvino"
+        },
+        {
+          "artifact": "results/exports/s_baseline_default_ptq/s_baseline_default_fp32.onnx",
+          "dump": "results/exports/s_baseline_default_ptq/s_baseline_default_ptq.json",
+          "kind": "export",
+          "seconds": 2.04,
+          "source": null,
+          "status": "ok",
+          "target": "onnx"
+        }
+      ]
+    },
+    {
+      "artifact": "results/exports/s_baseline_default_ptq/s_baseline_default_fp32_openvino/s_baseline_default_fp32.xml",
+      "key": {
+        "batch_size": "1",
+        "device_id": "workstation_cpu",
+        "experiment_id": "s_baseline_default_745e3d08",
+        "precision": "fp32",
+        "runtime": "openvino"
+      },
+      "label": "s_baseline_default_745e3d08/openvino/fp32/workstation_cpu/1",
+      "seconds": 2.74,
+      "steps": [
+        {
+          "artifact": "results/exports/s_baseline_default_ptq/s_baseline_default_fp32_openvino/s_baseline_default_fp32.xml",
+          "dump": "results/exports/s_baseline_default_ptq/s_baseline_default_ptq.json",
+          "kind": "export",
+          "seconds": 0.7,
+          "source": "results/exports/s_baseline_default_ptq/s_baseline_default_fp32.onnx",
+          "status": "ok",
+          "target": "openvino"
+        },
+        {
+          "artifact": "results/exports/s_baseline_default_ptq/s_baseline_default_fp32.onnx",
+          "dump": "results/exports/s_baseline_default_ptq/s_baseline_default_ptq.json",
+          "kind": "export",
+          "seconds": 2.04,
+          "source": null,
+          "status": "ok",
+          "target": "onnx"
+        }
+      ]
+    },
+    {
+      "artifact": "results/exports/s_qat_int8-noexcl_43300d34_qat/s_qat_int8-noexcl_43300d34_int8_openvino/s_qat_int8-noexcl_43300d34_int8.xml",
+      "key": {
+        "batch_size": "1",
+        "device_id": "workstation_cpu",
+        "experiment_id": "s_qat_int8-noexcl_43300d34",
+        "precision": "int8",
+        "runtime": "openvino"
+      },
+      "label": "s_qat_int8-noexcl_43300d34/openvino/int8/workstation_cpu/1",
+      "seconds": 25.3,
+      "steps": [
+        {
+          "artifact": "results/exports/s_qat_int8-noexcl_43300d34_qat/s_qat_int8-noexcl_43300d34_int8_openvino/s_qat_int8-noexcl_43300d34_int8.xml",
+          "dump": "results/exports/s_qat_int8-noexcl_43300d34_qat/s_qat_int8-noexcl_43300d34_qat_int8.json",
+          "kind": "quantize",
+          "seconds": 22.86,
+          "source": "results/exports/s_qat_int8-noexcl_43300d34_qat/s_qat_int8-noexcl_43300d34_fp32_openvino/s_qat_int8-noexcl_43300d34_fp32.xml",
+          "status": "ok",
+          "target": "openvino"
+        },
+        {
+          "artifact": "results/exports/s_qat_int8-noexcl_43300d34_qat/s_qat_int8-noexcl_43300d34_fp32_openvino/s_qat_int8-noexcl_43300d34_fp32.xml",
+          "dump": "results/exports/s_qat_int8-noexcl_43300d34_qat/s_qat_int8-noexcl_43300d34_qat_int8.json",
+          "kind": "export",
+          "seconds": 0.49,
+          "source": "results/exports/s_qat_int8-noexcl_43300d34_qat/s_qat_int8-noexcl_43300d34_fp32.onnx",
+          "status": "ok",
+          "target": "openvino"
+        },
+        {
+          "artifact": "results/exports/s_qat_int8-noexcl_43300d34_qat/s_qat_int8-noexcl_43300d34_fp32.onnx",
+          "dump": "results/exports/s_qat_int8-noexcl_43300d34_qat/s_qat_int8-noexcl_43300d34_qat_int8.json",
+          "kind": "export",
+          "seconds": 1.95,
+          "source": null,
+          "status": "ok",
+          "target": "onnx"
+        }
+      ]
+    },
+    {
+      "artifact": "results/exports/combined/s_combined_prune-l1global-r50-randomctl-ptqint8_13a9774e/s_combined_prune-l1global-r50-randomctl-ptqint8_13a9774e_int8_onnxruntime.onnx",
+      "key": {
+        "batch_size": "1",
+        "device_id": "workstation_cpu",
+        "experiment_id": "s_combined_prune-l1global-r50-randomctl-ptqint8_13a9774e",
+        "precision": "int8",
+        "runtime": "onnxruntime"
+      },
+      "label": "s_combined_prune-l1global-r50-randomctl-ptqint8_13a9774e/onnxruntime/int8/workstation_cpu/1",
+      "seconds": 19.82,
+      "steps": [
+        {
+          "artifact": "results/exports/combined/s_combined_prune-l1global-r50-randomctl-ptqint8_13a9774e/s_combined_prune-l1global-r50-randomctl-ptqint8_13a9774e_int8_onnxruntime.onnx",
+          "dump": "results/exports/combined/s_combined_prune-l1global-r50-randomctl-ptqint8_13a9774e/s_combined_prune-l1global-r50-randomctl-ptqint8_13a9774e_combined.json",
+          "kind": "quantize",
+          "seconds": 18.87,
+          "source": "results/exports/combined/s_combined_prune-l1global-r50-randomctl-ptqint8_13a9774e/s_combined_prune-l1global-r50-randomctl-ptqint8_13a9774e_fp32.onnx",
+          "status": "ok",
+          "target": "onnxruntime"
+        },
+        {
+          "artifact": "results/exports/combined/s_combined_prune-l1global-r50-randomctl-ptqint8_13a9774e/s_combined_prune-l1global-r50-randomctl-ptqint8_13a9774e_fp32.onnx",
+          "dump": "results/exports/combined/s_combined_prune-l1global-r50-randomctl-ptqint8_13a9774e/s_combined_prune-l1global-r50-randomctl-ptqint8_13a9774e_combined.json",
+          "kind": "export",
+          "seconds": 0.95,
+          "source": null,
+          "status": "ok",
+          "target": "onnx"
+        }
+      ]
+    },
+    {
+      "artifact": "results/exports/s_qat_int8-noexcl_4d491880_qat/s_qat_int8-noexcl_4d491880_int8_onnxruntime.onnx",
+      "key": {
+        "batch_size": "1",
+        "device_id": "workstation_cpu",
+        "experiment_id": "s_qat_int8-noexcl_4d491880",
+        "precision": "int8",
+        "runtime": "onnxruntime"
+      },
+      "label": "s_qat_int8-noexcl_4d491880/onnxruntime/int8/workstation_cpu/1",
+      "seconds": 28.83,
+      "steps": [
+        {
+          "artifact": "results/exports/s_qat_int8-noexcl_4d491880_qat/s_qat_int8-noexcl_4d491880_int8_onnxruntime.onnx",
+          "dump": "results/exports/s_qat_int8-noexcl_4d491880_qat/s_qat_int8-noexcl_4d491880_qat_int8.json",
+          "kind": "quantize",
+          "seconds": 26.45,
+          "source": "results/exports/s_qat_int8-noexcl_4d491880_qat/s_qat_int8-noexcl_4d491880_fp32.onnx",
+          "status": "ok",
+          "target": "onnxruntime"
+        },
+        {
+          "artifact": "results/exports/s_qat_int8-noexcl_4d491880_qat/s_qat_int8-noexcl_4d491880_fp32.onnx",
+          "dump": "results/exports/s_qat_int8-noexcl_4d491880_qat/s_qat_int8-noexcl_4d491880_qat_int8.json",
+          "kind": "export",
+          "seconds": 2.38,
+          "source": null,
+          "status": "ok",
+          "target": "onnx"
+        }
+      ]
+    },
+    {
+      "artifact": "results/exports/n_baseline_default_ptq/n_baseline_default_int8_openvino/n_baseline_default_int8.xml",
+      "key": {
+        "batch_size": "1",
+        "device_id": "workstation_cpu",
+        "experiment_id": "n_ptq_int8-noexcl_a78f566a",
+        "precision": "int8",
+        "runtime": "openvino"
+      },
+      "label": "n_ptq_int8-noexcl_a78f566a/openvino/int8/workstation_cpu/1",
+      "seconds": 30.46,
+      "steps": [
+        {
+          "artifact": "results/exports/n_baseline_default_ptq/n_baseline_default_int8_openvino/n_baseline_default_int8.xml",
+          "dump": "results/exports/n_baseline_default_ptq/n_baseline_default_ptq.json",
+          "kind": "quantize",
+          "seconds": 26.92,
+          "source": "results/exports/n_baseline_default_ptq/n_baseline_default_fp32_openvino/n_baseline_default_fp32.xml",
+          "status": "ok",
+          "target": "openvino"
+        },
+        {
+          "artifact": "results/exports/n_baseline_default_ptq/n_baseline_default_fp32_openvino/n_baseline_default_fp32.xml",
+          "dump": "results/exports/n_baseline_default_ptq/n_baseline_default_ptq.json",
+          "kind": "export",
+          "seconds": 0.89,
+          "source": "results/exports/n_baseline_default_ptq/n_baseline_default_fp32.onnx",
+          "status": "ok",
+          "target": "openvino"
+        },
+        {
+          "artifact": "results/exports/n_baseline_default_ptq/n_baseline_default_fp32.onnx",
+          "dump": "results/exports/n_baseline_default_ptq/n_baseline_default_ptq.json",
+          "kind": "export",
+          "seconds": 2.65,
+          "source": null,
+          "status": "ok",
+          "target": "onnx"
+        }
+      ]
+    },
+    {
+      "artifact": "results/exports/combined/s_combined_prune-l1global-r25-randomctl-ptqint8_e70dc4d6/s_combined_prune-l1global-r25-randomctl-ptqint8_e70dc4d6_int8_openvino/s_combined_prune-l1global-r25-randomctl-ptqint8_e70dc4d6_int8.xml",
+      "key": {
+        "batch_size": "1",
+        "device_id": "workstation_cpu",
+        "experiment_id": "s_combined_prune-l1global-r25-randomctl-ptqint8_e70dc4d6",
+        "precision": "int8",
+        "runtime": "openvino"
+      },
+      "label": "s_combined_prune-l1global-r25-randomctl-ptqint8_e70dc4d6/openvino/int8/workstation_cpu/1",
+      "seconds": 32.26,
+      "steps": [
+        {
+          "artifact": "results/exports/combined/s_combined_prune-l1global-r25-randomctl-ptqint8_e70dc4d6/s_combined_prune-l1global-r25-randomctl-ptqint8_e70dc4d6_int8_openvino/s_combined_prune-l1global-r25-randomctl-ptqint8_e70dc4d6_int8.xml",
+          "dump": "results/exports/combined/s_combined_prune-l1global-r25-randomctl-ptqint8_e70dc4d6/s_combined_prune-l1global-r25-randomctl-ptqint8_e70dc4d6_combined.json",
+          "kind": "quantize",
+          "seconds": 30.32,
+          "source": "results/exports/combined/s_combined_prune-l1global-r25-randomctl-ptqint8_e70dc4d6/s_combined_prune-l1global-r25-randomctl-ptqint8_e70dc4d6_fp32_openvino/s_combined_prune-l1global-r25-randomctl-ptqint8_e70dc4d6_fp32.xml",
+          "status": "ok",
+          "target": "openvino"
+        },
+        {
+          "artifact": "results/exports/combined/s_combined_prune-l1global-r25-randomctl-ptqint8_e70dc4d6/s_combined_prune-l1global-r25-randomctl-ptqint8_e70dc4d6_fp32_openvino/s_combined_prune-l1global-r25-randomctl-ptqint8_e70dc4d6_fp32.xml",
+          "dump": "results/exports/combined/s_combined_prune-l1global-r25-randomctl-ptqint8_e70dc4d6/s_combined_prune-l1global-r25-randomctl-ptqint8_e70dc4d6_combined.json",
+          "kind": "export",
+          "seconds": 0.68,
+          "source": "results/exports/combined/s_combined_prune-l1global-r25-randomctl-ptqint8_e70dc4d6/s_combined_prune-l1global-r25-randomctl-ptqint8_e70dc4d6_fp32.onnx",
+          "status": "ok",
+          "target": "openvino"
+        },
+        {
+          "artifact": "results/exports/combined/s_combined_prune-l1global-r25-randomctl-ptqint8_e70dc4d6/s_combined_prune-l1global-r25-randomctl-ptqint8_e70dc4d6_fp32.onnx",
+          "dump": "results/exports/combined/s_combined_prune-l1global-r25-randomctl-ptqint8_e70dc4d6/s_combined_prune-l1global-r25-randomctl-ptqint8_e70dc4d6_combined.json",
+          "kind": "export",
+          "seconds": 1.26,
+          "source": null,
+          "status": "ok",
+          "target": "onnx"
+        }
+      ]
+    },
+    {
+      "artifact": "results/exports/m_baseline_default_ptq/m_baseline_default_int8_openvino/m_baseline_default_int8.xml",
+      "key": {
+        "batch_size": "1",
+        "device_id": "workstation_cpu",
+        "experiment_id": "m_ptq_int8-noexcl_b1a6e9e7",
+        "precision": "int8",
+        "runtime": "openvino"
+      },
+      "label": "m_ptq_int8-noexcl_b1a6e9e7/openvino/int8/workstation_cpu/1",
+      "seconds": 126.45,
+      "steps": [
+        {
+          "artifact": "results/exports/m_baseline_default_ptq/m_baseline_default_int8_openvino/m_baseline_default_int8.xml",
+          "dump": "results/exports/m_baseline_default_ptq/m_baseline_default_ptq.json",
+          "kind": "quantize",
+          "seconds": 119.3,
+          "source": "results/exports/m_baseline_default_ptq/m_baseline_default_fp32_openvino/m_baseline_default_fp32.xml",
+          "status": "ok",
+          "target": "openvino"
+        },
+        {
+          "artifact": "results/exports/m_baseline_default_ptq/m_baseline_default_fp32_openvino/m_baseline_default_fp32.xml",
+          "dump": "results/exports/m_baseline_default_ptq/m_baseline_default_ptq.json",
+          "kind": "export",
+          "seconds": 1.19,
+          "source": "results/exports/m_baseline_default_ptq/m_baseline_default_fp32.onnx",
+          "status": "ok",
+          "target": "openvino"
+        },
+        {
+          "artifact": "results/exports/m_baseline_default_ptq/m_baseline_default_fp32.onnx",
+          "dump": "results/exports/m_baseline_default_ptq/m_baseline_default_ptq.json",
+          "kind": "export",
+          "seconds": 5.96,
+          "source": null,
+          "status": "ok",
+          "target": "onnx"
+        }
+      ]
+    },
+    {
+      "artifact": "results/exports/combined/s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5/s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5_fp32_openvino/s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5_fp32.xml",
+      "key": {
+        "batch_size": "1",
+        "device_id": "workstation_cpu",
+        "experiment_id": "s_pruning_l1global_r50_iter4_d8fe066f",
+        "precision": "fp32",
+        "runtime": "openvino"
+      },
+      "label": "s_pruning_l1global_r50_iter4_d8fe066f/openvino/fp32/workstation_cpu/1",
+      "seconds": 1.87,
+      "steps": [
+        {
+          "artifact": "results/exports/combined/s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5/s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5_fp32_openvino/s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5_fp32.xml",
+          "dump": "results/exports/combined/s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5/s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5_combined.json",
+          "kind": "export",
+          "seconds": 0.76,
+          "source": "results/exports/combined/s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5/s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5_fp32.onnx",
+          "status": "ok",
+          "target": "openvino"
+        },
+        {
+          "artifact": "results/exports/combined/s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5/s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5_fp32.onnx",
+          "dump": "results/exports/combined/s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5/s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5_combined.json",
+          "kind": "export",
+          "seconds": 1.11,
+          "source": null,
+          "status": "ok",
+          "target": "onnx"
+        }
+      ]
+    },
+    {
+      "artifact": "results/exports/l_baseline_default_ptq/l_baseline_default_fp32_openvino/l_baseline_default_fp32.xml",
+      "key": {
+        "batch_size": "1",
+        "device_id": "workstation_cpu",
+        "experiment_id": "l_baseline_default_188b9407",
+        "precision": "fp32",
+        "runtime": "openvino"
+      },
+      "label": "l_baseline_default_188b9407/openvino/fp32/workstation_cpu/1",
+      "seconds": 14.19,
+      "steps": [
+        {
+          "artifact": "results/exports/l_baseline_default_ptq/l_baseline_default_fp32_openvino/l_baseline_default_fp32.xml",
+          "dump": "results/exports/l_baseline_default_ptq/l_baseline_default_ptq.json",
+          "kind": "export",
+          "seconds": 2.86,
+          "source": "results/exports/l_baseline_default_ptq/l_baseline_default_fp32.onnx",
+          "status": "ok",
+          "target": "openvino"
+        },
+        {
+          "artifact": "results/exports/l_baseline_default_ptq/l_baseline_default_fp32.onnx",
+          "dump": "results/exports/l_baseline_default_ptq/l_baseline_default_ptq.json",
+          "kind": "export",
+          "seconds": 11.33,
+          "source": null,
+          "status": "ok",
+          "target": "onnx"
+        }
+      ]
+    },
+    {
+      "artifact": "results/exports/s_qat_int8-noexcl_d4d403fa_qat/s_qat_int8-noexcl_d4d403fa_int8_onnxruntime.onnx",
+      "key": {
+        "batch_size": "1",
+        "device_id": "workstation_cpu",
+        "experiment_id": "s_qat_int8-noexcl_d4d403fa",
+        "precision": "int8",
+        "runtime": "onnxruntime"
+      },
+      "label": "s_qat_int8-noexcl_d4d403fa/onnxruntime/int8/workstation_cpu/1",
+      "seconds": 37.85,
+      "steps": [
+        {
+          "artifact": "results/exports/s_qat_int8-noexcl_d4d403fa_qat/s_qat_int8-noexcl_d4d403fa_int8_onnxruntime.onnx",
+          "dump": "results/exports/s_qat_int8-noexcl_d4d403fa_qat/s_qat_int8-noexcl_d4d403fa_qat_int8.json",
+          "kind": "quantize",
+          "seconds": 35.3,
+          "source": "results/exports/s_qat_int8-noexcl_d4d403fa_qat/s_qat_int8-noexcl_d4d403fa_fp32.onnx",
+          "status": "ok",
+          "target": "onnxruntime"
+        },
+        {
+          "artifact": "results/exports/s_qat_int8-noexcl_d4d403fa_qat/s_qat_int8-noexcl_d4d403fa_fp32.onnx",
+          "dump": "results/exports/s_qat_int8-noexcl_d4d403fa_qat/s_qat_int8-noexcl_d4d403fa_qat_int8.json",
+          "kind": "export",
+          "seconds": 2.55,
+          "source": null,
+          "status": "ok",
+          "target": "onnx"
+        }
+      ]
+    },
+    {
+      "artifact": "results/exports/s_qat_int8-noexcl_4d491880_qat/s_qat_int8-noexcl_4d491880_int8_openvino/s_qat_int8-noexcl_4d491880_int8.xml",
+      "key": {
+        "batch_size": "1",
+        "device_id": "workstation_cpu",
+        "experiment_id": "s_qat_int8-noexcl_4d491880",
+        "precision": "int8",
+        "runtime": "openvino"
+      },
+      "label": "s_qat_int8-noexcl_4d491880/openvino/int8/workstation_cpu/1",
+      "seconds": 35.95,
+      "steps": [
+        {
+          "artifact": "results/exports/s_qat_int8-noexcl_4d491880_qat/s_qat_int8-noexcl_4d491880_int8_openvino/s_qat_int8-noexcl_4d491880_int8.xml",
+          "dump": "results/exports/s_qat_int8-noexcl_4d491880_qat/s_qat_int8-noexcl_4d491880_qat_int8.json",
+          "kind": "quantize",
+          "seconds": 32.93,
+          "source": "results/exports/s_qat_int8-noexcl_4d491880_qat/s_qat_int8-noexcl_4d491880_fp32_openvino/s_qat_int8-noexcl_4d491880_fp32.xml",
+          "status": "ok",
+          "target": "openvino"
+        },
+        {
+          "artifact": "results/exports/s_qat_int8-noexcl_4d491880_qat/s_qat_int8-noexcl_4d491880_fp32_openvino/s_qat_int8-noexcl_4d491880_fp32.xml",
+          "dump": "results/exports/s_qat_int8-noexcl_4d491880_qat/s_qat_int8-noexcl_4d491880_qat_int8.json",
+          "kind": "export",
+          "seconds": 0.64,
+          "source": "results/exports/s_qat_int8-noexcl_4d491880_qat/s_qat_int8-noexcl_4d491880_fp32.onnx",
+          "status": "ok",
+          "target": "openvino"
+        },
+        {
+          "artifact": "results/exports/s_qat_int8-noexcl_4d491880_qat/s_qat_int8-noexcl_4d491880_fp32.onnx",
+          "dump": "results/exports/s_qat_int8-noexcl_4d491880_qat/s_qat_int8-noexcl_4d491880_qat_int8.json",
+          "kind": "export",
+          "seconds": 2.38,
+          "source": null,
+          "status": "ok",
+          "target": "onnx"
+        }
+      ]
+    },
+    {
+      "artifact": "results/exports/s_baseline_default_ptq/s_baseline_default_fp32.onnx",
+      "key": {
+        "batch_size": "1",
+        "device_id": "workstation_cpu",
+        "experiment_id": "s_baseline_default_745e3d08",
+        "precision": "fp32",
+        "runtime": "onnxruntime"
+      },
+      "label": "s_baseline_default_745e3d08/onnxruntime/fp32/workstation_cpu/1",
+      "seconds": 2.04,
+      "steps": [
+        {
+          "artifact": "results/exports/s_baseline_default_ptq/s_baseline_default_fp32.onnx",
+          "dump": "results/exports/s_baseline_default_ptq/s_baseline_default_ptq.json",
+          "kind": "export",
+          "seconds": 2.04,
+          "source": null,
+          "status": "ok",
+          "target": "onnx"
+        }
+      ]
+    },
+    {
+      "artifact": "results/exports/combined/s_combined_prune-l1global-r25-ptqint8_4a1d5adc/s_combined_prune-l1global-r25-ptqint8_4a1d5adc_fp32_openvino/s_combined_prune-l1global-r25-ptqint8_4a1d5adc_fp32.xml",
+      "key": {
+        "batch_size": "1",
+        "device_id": "workstation_cpu",
+        "experiment_id": "s_pruning_l1global_r25_4e91ddbc",
+        "precision": "fp32",
+        "runtime": "openvino"
+      },
+      "label": "s_pruning_l1global_r25_4e91ddbc/openvino/fp32/workstation_cpu/1",
+      "seconds": 1.86,
+      "steps": [
+        {
+          "artifact": "results/exports/combined/s_combined_prune-l1global-r25-ptqint8_4a1d5adc/s_combined_prune-l1global-r25-ptqint8_4a1d5adc_fp32_openvino/s_combined_prune-l1global-r25-ptqint8_4a1d5adc_fp32.xml",
+          "dump": "results/exports/combined/s_combined_prune-l1global-r25-ptqint8_4a1d5adc/s_combined_prune-l1global-r25-ptqint8_4a1d5adc_combined.json",
+          "kind": "export",
+          "seconds": 0.62,
+          "source": "results/exports/combined/s_combined_prune-l1global-r25-ptqint8_4a1d5adc/s_combined_prune-l1global-r25-ptqint8_4a1d5adc_fp32.onnx",
+          "status": "ok",
+          "target": "openvino"
+        },
+        {
+          "artifact": "results/exports/combined/s_combined_prune-l1global-r25-ptqint8_4a1d5adc/s_combined_prune-l1global-r25-ptqint8_4a1d5adc_fp32.onnx",
+          "dump": "results/exports/combined/s_combined_prune-l1global-r25-ptqint8_4a1d5adc/s_combined_prune-l1global-r25-ptqint8_4a1d5adc_combined.json",
+          "kind": "export",
+          "seconds": 1.24,
+          "source": null,
+          "status": "ok",
+          "target": "onnx"
+        }
+      ]
+    },
+    {
+      "artifact": "results/exports/n_baseline_default_ptq/n_baseline_default_int8_onnxruntime.onnx",
+      "key": {
+        "batch_size": "1",
+        "device_id": "workstation_cpu",
+        "experiment_id": "n_ptq_int8-noexcl_a78f566a",
+        "precision": "int8",
+        "runtime": "onnxruntime"
+      },
+      "label": "n_ptq_int8-noexcl_a78f566a/onnxruntime/int8/workstation_cpu/1",
+      "seconds": 27.49,
+      "steps": [
+        {
+          "artifact": "results/exports/n_baseline_default_ptq/n_baseline_default_int8_onnxruntime.onnx",
+          "dump": "results/exports/n_baseline_default_ptq/n_baseline_default_ptq.json",
+          "kind": "quantize",
+          "seconds": 24.84,
+          "source": "results/exports/n_baseline_default_ptq/n_baseline_default_fp32.onnx",
+          "status": "ok",
+          "target": "onnxruntime"
+        },
+        {
+          "artifact": "results/exports/n_baseline_default_ptq/n_baseline_default_fp32.onnx",
+          "dump": "results/exports/n_baseline_default_ptq/n_baseline_default_ptq.json",
+          "kind": "export",
+          "seconds": 2.65,
+          "source": null,
+          "status": "ok",
+          "target": "onnx"
+        }
+      ]
+    },
+    {
+      "artifact": "results/exports/combined/s_combined_prune-l1global-r50-randomctl-ptqint8_13a9774e/s_combined_prune-l1global-r50-randomctl-ptqint8_13a9774e_int8_openvino/s_combined_prune-l1global-r50-randomctl-ptqint8_13a9774e_int8.xml",
+      "key": {
+        "batch_size": "1",
+        "device_id": "workstation_cpu",
+        "experiment_id": "s_combined_prune-l1global-r50-randomctl-ptqint8_13a9774e",
+        "precision": "int8",
+        "runtime": "openvino"
+      },
+      "label": "s_combined_prune-l1global-r50-randomctl-ptqint8_13a9774e/openvino/int8/workstation_cpu/1",
+      "seconds": 22.09,
+      "steps": [
+        {
+          "artifact": "results/exports/combined/s_combined_prune-l1global-r50-randomctl-ptqint8_13a9774e/s_combined_prune-l1global-r50-randomctl-ptqint8_13a9774e_int8_openvino/s_combined_prune-l1global-r50-randomctl-ptqint8_13a9774e_int8.xml",
+          "dump": "results/exports/combined/s_combined_prune-l1global-r50-randomctl-ptqint8_13a9774e/s_combined_prune-l1global-r50-randomctl-ptqint8_13a9774e_combined.json",
+          "kind": "quantize",
+          "seconds": 20.64,
+          "source": "results/exports/combined/s_combined_prune-l1global-r50-randomctl-ptqint8_13a9774e/s_combined_prune-l1global-r50-randomctl-ptqint8_13a9774e_fp32_openvino/s_combined_prune-l1global-r50-randomctl-ptqint8_13a9774e_fp32.xml",
+          "status": "ok",
+          "target": "openvino"
+        },
+        {
+          "artifact": "results/exports/combined/s_combined_prune-l1global-r50-randomctl-ptqint8_13a9774e/s_combined_prune-l1global-r50-randomctl-ptqint8_13a9774e_fp32_openvino/s_combined_prune-l1global-r50-randomctl-ptqint8_13a9774e_fp32.xml",
+          "dump": "results/exports/combined/s_combined_prune-l1global-r50-randomctl-ptqint8_13a9774e/s_combined_prune-l1global-r50-randomctl-ptqint8_13a9774e_combined.json",
+          "kind": "export",
+          "seconds": 0.5,
+          "source": "results/exports/combined/s_combined_prune-l1global-r50-randomctl-ptqint8_13a9774e/s_combined_prune-l1global-r50-randomctl-ptqint8_13a9774e_fp32.onnx",
+          "status": "ok",
+          "target": "openvino"
+        },
+        {
+          "artifact": "results/exports/combined/s_combined_prune-l1global-r50-randomctl-ptqint8_13a9774e/s_combined_prune-l1global-r50-randomctl-ptqint8_13a9774e_fp32.onnx",
+          "dump": "results/exports/combined/s_combined_prune-l1global-r50-randomctl-ptqint8_13a9774e/s_combined_prune-l1global-r50-randomctl-ptqint8_13a9774e_combined.json",
+          "kind": "export",
+          "seconds": 0.95,
+          "source": null,
+          "status": "ok",
+          "target": "onnx"
+        }
+      ]
+    },
+    {
+      "artifact": "results/exports/m_baseline_default_ptq/m_baseline_default_int8_onnxruntime.onnx",
+      "key": {
+        "batch_size": "1",
+        "device_id": "workstation_cpu",
+        "experiment_id": "m_ptq_int8-noexcl_b1a6e9e7",
+        "precision": "int8",
+        "runtime": "onnxruntime"
+      },
+      "label": "m_ptq_int8-noexcl_b1a6e9e7/onnxruntime/int8/workstation_cpu/1",
+      "seconds": 115.71,
+      "steps": [
+        {
+          "artifact": "results/exports/m_baseline_default_ptq/m_baseline_default_int8_onnxruntime.onnx",
+          "dump": "results/exports/m_baseline_default_ptq/m_baseline_default_ptq.json",
+          "kind": "quantize",
+          "seconds": 109.75,
+          "source": "results/exports/m_baseline_default_ptq/m_baseline_default_fp32.onnx",
+          "status": "ok",
+          "target": "onnxruntime"
+        },
+        {
+          "artifact": "results/exports/m_baseline_default_ptq/m_baseline_default_fp32.onnx",
+          "dump": "results/exports/m_baseline_default_ptq/m_baseline_default_ptq.json",
+          "kind": "export",
+          "seconds": 5.96,
+          "source": null,
+          "status": "ok",
+          "target": "onnx"
+        }
+      ]
+    },
+    {
+      "artifact": "results/exports/combined/s_combined_prune-bnscale-r50-ptqint8_7712cb36/s_combined_prune-bnscale-r50-ptqint8_7712cb36_int8_openvino/s_combined_prune-bnscale-r50-ptqint8_7712cb36_int8.xml",
+      "key": {
+        "batch_size": "1",
+        "device_id": "workstation_cpu",
+        "experiment_id": "s_combined_prune-bnscale-r50-ptqint8_7712cb36",
+        "precision": "int8",
+        "runtime": "openvino"
+      },
+      "label": "s_combined_prune-bnscale-r50-ptqint8_7712cb36/openvino/int8/workstation_cpu/1",
+      "seconds": 24.42,
+      "steps": [
+        {
+          "artifact": "results/exports/combined/s_combined_prune-bnscale-r50-ptqint8_7712cb36/s_combined_prune-bnscale-r50-ptqint8_7712cb36_int8_openvino/s_combined_prune-bnscale-r50-ptqint8_7712cb36_int8.xml",
+          "dump": "results/exports/combined/s_combined_prune-bnscale-r50-ptqint8_7712cb36/s_combined_prune-bnscale-r50-ptqint8_7712cb36_combined.json",
+          "kind": "quantize",
+          "seconds": 22.63,
+          "source": "results/exports/combined/s_combined_prune-bnscale-r50-ptqint8_7712cb36/s_combined_prune-bnscale-r50-ptqint8_7712cb36_fp32_openvino/s_combined_prune-bnscale-r50-ptqint8_7712cb36_fp32.xml",
+          "status": "ok",
+          "target": "openvino"
+        },
+        {
+          "artifact": "results/exports/combined/s_combined_prune-bnscale-r50-ptqint8_7712cb36/s_combined_prune-bnscale-r50-ptqint8_7712cb36_fp32_openvino/s_combined_prune-bnscale-r50-ptqint8_7712cb36_fp32.xml",
+          "dump": "results/exports/combined/s_combined_prune-bnscale-r50-ptqint8_7712cb36/s_combined_prune-bnscale-r50-ptqint8_7712cb36_combined.json",
+          "kind": "export",
+          "seconds": 0.71,
+          "source": "results/exports/combined/s_combined_prune-bnscale-r50-ptqint8_7712cb36/s_combined_prune-bnscale-r50-ptqint8_7712cb36_fp32.onnx",
+          "status": "ok",
+          "target": "openvino"
+        },
+        {
+          "artifact": "results/exports/combined/s_combined_prune-bnscale-r50-ptqint8_7712cb36/s_combined_prune-bnscale-r50-ptqint8_7712cb36_fp32.onnx",
+          "dump": "results/exports/combined/s_combined_prune-bnscale-r50-ptqint8_7712cb36/s_combined_prune-bnscale-r50-ptqint8_7712cb36_combined.json",
+          "kind": "export",
+          "seconds": 1.08,
+          "source": null,
+          "status": "ok",
+          "target": "onnx"
+        }
+      ]
+    },
+    {
+      "artifact": "results/exports/combined/s_combined_prune-l1global-r25-randomctl-ptqint8_e70dc4d6/s_combined_prune-l1global-r25-randomctl-ptqint8_e70dc4d6_fp32_openvino/s_combined_prune-l1global-r25-randomctl-ptqint8_e70dc4d6_fp32.xml",
+      "key": {
+        "batch_size": "1",
+        "device_id": "workstation_cpu",
+        "experiment_id": "s_pruning_l1global_r25_randomctl_a658e5d4",
+        "precision": "fp32",
+        "runtime": "openvino"
+      },
+      "label": "s_pruning_l1global_r25_randomctl_a658e5d4/openvino/fp32/workstation_cpu/1",
+      "seconds": 1.94,
+      "steps": [
+        {
+          "artifact": "results/exports/combined/s_combined_prune-l1global-r25-randomctl-ptqint8_e70dc4d6/s_combined_prune-l1global-r25-randomctl-ptqint8_e70dc4d6_fp32_openvino/s_combined_prune-l1global-r25-randomctl-ptqint8_e70dc4d6_fp32.xml",
+          "dump": "results/exports/combined/s_combined_prune-l1global-r25-randomctl-ptqint8_e70dc4d6/s_combined_prune-l1global-r25-randomctl-ptqint8_e70dc4d6_combined.json",
+          "kind": "export",
+          "seconds": 0.68,
+          "source": "results/exports/combined/s_combined_prune-l1global-r25-randomctl-ptqint8_e70dc4d6/s_combined_prune-l1global-r25-randomctl-ptqint8_e70dc4d6_fp32.onnx",
+          "status": "ok",
+          "target": "openvino"
+        },
+        {
+          "artifact": "results/exports/combined/s_combined_prune-l1global-r25-randomctl-ptqint8_e70dc4d6/s_combined_prune-l1global-r25-randomctl-ptqint8_e70dc4d6_fp32.onnx",
+          "dump": "results/exports/combined/s_combined_prune-l1global-r25-randomctl-ptqint8_e70dc4d6/s_combined_prune-l1global-r25-randomctl-ptqint8_e70dc4d6_combined.json",
+          "kind": "export",
+          "seconds": 1.26,
+          "source": null,
+          "status": "ok",
+          "target": "onnx"
+        }
+      ]
+    },
+    {
+      "artifact": "results/exports/l_baseline_default_ptq/l_baseline_default_fp32.onnx",
+      "key": {
+        "batch_size": "1",
+        "device_id": "workstation_cpu",
+        "experiment_id": "l_baseline_default_188b9407",
+        "precision": "fp32",
+        "runtime": "onnxruntime"
+      },
+      "label": "l_baseline_default_188b9407/onnxruntime/fp32/workstation_cpu/1",
+      "seconds": 11.33,
+      "steps": [
+        {
+          "artifact": "results/exports/l_baseline_default_ptq/l_baseline_default_fp32.onnx",
+          "dump": "results/exports/l_baseline_default_ptq/l_baseline_default_ptq.json",
+          "kind": "export",
+          "seconds": 11.33,
+          "source": null,
+          "status": "ok",
+          "target": "onnx"
+        }
+      ]
+    },
+    {
+      "artifact": "results/exports/combined/s_combined_prune-l1global-r50-randomctl-ptqint8_13a9774e/s_combined_prune-l1global-r50-randomctl-ptqint8_13a9774e_fp32_openvino/s_combined_prune-l1global-r50-randomctl-ptqint8_13a9774e_fp32.xml",
+      "key": {
+        "batch_size": "1",
+        "device_id": "workstation_cpu",
+        "experiment_id": "s_pruning_l1global_r50_randomctl_d581bd22",
+        "precision": "fp32",
+        "runtime": "openvino"
+      },
+      "label": "s_pruning_l1global_r50_randomctl_d581bd22/openvino/fp32/workstation_cpu/1",
+      "seconds": 1.45,
+      "steps": [
+        {
+          "artifact": "results/exports/combined/s_combined_prune-l1global-r50-randomctl-ptqint8_13a9774e/s_combined_prune-l1global-r50-randomctl-ptqint8_13a9774e_fp32_openvino/s_combined_prune-l1global-r50-randomctl-ptqint8_13a9774e_fp32.xml",
+          "dump": "results/exports/combined/s_combined_prune-l1global-r50-randomctl-ptqint8_13a9774e/s_combined_prune-l1global-r50-randomctl-ptqint8_13a9774e_combined.json",
+          "kind": "export",
+          "seconds": 0.5,
+          "source": "results/exports/combined/s_combined_prune-l1global-r50-randomctl-ptqint8_13a9774e/s_combined_prune-l1global-r50-randomctl-ptqint8_13a9774e_fp32.onnx",
+          "status": "ok",
+          "target": "openvino"
+        },
+        {
+          "artifact": "results/exports/combined/s_combined_prune-l1global-r50-randomctl-ptqint8_13a9774e/s_combined_prune-l1global-r50-randomctl-ptqint8_13a9774e_fp32.onnx",
+          "dump": "results/exports/combined/s_combined_prune-l1global-r50-randomctl-ptqint8_13a9774e/s_combined_prune-l1global-r50-randomctl-ptqint8_13a9774e_combined.json",
+          "kind": "export",
+          "seconds": 0.95,
+          "source": null,
+          "status": "ok",
+          "target": "onnx"
+        }
+      ]
+    },
+    {
+      "artifact": "results/exports/combined/s_combined_prune-l1global-r25-randomctl-ptqint8_e70dc4d6/s_combined_prune-l1global-r25-randomctl-ptqint8_e70dc4d6_int8_onnxruntime.onnx",
+      "key": {
+        "batch_size": "1",
+        "device_id": "workstation_cpu",
+        "experiment_id": "s_combined_prune-l1global-r25-randomctl-ptqint8_e70dc4d6",
+        "precision": "int8",
+        "runtime": "onnxruntime"
+      },
+      "label": "s_combined_prune-l1global-r25-randomctl-ptqint8_e70dc4d6/onnxruntime/int8/workstation_cpu/1",
+      "seconds": 26.81,
+      "steps": [
+        {
+          "artifact": "results/exports/combined/s_combined_prune-l1global-r25-randomctl-ptqint8_e70dc4d6/s_combined_prune-l1global-r25-randomctl-ptqint8_e70dc4d6_int8_onnxruntime.onnx",
+          "dump": "results/exports/combined/s_combined_prune-l1global-r25-randomctl-ptqint8_e70dc4d6/s_combined_prune-l1global-r25-randomctl-ptqint8_e70dc4d6_combined.json",
+          "kind": "quantize",
+          "seconds": 25.55,
+          "source": "results/exports/combined/s_combined_prune-l1global-r25-randomctl-ptqint8_e70dc4d6/s_combined_prune-l1global-r25-randomctl-ptqint8_e70dc4d6_fp32.onnx",
+          "status": "ok",
+          "target": "onnxruntime"
+        },
+        {
+          "artifact": "results/exports/combined/s_combined_prune-l1global-r25-randomctl-ptqint8_e70dc4d6/s_combined_prune-l1global-r25-randomctl-ptqint8_e70dc4d6_fp32.onnx",
+          "dump": "results/exports/combined/s_combined_prune-l1global-r25-randomctl-ptqint8_e70dc4d6/s_combined_prune-l1global-r25-randomctl-ptqint8_e70dc4d6_combined.json",
+          "kind": "export",
+          "seconds": 1.26,
+          "source": null,
+          "status": "ok",
+          "target": "onnx"
+        }
+      ]
+    }
+  ],
+  "rows_total": 54,
+  "table": "deployment_metrics",
+  "verification_problems": [],
+  "without_cost": [
+    {
+      "key": {
+        "batch_size": "",
+        "device_id": "",
+        "experiment_id": "",
+        "precision": "",
+        "runtime": "tensorrt"
+      },
+      "label": "/tensorrt///",
+      "reason": "La fila no dice qué artefacto se midió (artifact_path vacío).",
+      "steps": []
+    },
+    {
+      "key": {
+        "batch_size": "",
+        "device_id": "edge_cpu_arm",
+        "experiment_id": "",
+        "precision": "",
+        "runtime": ""
+      },
+      "label": "///edge_cpu_arm/",
+      "reason": "La fila no dice qué artefacto se midió (artifact_path vacío).",
+      "steps": []
+    },
+    {
+      "key": {
+        "batch_size": "",
+        "device_id": "edge_gpu_jetson",
+        "experiment_id": "",
+        "precision": "",
+        "runtime": ""
+      },
+      "label": "///edge_gpu_jetson/",
+      "reason": "La fila no dice qué artefacto se midió (artifact_path vacío).",
+      "steps": []
+    },
+    {
+      "key": {
+        "batch_size": "",
+        "device_id": "workstation_gpu",
+        "experiment_id": "",
+        "precision": "",
+        "runtime": ""
+      },
+      "label": "///workstation_gpu/",
+      "reason": "La fila no dice qué artefacto se midió (artifact_path vacío).",
+      "steps": []
+    },
+    {
+      "key": {
+        "batch_size": "1",
+        "device_id": "workstation_cpu",
+        "experiment_id": "n_baseline_default_fab9d45c",
+        "precision": "fp32",
+        "runtime": "pytorch"
+      },
+      "label": "n_baseline_default_fab9d45c/pytorch/fp32/workstation_cpu/1",
+      "reason": "Es el modelo de PyTorch, que no se exporta: su coste de exportación no es cero, no existe, y la celda se queda vacía.",
+      "steps": []
+    },
+    {
+      "key": {
+        "batch_size": "1",
+        "device_id": "workstation_cpu",
+        "experiment_id": "m_baseline_default_dfe22158",
+        "precision": "fp32",
+        "runtime": "pytorch"
+      },
+      "label": "m_baseline_default_dfe22158/pytorch/fp32/workstation_cpu/1",
+      "reason": "Es el modelo de PyTorch, que no se exporta: su coste de exportación no es cero, no existe, y la celda se queda vacía.",
+      "steps": []
+    },
+    {
+      "key": {
+        "batch_size": "1",
+        "device_id": "workstation_cpu",
+        "experiment_id": "l_baseline_default_188b9407",
+        "precision": "fp32",
+        "runtime": "pytorch"
+      },
+      "label": "l_baseline_default_188b9407/pytorch/fp32/workstation_cpu/1",
+      "reason": "Es el modelo de PyTorch, que no se exporta: su coste de exportación no es cero, no existe, y la celda se queda vacía.",
+      "steps": []
+    },
+    {
+      "key": {
+        "batch_size": "1",
+        "device_id": "workstation_cpu",
+        "experiment_id": "s_baseline_default_745e3d08",
+        "precision": "fp32",
+        "runtime": "pytorch"
+      },
+      "label": "s_baseline_default_745e3d08/pytorch/fp32/workstation_cpu/1",
+      "reason": "Es el modelo de PyTorch, que no se exporta: su coste de exportación no es cero, no existe, y la celda se queda vacía.",
+      "steps": []
+    }
+  ]
+}

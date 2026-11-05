@@ -1,0 +1,80 @@
+% Generado por tfm_edge.reporting.tables. No editar a mano: se regenera.
+% Requiere \usepackage{booktabs}, \usepackage{pdflscape}, \usepackage{adjustbox}.
+\ifdefined\tfmedgetitle\else\newsavebox{\tfmedgetitle}\fi
+\ifdefined\tfmedgenotes\else\newsavebox{\tfmedgenotes}\fi
+\begin{landscape}
+\begin{table}[htbp]
+  \centering
+  \sbox{\tfmedgetitle}{\parbox{\linewidth}{%
+  \caption{Despliegue de cada configuración medida en workstation\_cpu, por motor de inferencia}
+  \label{tab:6_1_medidas_despliegue_workstation_cpu}
+  }}%
+  \sbox{\tfmedgenotes}{%
+  \begin{minipage}{\linewidth}\footnotesize
+  Latencia y memoria medidas con el protocolo homogéneo del capítulo 4; el rendimiento es a lote 1.
+  \end{minipage}%
+  }%
+  \usebox{\tfmedgetitle}\par
+  \footnotesize
+  \begin{adjustbox}{max width=\linewidth, max totalheight=\dimexpr\textheight-\ht\tfmedgetitle-\dp\tfmedgetitle-\ht\tfmedgenotes-\dp\tfmedgenotes-6pt\relax}
+  \begin{tabular}{llllrrrrr}
+    \toprule
+    Experimento & Técnica & Motor & Precisión & latencia p50 (ms) & latencia p95 (ms) & rendimiento (img/s) & memoria pico (MiB) & tamaño del artefacto (MB) \\
+    \midrule
+    l\_baseline\_default\_188b9407 & Referencia & onnxruntime & fp32 & 704,92 & 726,26 & 1,41 & 809,4 & 174,76 \\
+    l\_baseline\_default\_188b9407 & Referencia & openvino & fp32 & 708,30 & 757,41 & 1,42 & 843,3 & 174,92 \\
+    l\_baseline\_default\_188b9407 & Referencia & pytorch & fp32 & 826,01 & 864,91 & 1,16 & 721,3 & 175,06 \\
+    l\_ptq\_int8-noexcl\_4a52a7e5 & Cuantización PTQ & onnxruntime & int8 & 293,40 & 312,25 & 3,42 & 536,9 & 44,49 \\
+    l\_ptq\_int8-noexcl\_4a52a7e5 & Cuantización PTQ & openvino & int8 & 329,58 & 358,87 & 2,96 & 571,1 & 44,63 \\
+    m\_baseline\_default\_dfe22158 & Referencia & onnxruntime & fp32 & 350,45 & 363,00 & 2,87 & 665,0 & 103,66 \\
+    m\_baseline\_default\_dfe22158 & Referencia & openvino & fp32 & 367,63 & 403,63 & 2,75 & 675,7 & 103,78 \\
+    m\_baseline\_default\_dfe22158 & Referencia & pytorch & fp32 & 454,64 & 479,50 & 2,20 & 586,9 & 103,86 \\
+    m\_ptq\_int8-noexcl\_b1a6e9e7 & Cuantización PTQ & onnxruntime & int8 & 162,88 & 177,95 & 6,47 & 471,4 & 26,53 \\
+    m\_ptq\_int8-noexcl\_b1a6e9e7 & Cuantización PTQ & openvino & int8 & 162,65 & 182,07 & 5,93 & 524,6 & 26,68 \\
+    n\_baseline\_default\_fab9d45c & Referencia & onnxruntime & fp32 & 53,27 & 58,47 & 19,70 & 445,3 & 12,28 \\
+    n\_baseline\_default\_fab9d45c & Referencia & openvino & fp32 & 44,81 & 47,78 & 22,48 & 468,1 & 12,36 \\
+    n\_baseline\_default\_fab9d45c & Referencia & pytorch & fp32 & 79,18 & 85,34 & 12,73 & 417,6 & 12,32 \\
+    n\_ptq\_int8-noexcl\_a78f566a & Cuantización PTQ & onnxruntime & int8 & 30,05 & 34,90 & 35,89 & \textbf{411,2} & \textbf{3,44} \\
+    n\_ptq\_int8-noexcl\_a78f566a & Cuantización PTQ & openvino & int8 & \textbf{25,61} & \textbf{27,47} & \textbf{40,93} & 463,0 & 3,61 \\
+    s\_baseline\_default\_745e3d08 & Referencia & onnxruntime & fp32 & 144,13 & 155,15 & 7,02 & 536,2 & 44,77 \\
+    s\_baseline\_default\_745e3d08 & Referencia & openvino & fp32 & 134,24 & 147,42 & 7,51 & 546,0 & 44,85 \\
+    s\_baseline\_default\_745e3d08 & Referencia & pytorch & fp32 & 203,89 & 217,27 & 4,87 & 478,4 & 44,87 \\
+    s\_combined\_prune-bnscale-r50-ptqint8\_7712cb36 & Combinaciones & onnxruntime & int8 & 43,06 & 48,77 & 24,29 & 430,2 & 4,06 \\
+    s\_combined\_prune-bnscale-r50-ptqint8\_7712cb36 & Combinaciones & openvino & int8 & 35,48 & 38,20 & 30,51 & 463,1 & 4,23 \\
+    s\_combined\_prune-l1global-r25-ptqint8\_4a1d5adc & Combinaciones & onnxruntime & int8 & 67,00 & 74,36 & 15,20 & 433,3 & 7,26 \\
+    s\_combined\_prune-l1global-r25-ptqint8\_4a1d5adc & Combinaciones & openvino & int8 & 55,96 & 58,62 & 19,51 & 470,1 & 7,41 \\
+    s\_combined\_prune-l1global-r25-randomctl-ptqint8\_e70dc4d6 & Combinaciones & onnxruntime & int8 & 61,53 & 68,21 & 16,63 & 433,5 & 7,32 \\
+    s\_combined\_prune-l1global-r25-randomctl-ptqint8\_e70dc4d6 & Combinaciones & openvino & int8 & 50,31 & 53,21 & 21,19 & 469,8 & 7,47 \\
+    s\_combined\_prune-l1global-r50-iter4-ptqint8\_6f322ad5 & Combinaciones & onnxruntime & int8 & 47,50 & 53,74 & 22,08 & 431,1 & 4,16 \\
+    s\_combined\_prune-l1global-r50-iter4-ptqint8\_6f322ad5 & Combinaciones & openvino & int8 & 39,36 & 41,41 & 26,45 & 463,3 & 4,33 \\
+    s\_combined\_prune-l1global-r50-ptqint8\_9067dba2 & Combinaciones & onnxruntime & int8 & 45,07 & 50,55 & 22,81 & 430,7 & 4,06 \\
+    s\_combined\_prune-l1global-r50-ptqint8\_9067dba2 & Combinaciones & openvino & int8 & 35,49 & 37,65 & 29,36 & 463,1 & 4,24 \\
+    s\_combined\_prune-l1global-r50-randomctl-ptqint8\_13a9774e & Combinaciones & onnxruntime & int8 & 42,37 & 48,31 & 24,56 & 430,1 & 4,08 \\
+    s\_combined\_prune-l1global-r50-randomctl-ptqint8\_13a9774e & Combinaciones & openvino & int8 & 34,29 & 36,50 & 30,30 & 463,2 & 4,25 \\
+    s\_pruning\_bnscale\_r50\_f51fef4c & Poda estructurada & onnxruntime & fp32 & 80,21 & 85,36 & 12,89 & 454,5 & 14,67 \\
+    s\_pruning\_bnscale\_r50\_f51fef4c & Poda estructurada & openvino & fp32 & 64,65 & 68,81 & 15,59 & 491,7 & 14,75 \\
+    s\_pruning\_l1global\_r25\_4e91ddbc & Poda estructurada & onnxruntime & fp32 & 122,72 & 130,90 & 8,32 & 483,3 & 27,34 \\
+    s\_pruning\_l1global\_r25\_4e91ddbc & Poda estructurada & openvino & fp32 & 110,46 & 117,56 & 9,36 & 515,8 & 27,42 \\
+    s\_pruning\_l1global\_r25\_randomctl\_a658e5d4 & Poda estructurada & onnxruntime & fp32 & 111,24 & 118,22 & 9,18 & 474,2 & 27,57 \\
+    s\_pruning\_l1global\_r25\_randomctl\_a658e5d4 & Poda estructurada & openvino & fp32 & 98,57 & 105,15 & 10,27 & 518,0 & 27,65 \\
+    s\_pruning\_l1global\_r50\_9419b26f & Poda estructurada & onnxruntime & fp32 & 80,43 & 86,77 & 12,57 & 460,7 & 14,70 \\
+    s\_pruning\_l1global\_r50\_9419b26f & Poda estructurada & openvino & fp32 & 63,44 & 67,56 & 16,56 & 487,7 & 14,78 \\
+    s\_pruning\_l1global\_r50\_iter4\_d8fe066f & Poda estructurada & onnxruntime & fp32 & 86,35 & 92,19 & 12,10 & 454,6 & 15,06 \\
+    s\_pruning\_l1global\_r50\_iter4\_d8fe066f & Poda estructurada & openvino & fp32 & 73,34 & 77,22 & 14,10 & 493,9 & 15,15 \\
+    s\_pruning\_l1global\_r50\_randomctl\_d581bd22 & Poda estructurada & onnxruntime & fp32 & 74,96 & 81,71 & 13,58 & 453,5 & 14,76 \\
+    s\_pruning\_l1global\_r50\_randomctl\_d581bd22 & Poda estructurada & openvino & fp32 & 62,82 & 66,24 & 16,40 & 493,0 & 14,84 \\
+    s\_ptq\_int8-noexcl\_5bcd71f0 & Cuantización PTQ & onnxruntime & int8 & 67,57 & 75,75 & 15,15 & 434,6 & 11,64 \\
+    s\_ptq\_int8-noexcl\_5bcd71f0 & Cuantización PTQ & openvino & int8 & 70,55 & 75,83 & 14,77 & 485,0 & 11,77 \\
+    s\_qat\_int8-noexcl\_43300d34 & Cuantización QAT & onnxruntime & int8 & 45,29 & 50,84 & 23,00 & 430,9 & 4,06 \\
+    s\_qat\_int8-noexcl\_43300d34 & Cuantización QAT & openvino & int8 & 35,72 & 38,17 & 30,53 & 462,9 & 4,24 \\
+    s\_qat\_int8-noexcl\_4d491880 & Cuantización QAT & onnxruntime & int8 & 65,80 & 73,80 & 15,17 & 433,2 & 7,26 \\
+    s\_qat\_int8-noexcl\_4d491880 & Cuantización QAT & openvino & int8 & 56,37 & 59,40 & 18,33 & 469,8 & 7,41 \\
+    s\_qat\_int8-noexcl\_d4d403fa & Cuantización QAT & onnxruntime & int8 & 71,09 & 79,93 & 14,42 & 435,3 & 11,64 \\
+    s\_qat\_int8-noexcl\_d4d403fa & Cuantización QAT & openvino & int8 & 72,77 & 76,12 & 14,23 & 484,4 & 11,77 \\
+    \bottomrule
+  \end{tabular}
+  \end{adjustbox}
+  \par\vspace{2pt}
+  \usebox{\tfmedgenotes}
+\end{table}
+\end{landscape}

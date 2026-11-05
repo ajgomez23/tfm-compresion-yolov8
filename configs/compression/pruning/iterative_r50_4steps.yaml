@@ -1,0 +1,24 @@
+# Poda iterativa hasta el 50 %, en cuatro ciclos con reajuste parcial.
+#
+# Se compara con l1_global_r50, que llega al mismo ratio de una vez (apartado 9.3.4). La comparación
+# solo vale al mismo ratio final, y compare_schedules() lo comprueba.
+
+_base_: l1_global_r50.yaml
+
+technique_variant: l1global_r50_iter4
+
+pruning:
+  iterative_steps: 4
+
+  # Reajuste parcial entre ciclos de 5 épocas, el valor por defecto. Con 116,5 s/época del baseline,
+  # la campaña son 3x5 + 30 = 45 épocas, como mucho 1,46 h.
+
+# Sobre los pesos afinados en SH17, la primera convolución no se poda ni en una etapa ni en cuatro,
+# así que no hace falta proteger model.0 ni cambiar min_channels:
+#
+#     pesos de partida                          model.0.conv   campaña
+#     COCO + cabeza de 17 clases reinicializada   32 a  <8     aborta
+#     afinados en SH17                            32 a  32     completa, 68,6 %
+#
+# La arquitectura que resulta de una poda depende de los pesos de partida tanto como de la
+# configuración.

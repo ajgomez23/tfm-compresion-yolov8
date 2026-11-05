@@ -1,0 +1,137 @@
+# Configuración base del proyecto.
+#
+# Las demás configuraciones heredan de esta con la clave `_base_`, cuya ruta se resuelve respecto al
+# directorio del fichero que la declara, por ejemplo:
+#
+#       _base_: ../default.yaml
+#
+# Los diccionarios se fusionan en profundidad y las listas se reemplazan. Cualquier clave se puede
+# sobrescribir desde la línea de comandos:
+#
+#       --override training.epochs=150 model.size=m
+#
+# Los valores se interpretan como YAML. Una clave que no exista en el esquema
+# (src/tfm_edge/common/config.py) hace fallar la validación.
+
+project_name: tfm-edge-object-detection
+
+# Semilla global. Se aplica a random, NumPy, PyTorch y CUDA.
+seed: 42
+
+# Modo determinista. Desactívalo en las campañas de medida de latencia: apaga la búsqueda de
+# algoritmos de cuDNN y altera el rendimiento medido.
+deterministic: true
+
+# Dispositivo de cómputo. "auto" deja que la capa de modelos elija GPU si la hay.
+device: auto
+
+# Identificación de la variante. Los baselines no cambian esto; cada
+# configuración de compresión sí.
+technique: baseline
+technique_variant: default
+notes: ""
+
+
+dataset:
+  name: sh17
+  num_classes: 17
+  # Mapeo canónico de índice a nombre de clase, generado al preparar el dataset. Es la única fuente
+  # de los nombres de clase para el registro y las figuras.
+  class_names_file: configs/dataset/sh17_classes.json
+  split_ratios:
+    train: 0.70
+    val: 0.15
+    test: 0.15
+  # Estratificación multietiqueta a nivel de imagen: SH17 está desequilibrado y
+  # una partición aleatoria simple dejaría clases raras mal repartidas.
+  stratified: true
+  # Semilla del particionado, separada de la global a propósito: cambiar la
+  # semilla de entrenamiento no debe reparticionar el dataset.
+  split_seed: 42
+  smoke_test_images: 64
+
+
+model:
+  family: yolov8
+  size: s
+  pretrained: true
+  input_resolution: 640
+
+
+training:
+  epochs: 100
+  batch_size: 16
+  learning_rate: 0.01
+  final_learning_rate_factor: 0.01
+  momentum: 0.937
+  weight_decay: 0.0005
+  warmup_epochs: 3.0
+  optimizer: SGD
+  # Lineal, que es el defecto de Ultralytics y el que se usó en todas las campañas.
+  scheduler: linear
+  patience: 30
+  # Valor usado en todas las campañas.
+  workers: 2
+  amp: true
+  smoke_test_epochs: 2
+
+
+export:
+  formats:
+    - onnx
+  precisions:
+    - fp32
+  opset: 17
+  dynamic_axes: false
+  simplify: true
+  batch_size: 1
+  # Equivalencia numérica pre/post exportación. Si falla, el artefacto se marca
+  # como no válido en el registro y se excluye de las medidas posteriores.
+  validate_numerical_equivalence: true
+  tolerance_fp32: 0.0001
+  tolerance_fp16: 0.01
+  tolerance_int8: 0.1
+
+
+evaluation:
+  # Partición de la campaña y valor por defecto de '--split' en los scripts 06, 13, 16 y 20.
+  split: val
+  # Umbrales idénticos para todas las variantes, para que las diferencias de mAP se deban a la
+  # compresión.
+  conf_threshold: 0.001
+  iou_threshold: 0.7
+  max_detections: 300
+  # Cuál de los dos criterios de tamaño de objeto es el primario (apartado 6.5.2). Los dos se
+  # calculan y se registran siempre; ver docs/PROTOCOLO_MEDIDA.md.
+  #
+  #     inference_res : umbrales COCO sobre el área del objeto a la entrada del modelo, tras el
+  #                     letterbox a model.input_resolution. Es el que responde a la pregunta del
+  #                     estudio, porque el detector no ve la imagen original.
+  #     original_res  : umbrales sobre la resolución original, el estándar de pycocotools. Sobre SH17
+  #                     deja el 88 % de los objetos como "grandes" y cuatro clases sin instancias
+  #                     pequeñas.
+  size_criterion: inference_res
+  compute_error_analysis: true
+  smoke_test_images: 32
+
+
+benchmark:
+  # Identificador que se escribe en cada fila del registro. Se sobrescribe desde
+  # configs/benchmark/*.yaml.
+  device_id: workstation_cpu
+  warmup_iters: 50
+  measure_iters: 300
+  num_repeats: 3
+  # La latencia se mide siempre con lote 1; los lotes mayores son para el throughput.
+  batch_size: 1
+  throughput_batch_sizes: [1, 2, 4, 8, 16]
+  throughput_window_s: 30.0
+  num_threads: null
+  memory_sample_interval_s: 0.05
+  # Medir latencia en una máquina ocupada produce resultados no comparables.
+  check_system_load: true
+  max_system_load_percent: 20.0
+  record_temperature: true
+  smoke_test_warmup_iters: 5
+  smoke_test_measure_iters: 20
+  smoke_test_num_repeats: 2

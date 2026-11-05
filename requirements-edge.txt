@@ -1,0 +1,40 @@
+# Entorno del dispositivo de borde.
+#
+# Contiene lo mínimo para cargar un artefacto exportado, ejecutar el protocolo de medida y escribir
+# en el registro. No incluye dependencias de entrenamiento (torch, ultralytics, torch-pruning,
+# matplotlib).
+#
+# No hay ningún dispositivo de borde disponible en el proyecto (ni Raspberry Pi 5 ni Jetson Orin
+# Nano). Este fichero define el entorno por diseño, pero no se ha instalado ni validado en ARM.
+
+
+# Núcleo compartido: configuración, registro, huella de entorno y temporización. Mismas versiones
+# que requirements.txt, porque common/ es igual en los dos entornos y el registro debe tener el
+# mismo esquema.
+pydantic==2.8.2
+PyYAML==6.0.1
+pandas==2.2.2
+numpy==1.26.4
+psutil==5.9.0
+py-cpuinfo==9.0.0
+
+
+# Preprocesado de imágenes.  [PENDIENTE]
+#
+# El preprocesado y el postprocesado tienen que ser idénticos en todos los backends y dispositivos.
+# Se fijarán a la vez que los runtimes para que OpenCV tenga la misma versión en la estación de
+# trabajo y en el borde.
+#
+#     opencv-python-headless==...   # headless: el dispositivo de borde no tiene GUI
+#     pillow==...
+
+
+# Runtimes de inferencia en el borde.  [PENDIENTE]
+#
+# Se instala solo el que corresponda al dispositivo:
+#
+#     onnxruntime==...        # CPU ARM (Raspberry Pi)
+#     tflite-runtime==...     # TFLite en ARM; paquete distinto del de x86
+#     openvino==...           # solo tiene sentido en CPU Intel, no en ARM
+#
+# En Jetson, onnxruntime y TensorRT vienen del JetPack del fabricante, no de PyPI.

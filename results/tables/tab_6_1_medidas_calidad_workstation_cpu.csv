@@ -1,0 +1,51 @@
+experiment_id,technique,runtime,precision,map_50,map_50_95
+l_baseline_default_188b9407,Referencia,onnxruntime,fp32,0.619416,0.41148
+l_baseline_default_188b9407,Referencia,openvino,fp32,0.619416,0.41148
+l_baseline_default_188b9407,Referencia,pytorch,fp32,0.619415,0.41148
+l_ptq_int8-noexcl_4a52a7e5,Cuantización PTQ,onnxruntime,int8,0.551122,0.309595
+l_ptq_int8-noexcl_4a52a7e5,Cuantización PTQ,openvino,int8,0.565263,0.321734
+m_baseline_default_dfe22158,Referencia,onnxruntime,fp32,0.623255,0.409316
+m_baseline_default_dfe22158,Referencia,openvino,fp32,0.623255,0.409313
+m_baseline_default_dfe22158,Referencia,pytorch,fp32,0.623255,0.409316
+m_ptq_int8-noexcl_b1a6e9e7,Cuantización PTQ,onnxruntime,int8,0.512705,0.281464
+m_ptq_int8-noexcl_b1a6e9e7,Cuantización PTQ,openvino,int8,0.552063,0.311959
+n_baseline_default_fab9d45c,Referencia,onnxruntime,fp32,0.524158,0.325635
+n_baseline_default_fab9d45c,Referencia,openvino,fp32,0.524158,0.325635
+n_baseline_default_fab9d45c,Referencia,pytorch,fp32,0.524158,0.325636
+n_ptq_int8-noexcl_a78f566a,Cuantización PTQ,onnxruntime,int8,0.447612,0.247739
+n_ptq_int8-noexcl_a78f566a,Cuantización PTQ,openvino,int8,0.471408,0.254759
+s_baseline_default_745e3d08,Referencia,onnxruntime,fp32,0.586152,0.376214
+s_baseline_default_745e3d08,Referencia,openvino,fp32,0.586152,0.376214
+s_baseline_default_745e3d08,Referencia,pytorch,fp32,0.586152,0.376214
+s_combined_prune-bnscale-r50-ptqint8_7712cb36,Combinaciones,onnxruntime,int8,0.389369,0.206639
+s_combined_prune-bnscale-r50-ptqint8_7712cb36,Combinaciones,openvino,int8,0.446191,0.243604
+s_combined_prune-l1global-r25-ptqint8_4a1d5adc,Combinaciones,onnxruntime,int8,0.491923,0.270323
+s_combined_prune-l1global-r25-ptqint8_4a1d5adc,Combinaciones,openvino,int8,0.53247,0.298402
+s_combined_prune-l1global-r25-randomctl-ptqint8_e70dc4d6,Combinaciones,onnxruntime,int8,0.478558,0.259057
+s_combined_prune-l1global-r25-randomctl-ptqint8_e70dc4d6,Combinaciones,openvino,int8,0.518958,0.288337
+s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5,Combinaciones,onnxruntime,int8,0.461694,0.249358
+s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5,Combinaciones,openvino,int8,0.492214,0.275993
+s_combined_prune-l1global-r50-ptqint8_9067dba2,Combinaciones,onnxruntime,int8,0.446691,0.238463
+s_combined_prune-l1global-r50-ptqint8_9067dba2,Combinaciones,openvino,int8,0.480036,0.263447
+s_combined_prune-l1global-r50-randomctl-ptqint8_13a9774e,Combinaciones,onnxruntime,int8,0.4093,0.223422
+s_combined_prune-l1global-r50-randomctl-ptqint8_13a9774e,Combinaciones,openvino,int8,0.450492,0.249635
+s_pruning_bnscale_r50_f51fef4c,Poda estructurada,onnxruntime,fp32,0.473036,0.286545
+s_pruning_bnscale_r50_f51fef4c,Poda estructurada,openvino,fp32,0.473036,0.286544
+s_pruning_l1global_r25_4e91ddbc,Poda estructurada,onnxruntime,fp32,0.568627,0.357923
+s_pruning_l1global_r25_4e91ddbc,Poda estructurada,openvino,fp32,0.568627,0.357922
+s_pruning_l1global_r25_randomctl_a658e5d4,Poda estructurada,onnxruntime,fp32,0.556488,0.347942
+s_pruning_l1global_r25_randomctl_a658e5d4,Poda estructurada,openvino,fp32,0.556491,0.347943
+s_pruning_l1global_r50_9419b26f,Poda estructurada,onnxruntime,fp32,0.509366,0.316322
+s_pruning_l1global_r50_9419b26f,Poda estructurada,openvino,fp32,0.509366,0.316322
+s_pruning_l1global_r50_iter4_d8fe066f,Poda estructurada,onnxruntime,fp32,0.530635,0.331078
+s_pruning_l1global_r50_iter4_d8fe066f,Poda estructurada,openvino,fp32,0.530635,0.331078
+s_pruning_l1global_r50_randomctl_d581bd22,Poda estructurada,onnxruntime,fp32,0.480124,0.300316
+s_pruning_l1global_r50_randomctl_d581bd22,Poda estructurada,openvino,fp32,0.480124,0.300316
+s_ptq_int8-noexcl_5bcd71f0,Cuantización PTQ,onnxruntime,int8,0.518622,0.286091
+s_ptq_int8-noexcl_5bcd71f0,Cuantización PTQ,openvino,int8,0.548378,0.310032
+s_qat_int8-noexcl_43300d34,Cuantización QAT,onnxruntime,int8,0.455674,0.247754
+s_qat_int8-noexcl_43300d34,Cuantización QAT,openvino,int8,0.481893,0.267243
+s_qat_int8-noexcl_4d491880,Cuantización QAT,onnxruntime,int8,0.497449,0.272785
+s_qat_int8-noexcl_4d491880,Cuantización QAT,openvino,int8,0.530671,0.298013
+s_qat_int8-noexcl_d4d403fa,Cuantización QAT,onnxruntime,int8,0.497894,0.274701
+s_qat_int8-noexcl_d4d403fa,Cuantización QAT,openvino,int8,0.543178,0.312429

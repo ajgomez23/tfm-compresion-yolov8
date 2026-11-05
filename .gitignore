@@ -1,0 +1,159 @@
+# .gitignore del proyecto.
+#
+# Se ignoran data/ y models/, que contienen ficheros grandes y regenerables. results/ se versiona:
+# el registro de resultados es la fuente de los datos del TFM y los vectores de tiempos crudos son
+# la evidencia de las medidas.
+
+# Datos y modelos (grandes, regenerables).
+#
+# Se ignoran por completo. No se conservan marcadores .gitkeep dentro, porque git no puede volver a
+# incluir un fichero cuyo directorio padre está excluido. La estructura de directorios la crea el
+# código:
+#
+#     python scripts/00_setup_check.py --create-dirs
+#
+# Las barras iniciales anclan los patrones a la raíz: "data/" sin barra coincidiría también con el
+# paquete src/tfm_edge/data/.
+/data/
+/models/
+
+# Excepciones versionadas con "git add -f" y rutas explícitas. Git sigue un fichero ya versionado
+# aunque su directorio esté ignorado, así que no hace falta ninguna regla aquí.
+#
+# Los diez args.yaml de Ultralytics de los entrenamientos del estudio (baselines n/s/m/l, piloto y
+# control de destilación, reajuste y pasos de la poda iterativa d8fe066f), que son la receta
+# efectiva de esos experimentos.
+#
+# Los results.csv junto a esos args.yaml y los dos de la campaña de destilación de 50 épocas: las
+# curvas de entrenamiento época a época que usa la figura de curvas. Los dos de 50 épocas también
+# están en docs/evidencia/d171_results_<experiment_id>.csv, y un test comprueba que son idénticos.
+#
+# schedule.json, complexity.json y training_cost.json de n/s/m/l, y session_environment.json de
+# n/m/l. 14_import_colab_registry.py los usa como evidencia de los baselines.
+#
+# Se versionan los ficheros de texto y no los pesos. No se reabre /models/ con un patrón que incluya
+# todos los args.yaml, porque recogería también ficheros futuros.
+
+# Resultados: se versionan, salvo los volcados demasiado grandes.
+results/logs/*.log
+!results/logs/.gitkeep
+
+# Copias preparadas de artefactos para que Ultralytics pueda evaluarlos (export/staging.py). Son
+# duplicados del grafo del artefacto versionado en results/exports/ con metadatos añadidos; se
+# regeneran en cada evaluación y assert_graph_unchanged comprueba que son el mismo modelo.
+results/exports/_staged/
+
+# Ficheros auxiliares de --smoke-test: enlaces al dataset y listas recortadas.
+results/raw/*/_smoke_subset/
+
+# Directorio de trabajo del validador de Ultralytics. Lo que se versiona es el volcado propio del
+# script, ya traducido y reescalado.
+results/raw/artifact_eval/validator_*/
+# El mismo directorio del paso 17, por el mismo motivo.
+results/raw/quality/_val_*/
+
+# Entorno.
+.env
+*.env
+!.env.example
+
+# Python.
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Entornos virtuales.
+.venv/
+venv/
+ENV/
+env/
+.conda/
+
+# Tests y cobertura.
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+.tox/
+.nox/
+.cache
+
+# Herramientas.
+.mypy_cache/
+.ruff_cache/
+.dmypy.json
+dmypy.json
+
+# Notebooks.
+.ipynb_checkpoints/
+
+# Editores e IDE.
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Sistema operativo.
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Artefactos de Ultralytics. Ultralytics escribe por defecto en runs/ y descarga pesos preentrenados
+# en el directorio de trabajo; los dos se redirigen por configuración, pero se ignoran igualmente.
+runs/
+*.pt
+yolo*.pt
+
+# Artefactos derivados del dataset, que se regeneran con 02b
+sh17_resized*.tar.gz
+
+# Artefactos de la rejilla de combinaciones (22_combine.py): unos 279 MiB de ONNX e IR de OpenVINO
+# que se regeneran desde el podado reajustado y la misma calibración (hash a27c6f11fb1865fd). La
+# evidencia son los volcados de results/raw/artifact_eval/ y las filas del registro.
+#
+# Se ignoran los binarios, no el directorio: los seis *_combined.json sí se versionan. Con ellos el
+# paso 31 se puede repetir desde un clon en otra ruta.
+results/exports/combined/*/*.onnx
+results/exports/combined/*/*_openvino/
+
+# Artefactos de la PTQ de n, m y l (08_export.py y 10_quantize_ptq.py): unos 699 MiB de ONNX e IR de
+# OpenVINO, regenerables desde el checkpoint y la misma calibración. La evidencia es el volcado JSON
+# de cada directorio, que sí se versiona.
+#
+# Se ignoran los binarios y no el directorio entero, porque el volcado está dentro. Los binarios de
+# s_baseline_default_ptq/ y de s_qat_int8-noexcl_d4d403fa_qat/ sí están versionados.
+results/exports/n_baseline_default_ptq/*.onnx
+results/exports/n_baseline_default_ptq/*_openvino/
+results/exports/m_baseline_default_ptq/*.onnx
+results/exports/m_baseline_default_ptq/*_openvino/
+results/exports/l_baseline_default_ptq/*.onnx
+results/exports/l_baseline_default_ptq/*_openvino/
+
+# Materialización INT8 de los QAT sobre podado (18_quantize_qat.py): unos 37 MiB por afinado. Se
+# regeneran desde el checkpoint y la calibración (config 6e6494c461cbdd63, calibración
+# a27c6f11fb1865fd); la evidencia es el volcado *_qat_int8.json, que sí se versiona.
+results/exports/s_qat_int8-noexcl_43300d34_qat/*.onnx
+results/exports/s_qat_int8-noexcl_43300d34_qat/*_openvino/
+results/exports/s_qat_int8-noexcl_4d491880_qat/*.onnx
+results/exports/s_qat_int8-noexcl_4d491880_qat/*_openvino/

@@ -1,0 +1,61 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tfm-edge-object-detection"
+version = "0.1.0"
+description = "Optimización de modelos de detección de objetos para inferencia en el borde: análisis comparativo de cuantización, poda estructurada y destilación de conocimiento"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "AGPL-3.0-or-later" }
+authors = [{ name = "Autor del TFM" }]
+keywords = ["object-detection", "model-compression", "quantization", "pruning", "knowledge-distillation", "edge-ai"]
+
+# Aquí solo se declaran las dependencias sin versión exacta necesarias para importar el paquete; las
+# versiones fijadas con "==" están en requirements.txt.
+dependencies = [
+    "pydantic",
+    "PyYAML",
+    "pandas",
+    "numpy",
+    "psutil",
+    "py-cpuinfo",
+]
+
+[project.optional-dependencies]
+# El "<9" de ipython es un límite de compatibilidad, no una versión fija: `pip install -e .[dev]` no
+# lee requirements.txt, y sin este límite instalaría IPython 9, que exige psutil>=7 y cambiaría la
+# biblioteca con la que se mide la memoria residente.
+dev = ["pytest", "pytest-cov", "black[jupyter]", "ipython<9", "isort"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+tfm_edge = ["py.typed"]
+
+# Formateo y ordenación de imports.
+[tool.black]
+line-length = 100
+target-version = ["py310", "py311", "py312"]
+
+[tool.isort]
+profile = "black"
+line_length = 100
+src_paths = ["src", "scripts", "tests"]
+known_first_party = ["tfm_edge"]
+
+# Tests.
+[tool.pytest.ini_options]
+minversion = "7.0"
+testpaths = ["tests"]
+addopts = "-ra --strict-markers"
+markers = [
+    "slow: pruebas lentas, se omiten con -m 'not slow'",
+    "requires_torch: requiere que PyTorch esté instalado",
+    "requires_gpu: requiere una GPU NVIDIA disponible",
+    "requires_dataset: requiere el dataset SH17 preparado en disco",
+    "requires_weights: requiere checkpoints entrenados reales en models/",
+]
+filterwarnings = ["error::DeprecationWarning:tfm_edge.*"]

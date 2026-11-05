@@ -1,0 +1,21 @@
+# Perfil declarado pero no ejecutado, por falta de hardware.
+device_id: edge_cpu_arm
+description: >-
+  Dispositivo de borde con CPU ARM, tipo Raspberry Pi 5.
+device_type: cpu
+valid_for_measurement: true
+available: false
+unavailable_reason: >-
+  No se dispone del dispositivo fisico. La campana registra status=no_disponible
+  y continua; la memoria declara este perfil como implementado pero no ejecutado.
+requires_temperature: false
+num_threads: 4
+cpu_affinity: []
+backends:
+  - pytorch
+warmup_iterations: 50
+measure_iterations: 300
+repetitions: 3
+throughput_batch_sizes: [1, 2, 4]
+latency_representative: true
+notes: ""

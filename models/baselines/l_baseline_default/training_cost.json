@@ -1,0 +1,10 @@
+{
+  "wall_time_s": 36769.4,
+  "gpu_hours": 10.2137,
+  "device": "cuda:0",
+  "gpu_name": "Tesla T4",
+  "epochs_completed": 100,
+  "peak_gpu_memory_mb": 10686.0,
+  "execution_context": "google_colab+container",
+  "interrupted": false
+}

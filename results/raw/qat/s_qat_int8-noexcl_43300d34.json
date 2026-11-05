@@ -1,0 +1,87 @@
+{
+  "experiment_id": "s_qat_int8-noexcl_43300d34",
+  "checkpoint": "/content/tfm-edge-object-detection/models/pruned/s_pruning_l1global_r50_9419b26f/best.pt",
+  "config_path": "configs/compression/quantization/qat_default.yaml",
+  "smoke_test": false,
+  "seed_base": 42,
+  "seed_branch": 2009573451,
+  "seeding_scheme": "per_branch_v2",
+  "warmup_epochs": 0.0,
+  "effective_config": {
+    "mode": "qat",
+    "precision": "int8",
+    "scheme": "symmetric",
+    "weight_granularity": "per_channel",
+    "activation_granularity": "per_tensor",
+    "calibration_method": "minmax",
+    "calibration_percentile": 99.99,
+    "calibration_size": 128,
+    "excluded_layers": [],
+    "bias_correction": false,
+    "cross_layer_equalization": false,
+    "qat_epochs": 10,
+    "qat_learning_rate": 0.0001,
+    "freeze_observers_epoch": 8,
+    "freeze_bn_stats_epoch": null
+  },
+  "baseline_reference": {
+    "experiment_id": "s_pruning_l1global_r50_9419b26f",
+    "evaluator": "pycocotools",
+    "device_id": "colab_t4_gpu"
+  },
+  "qat": {
+    "epochs": 10,
+    "learning_rate": 0.0001,
+    "metric_key": "map_50_95",
+    "preparation": {
+      "num_weight_observers": 72,
+      "num_activation_observers": 137,
+      "weight_observers_settled": 72,
+      "empty_buffers_after_prepare": 0,
+      "excluded_modules": [],
+      "qengine": "x86",
+      "gradient_flows": true,
+      "config": {
+        "qengine": "x86",
+        "excluded_modules": [],
+        "exclude_head": false,
+        "freeze_observers_epoch": 8,
+        "freeze_bn_epoch": null
+      }
+    },
+    "metrics_baseline": {
+      "map_50": 0.509366,
+      "map_50_95": 0.316322
+    },
+    "metrics_after": {
+      "map_50": 0.51369032586926,
+      "map_50_95": 0.31694100144212584
+    },
+    "checkpoint_after": "/content/drive/MyDrive/tfm-edge/qat/s_qat_int8-noexcl_43300d34/qat_stripped_fp32.pt",
+    "parameters": 3618872,
+    "observers_exercised": true,
+    "frozen": {
+      "observers_epoch": 8,
+      "observers_frozen": 209
+    },
+    "integrity": {
+      "fake_quant_at_train_start": 209,
+      "amp": false,
+      "empty_buffers_at_train_start": 0,
+      "ema_rebuilt_after_first_batch": true,
+      "fake_quant_in_ema": 209
+    },
+    "cost": {
+      "wall_time_s": 1868.23,
+      "gpu_hours": 0.519,
+      "device": "cuda:0",
+      "gpu_name": "Tesla T4",
+      "epochs_completed": 10,
+      "peak_gpu_memory_mb": 10442.0,
+      "execution_context": "google_colab+container",
+      "interrupted": false
+    },
+    "notes": "",
+    "fp32_delta": 0.0006190014421258438
+  }
+}

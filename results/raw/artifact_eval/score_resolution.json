@@ -1,0 +1,32 @@
+{
+  "reference": "results/raw/artifact_eval/validator_onnxruntime_fp32",
+  "quantized": "results/raw/artifact_eval/validator_onnxruntime_int8",
+  "split": "val",
+  "input_resolution": 640,
+  "num_detections": 105248,
+  "num_levels": 15,
+  "levels": [
+    0.00386,
+    0.00772,
+    0.01545,
+    0.02703,
+    0.04635,
+    0.0811,
+    0.13904,
+    0.22786,
+    0.35145,
+    0.49821,
+    0.64883,
+    0.77242,
+    0.86125,
+    0.91918,
+    0.95394
+  ],
+  "tied_fraction": 1.0,
+  "reference_map_50": 0.586152,
+  "reference_map_50_95": 0.376214,
+  "ablated_map_50": 0.586128,
+  "ablated_map_50_95": 0.37481,
+  "cost_map_50": 2.4e-05,
+  "cost_map_50_95": 0.001403
+}

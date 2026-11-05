@@ -1,0 +1,32 @@
+# Campaña piloto de destilación: kd_combined a 10 épocas.
+#
+# Sirve para decidir si compensa lanzar las cinco variantes a 50 épocas (unas 85 h). Las épocas
+# están en este fichero y no en un --override porque el control (`kd_pilot_10ep_control.yaml`)
+# hereda de aquí y así no pueden discrepar.
+#
+# Lectura del resultado, fijada antes de medir:
+#
+#   | destilado > control                  | señal positiva; justifica extender    |
+#   | destilado ~ control, ambos > partida | ayudaron las épocas extra, no destilar|
+#   | destilado ~ control ~ partida        | "10 épocas no bastan para verlo"      |
+#   | destilado < control                  | destilar perjudica con este alpha y lr|
+#
+# Suelo de lectura: 0,46 puntos de mAP@50-95, lo que varía el mismo checkpoint de `n` entre dos
+# dispositivos de evaluación. Por debajo se reporta "no distinguible del ruido de dispositivo".
+
+_base_: kd_combined.yaml
+
+technique_variant: l2n_combined_t2_pilot10
+
+distillation:
+  # 10 épocas: 3,41 h en T4; con el control, 6,82 h, dentro de una sesión de 10,2 h útiles.
+  epochs: 10
+
+  # El piloto se ejecutó sin declarar el cierre del mosaico (el Trainer usó su 10 por defecto, que
+  # con 10 épocas equivale a no usar mosaico). Se quita aquí para que la identidad del piloto no
+  # cambie.
+  close_mosaic_epochs: null
+
+training:
+  # La paciencia con la que se ejecutó el piloto, que con 10 épocas no podía activarse.
+  patience: 30

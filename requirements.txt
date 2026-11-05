@@ -1,0 +1,114 @@
+# Entorno de entrenamiento y experimentación (estación de trabajo y nube). Para el dispositivo de
+# borde, usar requirements-edge.txt.
+#
+# Todas las versiones fijadas con "==". Cada sección indica su estado:
+#
+#   [VERIFICADO]  La versión se instala desde cero en el entorno de referencia y los tests pasan.
+#   [CANDIDATO]   La versión existe en PyPI y es coherente con el resto, pero no se ha validado
+#                 instalando el entorno.
+#   [PENDIENTE]   Sin fijar todavía, con el motivo indicado.
+
+
+# Núcleo: configuración, registro de resultados y utilidades.  [VERIFICADO] No depende de PyTorch.
+# Verificado instalando desde cero en el entorno de referencia (Miniforge, Python 3.11, Ubuntu 26.04
+# bajo WSL2) y ejecutando los tests.
+pydantic==2.8.2
+PyYAML==6.0.1
+pandas==2.2.2
+numpy==1.26.4
+# psutil 5.9.0 no publica rueda binaria para Python 3.11 y pip intentaría compilarlo. Desde la 5.9.5
+# hay ruedas 'abi3', válidas para todo CPython 3.x.
+psutil==5.9.8
+py-cpuinfo==9.0.0
+# Pillow es obligatorio: lo usan la validación de procedencia (lectura de resoluciones), el hash
+# perceptual del particionado y el mosaico de ejemplos del EDA.
+pillow==10.4.0
+
+# numpy se mantiene por debajo de 2.0 porque el extra "export" de ultralytics 8.3.x declara
+# numpy<2.0.0.
+
+
+# Detección de objetos y compresión.  [VERIFICADO]
+#
+# torch 2.8.0 y torchvision 0.23.0 son pareja (ambas de 2025-08) y contemporáneas de torch-pruning
+# 1.6.1 (2025-09), que declara torch>=2.0 sin cota superior.
+#
+# ultralytics 8.3.253 es la última de la serie 8.3 (2026-01-13). Se elige frente a la 8.4.x porque
+# la 8.4 cambió la exportación a TFLite por litert-torch/ai-edge-litert y porque la 8.3 es la
+# contemporánea de la literatura de poda y cuantización sobre YOLOv8. YOLOv8 sigue incluido
+# (ultralytics/cfg/models/v8/yolov8.yaml).
+#
+# DepGraph construye el grafo de YOLOv8, pero las 18 convoluciones que alimentan un C2f fallan con
+# un IndexError al estimar la importancia, porque el chunk() de C2f.forward descoloca el mapeo de
+# índices de la concatenación. Se resuelve sustituyendo esos módulos por un equivalente sin chunk,
+# con la equivalencia numérica verificada.
+#
+# El atributo __version__ de torch-pruning dice "1.6.0" aunque la versión instalada sea la 1.6.1; la
+# referencia es pip.
+#
+# torch debe instalarse con el índice de la variante CUDA correspondiente (ver README.md).
+#
+# opencv-python está fijado porque la serie 4.12 y la 5.x declaran numpy>=2 y pip subiría numpy al
+# instalar ultralytics, lo que rompería la exportación a TFLite. La 4.11.0.86 es la última que
+# acepta numpy<2.
+opencv-python==4.11.0.86
+torch==2.8.0
+torchvision==0.23.0
+ultralytics==8.3.253
+torch-pruning==1.6.1
+
+
+# Evaluación de calidad.  [VERIFICADO]
+#
+# pycocotools 2.0.11 es el evaluador canónico de las filas de quality_metrics.csv y proporciona las
+# métricas COCO estándar y el desglose por tamaño de objeto. En Windows requiere compilador C; en
+# Linux no.
+pycocotools==2.0.11
+
+
+# Figuras y tablas.  [VERIFICADO] Instaladas desde cero en el entorno de referencia y usadas por
+# scripts/03_dataset_eda.py.
+matplotlib==3.9.2
+seaborn==0.13.2
+openpyxl==3.1.5
+
+
+# Desarrollo y calidad de código.  [VERIFICADO]
+pytest==7.4.4
+pytest-cov==4.1.0
+# El extra «jupyter» permite a black revisar notebooks/; sin él, black omite los cuadernos sin
+# avisar.
+black[jupyter]==24.8.0
+# ipython llega con ese extra y se mantiene por debajo de la serie 9, porque IPython 9 exige
+# `psutil>=7` y subiría psutil de 5.9.8 a 7.2.2, que es la biblioteca con la que
+# `benchmark/protocol.py` mide `rss_idle_bytes` y `common/environment.py` lee núcleos y RAM. Con
+# 8.39.0 psutil no aparece entre las dependencias (comprobado con `pip install --dry-run`).
+ipython==8.39.0
+isort==5.13.2
+
+
+# Runtimes de exportación e inferencia.  [VERIFICADO]
+#
+# Instalados en el entorno de referencia; ninguno cambia numpy 1.26.4 ni opencv 4.11.0.86.
+# ultralytics 8.3.253 pide numpy<2.0.0 en su extra "export".
+onnx==1.22.0
+onnxruntime==1.28.0  # CPU. Para GPU hace falta onnxruntime-gpu, y el
+                           # backend no pasa a CPU sin avisar: una medida etiquetada como GPU que
+                           # corriese en CPU sería incorrecta.
+onnxslim==0.1.95           # simplificación del grafo; no altera los números
+openvino==2026.3.0         # se ejecuta sobre la CPU Intel del equipo de medida
+nncf==3.3.0  # cuantización de OpenVINO
+
+# tensorflow no se instala. La exportación a TFLite arrastra tensorflow<=2.19.0 y sus propias
+# restricciones sobre numpy y protobuf, y en este proyecto TFLite tiene un alcance reducido: su
+# latencia sobre x86 no representa a un dispositivo ARM. Se registra como no_disponible con ese
+# motivo.
+#
+# TensorRT no se instala desde PyPI: se usa el del entorno CUDA del sistema o del contenedor. Es
+# opcional y su ausencia se registra como "no_disponible" sin abortar la campaña.
+
+
+# Nube.  [FUERA DE ALCANCE]
+#
+# No se fija 'sagemaker' ni 'boto3': la validación en servicios gestionados quedó fuera del alcance.
+# Los perfiles de nube siguen rechazándose para medir latencia.

@@ -1,0 +1,10 @@
+# Poda estructurada, norma L1, reparto global, ratio 25 %.
+#
+# Punto bajo de la curva mAP frente a ratio (fig_5_3_map_vs_ratio_poda), junto con 50 y 70 %.
+
+_base_: l1_global_r50.yaml
+
+technique_variant: l1global_r25
+
+pruning:
+  ratio: 0.25

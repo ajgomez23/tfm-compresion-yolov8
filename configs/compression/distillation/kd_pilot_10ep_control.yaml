@@ -1,0 +1,22 @@
+# Control de la campaña piloto: el mismo camino, sin destilar.
+#
+# El baseline `n` no sirve de control porque es el punto de partida del alumno, con otra duración,
+# otra tasa (0,01 frente a 0,005) y otra precisión (AMP frente a FP32).
+#
+# Con alpha=0 la pérdida es `1,0 * detección + 0,0 * destilación`, un afinado normal exacto, pero
+# por el mismo código: cargador, semilla, FP32, adaptadores inicializados al azar y pase del
+# maestro. La única diferencia entre las dos ejecuciones es alpha.
+#
+# Cuesta lo mismo que el piloto (3,41 h), porque el pase del maestro se hace siempre: 3.500 s de los
+# 4.278 s de sobrecoste medido.
+#
+# Con alpha=0 los adaptadores no deben moverse, y `DistillationTrainer._comprobar_adaptadores`
+# comprueba que su gradiente es cero.
+
+_base_: kd_pilot_10ep.yaml
+
+technique_variant: l2n_control_alpha0_pilot10
+
+distillation:
+  # Lo único que cambia respecto del piloto; las épocas se heredan.
+  alpha: 0.0

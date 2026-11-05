@@ -1,0 +1,34 @@
+# Perfil de medida: GPU discreta del equipo de desarrollo.
+#
+# La temperatura es obligatoria: es una Max-Q de portátil con un tope de potencia de 35,00 W que en
+# reposo ya está a 52-59 grados. Sin temperatura al inicio y al final no se distingue una p99 alta
+# del modelo de un estrangulamiento térmico.
+device_id: workstation_gpu
+description: >-
+  Equipo de desarrollo del autor, GPU NVIDIA GTX 1650 Max-Q de 4 GB.
+  Es el perfil de referencia para latencia sobre GPU.
+device_type: cuda
+valid_for_measurement: true
+# No disponible: la GPU es visible con nvidia-smi, pero el entorno medido tiene torch 2.8.0+cpu, sin
+# CUDA.
+available: false
+unavailable_reason: >-
+  El PyTorch instalado en el equipo del autor es la compilacion CPU
+  (torch 2.8.0+cpu, en todas las filas de environments.csv de esta maquina), asi que
+  no hay CUDA disponible pese a que nvidia-smi si ve la GTX 1650 Max-Q. No es
+  falta de hardware: es que el entorno de la campana nunca tuvo una build con
+  CUDA. Volver a habilitarlo exige reinstalar PyTorch con CUDA y volver a medir: H1 y H2
+  dependen de este perfil y estan sin contrastar.
+requires_temperature: true
+num_threads: null
+cpu_affinity: []
+backends:
+  - pytorch
+warmup_iterations: 50
+measure_iterations: 300
+repetitions: 3
+throughput_batch_sizes: [1, 2, 4, 8, 16]
+latency_representative: true
+notes: >-
+  4 GB de VRAM: los lotes grandes pueden fallar por memoria, y eso se registra
+  en la fila correspondiente sin abortar el barrido.

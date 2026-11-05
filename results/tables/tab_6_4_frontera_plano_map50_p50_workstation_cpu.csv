@@ -1,0 +1,51 @@
+experiment_id,technique,runtime,precision,map_50,latency_p50_ms,frontier,frontier_runtime,distance_to_ideal
+s_baseline_default_745e3d08,Referencia,openvino,fp32,0.586152,134.2438,estricta,estricta,0.20877531651096232
+s_baseline_default_745e3d08,Referencia,onnxruntime,fp32,0.586152,144.132,solo con suelo,estricta,0.21700980413140902
+s_pruning_l1global_r25_4e91ddbc,Poda estructurada,openvino,fp32,0.568627,110.4585,estricta,estricta,0.2564981988898429
+s_pruning_l1global_r25_4e91ddbc,Poda estructurada,onnxruntime,fp32,0.568627,122.7169,dominado,estricta,0.26319761614050874
+s_baseline_default_745e3d08,Referencia,pytorch,fp32,0.586152,203.8891,dominado,estricta,0.2734555525963819
+s_pruning_l1global_r25_randomctl_a658e5d4,Poda estructurada,openvino,fp32,0.556491,98.5692,estricta,estricta,0.29965635196990764
+s_pruning_l1global_r25_randomctl_a658e5d4,Poda estructurada,onnxruntime,fp32,0.556488,111.2425,dominado,estricta,0.30485828228320894
+s_ptq_int8-noexcl_5bcd71f0,Cuantización PTQ,openvino,int8,0.548378,70.5537,estricta,estricta,0.3250304785674929
+s_qat_int8-noexcl_d4d403fa,Cuantización QAT,openvino,int8,0.543178,72.7711,solo con suelo,solo con suelo,0.3474096175883633
+m_ptq_int8-noexcl_b1a6e9e7,Cuantización PTQ,openvino,int8,0.552063,162.6528,dominado,dominado,0.34923869135753005
+s_combined_prune-l1global-r25-ptqint8_4a1d5adc,Combinaciones,openvino,int8,0.53247,55.9581,estricta,estricta,0.3900068246733026
+s_qat_int8-noexcl_4d491880,Cuantización QAT,openvino,int8,0.530671,56.365,solo con suelo,solo con suelo,0.39771166563952426
+s_pruning_l1global_r50_iter4_d8fe066f,Poda estructurada,openvino,fp32,0.530635,73.3439,dominado,dominado,0.40047060013966085
+s_pruning_l1global_r50_iter4_d8fe066f,Poda estructurada,onnxruntime,fp32,0.530635,86.3515,dominado,estricta,0.4032111456112177
+m_baseline_default_dfe22158,Referencia,onnxruntime,fp32,0.623255,350.4465,estricta,estricta,0.4058419138799021
+n_baseline_default_fab9d45c,Referencia,openvino,fp32,0.524158,44.8115,estricta,estricta,0.4243765866657884
+n_baseline_default_fab9d45c,Referencia,onnxruntime,fp32,0.524158,53.2729,dominado,estricta,0.425105273131466
+m_baseline_default_dfe22158,Referencia,openvino,fp32,0.623255,367.6264,solo con suelo,estricta,0.42730590931721474
+n_baseline_default_fab9d45c,Referencia,pytorch,fp32,0.524158,79.179,dominado,estricta,0.4289515351777586
+s_combined_prune-l1global-r25-randomctl-ptqint8_e70dc4d6,Combinaciones,openvino,int8,0.518958,50.3066,dominado,dominado,0.4469972593073596
+s_ptq_int8-noexcl_5bcd71f0,Cuantización PTQ,onnxruntime,int8,0.518622,67.5694,dominado,dominado,0.45042873528013033
+l_ptq_int8-noexcl_4a52a7e5,Cuantización PTQ,openvino,int8,0.565263,329.584,dominado,dominado,0.4535523136098697
+l_ptq_int8-noexcl_4a52a7e5,Cuantización PTQ,onnxruntime,int8,0.551122,293.3968,dominado,dominado,0.4550292932642228
+s_pruning_l1global_r50_9419b26f,Poda estructurada,openvino,fp32,0.509366,63.4413,dominado,dominado,0.4892310738396273
+s_pruning_l1global_r50_9419b26f,Poda estructurada,onnxruntime,fp32,0.509366,80.4303,dominado,dominado,0.4917358058509851
+m_ptq_int8-noexcl_b1a6e9e7,Cuantización PTQ,onnxruntime,int8,0.512705,162.8844,dominado,dominado,0.502820371422018
+m_baseline_default_dfe22158,Referencia,pytorch,fp32,0.623255,454.6437,dominado,estricta,0.5360224286314874
+s_qat_int8-noexcl_d4d403fa,Cuantización QAT,onnxruntime,int8,0.497894,71.0929,dominado,dominado,0.5389959159933454
+s_qat_int8-noexcl_4d491880,Cuantización QAT,onnxruntime,int8,0.497449,65.7955,dominado,dominado,0.54023273799829
+s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5,Combinaciones,openvino,int8,0.492214,39.3646,estricta,estricta,0.5605407661631713
+s_combined_prune-l1global-r25-ptqint8_4a1d5adc,Combinaciones,onnxruntime,int8,0.491923,66.9954,dominado,dominado,0.5638971364239994
+s_qat_int8-noexcl_43300d34,Cuantización QAT,openvino,int8,0.481893,35.7216,estricta,estricta,0.6045376189862752
+s_combined_prune-l1global-r50-ptqint8_9067dba2,Combinaciones,openvino,int8,0.480036,35.4919,estricta,estricta,0.6124698195958221
+s_pruning_l1global_r50_randomctl_d581bd22,Poda estructurada,openvino,fp32,0.480124,62.8196,dominado,dominado,0.6137324450898823
+s_pruning_l1global_r50_randomctl_d581bd22,Poda estructurada,onnxruntime,fp32,0.480124,74.9582,dominado,dominado,0.6150671635669156
+s_combined_prune-l1global-r25-randomctl-ptqint8_e70dc4d6,Combinaciones,onnxruntime,int8,0.478558,61.5336,dominado,dominado,0.6202906563764822
+s_pruning_bnscale_r50_f51fef4c,Poda estructurada,openvino,fp32,0.473036,64.649,dominado,dominado,0.6441238691777823
+s_pruning_bnscale_r50_f51fef4c,Poda estructurada,onnxruntime,fp32,0.473036,80.2087,dominado,dominado,0.6458868733620727
+n_ptq_int8-noexcl_a78f566a,Cuantización PTQ,openvino,int8,0.471408,25.6084,estricta,estricta,0.6492350974406336
+s_combined_prune-l1global-r50-iter4-ptqint8_6f322ad5,Combinaciones,onnxruntime,int8,0.461694,47.5047,dominado,estricta,0.6913096400253168
+s_qat_int8-noexcl_43300d34,Cuantización QAT,onnxruntime,int8,0.455674,45.2895,dominado,estricta,0.7169289811179903
+s_combined_prune-l1global-r50-randomctl-ptqint8_13a9774e,Combinaciones,openvino,int8,0.450492,34.293,dominado,dominado,0.7387429659527891
+n_ptq_int8-noexcl_a78f566a,Cuantización PTQ,onnxruntime,int8,0.447612,30.0546,dominado,estricta,0.7509975161742017
+s_combined_prune-l1global-r50-ptqint8_9067dba2,Combinaciones,onnxruntime,int8,0.446691,45.0749,dominado,dominado,0.7553064528002498
+s_combined_prune-bnscale-r50-ptqint8_7712cb36,Combinaciones,openvino,int8,0.446191,35.4794,dominado,dominado,0.7571530236286028
+l_baseline_default_188b9407,Referencia,onnxruntime,fp32,0.619416,704.9157,dominado,dominado,0.8488626469713387
+l_baseline_default_188b9407,Referencia,openvino,fp32,0.619416,708.296,dominado,dominado,0.8530850956251691
+s_combined_prune-l1global-r50-randomctl-ptqint8_13a9774e,Combinaciones,onnxruntime,int8,0.4093,42.3687,dominado,dominado,0.9150228989219282
+l_baseline_default_188b9407,Referencia,pytorch,fp32,0.619415,826.0139,dominado,dominado,1.00013477046786
+s_combined_prune-bnscale-r50-ptqint8_7712cb36,Combinaciones,onnxruntime,int8,0.389369,43.0575,dominado,dominado,1.0002375988575785

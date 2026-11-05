@@ -1,0 +1,82 @@
+% Generado por tfm_edge.reporting.tables. No editar a mano: se regenera.
+% Requiere \usepackage{booktabs}, \usepackage[T1]{fontenc}, \usepackage{pdflscape}, \usepackage{adjustbox}.
+\ifdefined\tfmedgetitle\else\newsavebox{\tfmedgetitle}\fi
+\ifdefined\tfmedgenotes\else\newsavebox{\tfmedgenotes}\fi
+\begin{landscape}
+\begin{table}[htbp]
+  \centering
+  \sbox{\tfmedgetitle}{\parbox{\linewidth}{%
+  \caption{Situación de cada configuración respecto a la frontera de Pareto en workstation\_cpu, vista «plano\_map5095\_p50»}
+  \label{tab:6_4_frontera_plano_map5095_p50_workstation_cpu}
+  }}%
+  \sbox{\tfmedgenotes}{%
+  \begin{minipage}{\linewidth}\footnotesize
+  «estricta»: no dominada por nadie. «solo con suelo»: entra en la frontera únicamente cuando se exige que la ventaja del rival supere la resolución de la medida (D-128). «dominado»: hay otra configuración que no es peor en ningún eje y es mejor por encima del suelo de la medida en al menos uno.
+  «Frontera común» compara cada configuración con las de todos los motores del dispositivo; «En su motor», solo con las del mismo motor.
+  La distancia al ideal está normalizada sobre el rango observado: sirve para ordenar, no como magnitud física.
+  \end{minipage}%
+  }%
+  \usebox{\tfmedgetitle}\par
+  \footnotesize
+  \begin{adjustbox}{max width=\linewidth, max totalheight=\dimexpr\textheight-\ht\tfmedgetitle-\dp\tfmedgetitle-\ht\tfmedgenotes-\dp\tfmedgenotes-6pt\relax}
+  \begin{tabular}{llllrrllr}
+    \toprule
+    Experimento & Técnica & Motor & Precisión & mAP@50-95 & latencia p50 (ms) & Frontera común & En su motor & distancia al ideal \\
+    \midrule
+    s\_baseline\_default\_745e3d08 & Referencia & openvino & fp32 & 0,3762 & 134,24 & estricta & estricta & \textbf{0,219} \\
+    s\_baseline\_default\_745e3d08 & Referencia & onnxruntime & fp32 & 0,3762 & 144,13 & solo con suelo & estricta & 0,227 \\
+    s\_baseline\_default\_745e3d08 & Referencia & pytorch & fp32 & 0,3762 & 203,89 & dominado & estricta & 0,282 \\
+    s\_pruning\_l1global\_r25\_4e91ddbc & Poda estructurada & openvino & fp32 & 0,3579 & 110,46 & estricta & estricta & 0,282 \\
+    s\_pruning\_l1global\_r25\_4e91ddbc & Poda estructurada & onnxruntime & fp32 & 0,3579 & 122,72 & estricta & estricta & 0,288 \\
+    s\_pruning\_l1global\_r25\_randomctl\_a658e5d4 & Poda estructurada & openvino & fp32 & 0,3479 & 98,57 & estricta & estricta & 0,323 \\
+    s\_pruning\_l1global\_r25\_randomctl\_a658e5d4 & Poda estructurada & onnxruntime & fp32 & 0,3479 & 111,24 & dominado & estricta & 0,328 \\
+    s\_pruning\_l1global\_r50\_iter4\_d8fe066f & Poda estructurada & openvino & fp32 & 0,3311 & 73,34 & estricta & estricta & 0,397 \\
+    s\_pruning\_l1global\_r50\_iter4\_d8fe066f & Poda estructurada & onnxruntime & fp32 & 0,3311 & 86,35 & dominado & estricta & 0,400 \\
+    m\_baseline\_default\_dfe22158 & Referencia & onnxruntime & fp32 & \textbf{0,4093} & 350,45 & estricta & estricta & 0,406 \\
+    n\_baseline\_default\_fab9d45c & Referencia & openvino & fp32 & 0,3256 & 44,81 & estricta & estricta & 0,420 \\
+    n\_baseline\_default\_fab9d45c & Referencia & onnxruntime & fp32 & 0,3256 & 53,27 & dominado & estricta & 0,421 \\
+    n\_baseline\_default\_fab9d45c & Referencia & pytorch & fp32 & 0,3256 & 79,18 & dominado & estricta & 0,424 \\
+    m\_baseline\_default\_dfe22158 & Referencia & openvino & fp32 & \textbf{0,4093} & 367,63 & solo con suelo & estricta & 0,427 \\
+    s\_pruning\_l1global\_r50\_9419b26f & Poda estructurada & openvino & fp32 & 0,3163 & 63,44 & dominado & dominado & 0,467 \\
+    s\_pruning\_l1global\_r50\_9419b26f & Poda estructurada & onnxruntime & fp32 & 0,3163 & 80,43 & dominado & dominado & 0,470 \\
+    s\_qat\_int8-noexcl\_d4d403fa & Cuantización QAT & openvino & int8 & 0,3124 & 72,77 & dominado & dominado & 0,487 \\
+    s\_ptq\_int8-noexcl\_5bcd71f0 & Cuantización PTQ & openvino & int8 & 0,3100 & 70,55 & dominado & dominado & 0,498 \\
+    m\_ptq\_int8-noexcl\_b1a6e9e7 & Cuantización PTQ & openvino & int8 & 0,3120 & 162,65 & dominado & dominado & 0,515 \\
+    m\_baseline\_default\_dfe22158 & Referencia & pytorch & fp32 & \textbf{0,4093} & 454,64 & dominado & estricta & 0,536 \\
+    s\_pruning\_l1global\_r50\_randomctl\_d581bd22 & Poda estructurada & openvino & fp32 & 0,3003 & 62,82 & dominado & dominado & 0,545 \\
+    s\_pruning\_l1global\_r50\_randomctl\_d581bd22 & Poda estructurada & onnxruntime & fp32 & 0,3003 & 74,96 & dominado & dominado & 0,546 \\
+    s\_combined\_prune-l1global-r25-ptqint8\_4a1d5adc & Combinaciones & openvino & int8 & 0,2984 & 55,96 & dominado & dominado & 0,553 \\
+    s\_qat\_int8-noexcl\_4d491880 & Cuantización QAT & openvino & int8 & 0,2980 & 56,37 & dominado & dominado & 0,555 \\
+    l\_ptq\_int8-noexcl\_4a52a7e5 & Cuantización PTQ & openvino & int8 & 0,3217 & 329,58 & dominado & dominado & 0,580 \\
+    l\_ptq\_int8-noexcl\_4a52a7e5 & Cuantización PTQ & onnxruntime & int8 & 0,3096 & 293,40 & dominado & dominado & 0,599 \\
+    s\_combined\_prune-l1global-r25-randomctl-ptqint8\_e70dc4d6 & Combinaciones & openvino & int8 & 0,2883 & 50,31 & dominado & dominado & 0,602 \\
+    s\_pruning\_bnscale\_r50\_f51fef4c & Poda estructurada & openvino & fp32 & 0,2865 & 64,65 & dominado & dominado & 0,612 \\
+    s\_pruning\_bnscale\_r50\_f51fef4c & Poda estructurada & onnxruntime & fp32 & 0,2865 & 80,21 & dominado & dominado & 0,614 \\
+    s\_ptq\_int8-noexcl\_5bcd71f0 & Cuantización PTQ & onnxruntime & int8 & 0,2861 & 67,57 & dominado & dominado & 0,614 \\
+    m\_ptq\_int8-noexcl\_b1a6e9e7 & Cuantización PTQ & onnxruntime & int8 & 0,2815 & 162,88 & dominado & dominado & 0,657 \\
+    s\_combined\_prune-l1global-r50-iter4-ptqint8\_6f322ad5 & Combinaciones & openvino & int8 & 0,2760 & 39,36 & estricta & estricta & 0,662 \\
+    s\_qat\_int8-noexcl\_d4d403fa & Cuantización QAT & onnxruntime & int8 & 0,2747 & 71,09 & dominado & dominado & 0,670 \\
+    s\_qat\_int8-noexcl\_4d491880 & Cuantización QAT & onnxruntime & int8 & 0,2728 & 65,80 & dominado & dominado & 0,679 \\
+    s\_combined\_prune-l1global-r25-ptqint8\_4a1d5adc & Combinaciones & onnxruntime & int8 & 0,2703 & 67,00 & dominado & dominado & 0,691 \\
+    s\_qat\_int8-noexcl\_43300d34 & Cuantización QAT & openvino & int8 & 0,2672 & 35,72 & estricta & estricta & 0,704 \\
+    s\_combined\_prune-l1global-r50-ptqint8\_9067dba2 & Combinaciones & openvino & int8 & 0,2634 & 35,49 & estricta & estricta & 0,723 \\
+    s\_combined\_prune-l1global-r25-randomctl-ptqint8\_e70dc4d6 & Combinaciones & onnxruntime & int8 & 0,2591 & 61,53 & dominado & dominado & 0,745 \\
+    n\_ptq\_int8-noexcl\_a78f566a & Cuantización PTQ & openvino & int8 & 0,2548 & \textbf{25,61} & estricta & estricta & 0,765 \\
+    s\_combined\_prune-l1global-r50-randomctl-ptqint8\_13a9774e & Combinaciones & openvino & int8 & 0,2496 & 34,29 & dominado & dominado & 0,790 \\
+    s\_combined\_prune-l1global-r50-iter4-ptqint8\_6f322ad5 & Combinaciones & onnxruntime & int8 & 0,2494 & 47,50 & dominado & estricta & 0,792 \\
+    n\_ptq\_int8-noexcl\_a78f566a & Cuantización PTQ & onnxruntime & int8 & 0,2477 & 30,05 & dominado & estricta & 0,799 \\
+    s\_qat\_int8-noexcl\_43300d34 & Cuantización QAT & onnxruntime & int8 & 0,2478 & 45,29 & dominado & estricta & 0,800 \\
+    s\_combined\_prune-bnscale-r50-ptqint8\_7712cb36 & Combinaciones & openvino & int8 & 0,2436 & 35,48 & dominado & dominado & 0,820 \\
+    s\_combined\_prune-l1global-r50-ptqint8\_9067dba2 & Combinaciones & onnxruntime & int8 & 0,2385 & 45,07 & dominado & dominado & 0,845 \\
+    l\_baseline\_default\_188b9407 & Referencia & onnxruntime & fp32 & \textbf{0,4115} & 704,92 & estricta & estricta & 0,849 \\
+    l\_baseline\_default\_188b9407 & Referencia & openvino & fp32 & \textbf{0,4115} & 708,30 & solo con suelo & estricta & 0,853 \\
+    s\_combined\_prune-l1global-r50-randomctl-ptqint8\_13a9774e & Combinaciones & onnxruntime & int8 & 0,2234 & 42,37 & dominado & dominado & 0,918 \\
+    l\_baseline\_default\_188b9407 & Referencia & pytorch & fp32 & \textbf{0,4115} & 826,01 & dominado & estricta & 1,000 \\
+    s\_combined\_prune-bnscale-r50-ptqint8\_7712cb36 & Combinaciones & onnxruntime & int8 & 0,2066 & 43,06 & dominado & dominado & 1,000 \\
+    \bottomrule
+  \end{tabular}
+  \end{adjustbox}
+  \par\vspace{2pt}
+  \usebox{\tfmedgenotes}
+\end{table}
+\end{landscape}

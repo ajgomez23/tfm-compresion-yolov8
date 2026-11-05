@@ -1,0 +1,22 @@
+{
+  "finetune_step1_training_cost.json": {
+    "sha256": "dcbb71c47475c638a6cda3c3cd4de17b2048785536d65b6f8acf889c6e76cd2e",
+    "origen": "models/pruned/s_pruning_l1global_r50_iter4_d8fe066f/finetune_step1/train/training_cost.json"
+  },
+  "finetune_step2_training_cost.json": {
+    "sha256": "0a977ee71a8a2eaa634b96e04a1c14cf40ac054db2de68003c7eff3564ea1a7e",
+    "origen": "models/pruned/s_pruning_l1global_r50_iter4_d8fe066f/finetune_step2/train/training_cost.json"
+  },
+  "finetune_step3_training_cost.json": {
+    "sha256": "7246f427ab12a82c60e071a0892798bdcace36d9487572ac000ba889ac2fe9e7",
+    "origen": "models/pruned/s_pruning_l1global_r50_iter4_d8fe066f/finetune_step3/train/training_cost.json"
+  },
+  "finetune_training_cost.json": {
+    "sha256": "0f62889a385ea4236c69e9081e79db18b3a7f206ab155228120d4c711d5ba7fd",
+    "origen": "models/pruned/s_pruning_l1global_r50_iter4_d8fe066f/finetune/train/training_cost.json"
+  },
+  "experiments_fila_antes.csv": {
+    "sha256": "1d92c347aa269f816008d360f787d60b169ea150327a0682e9e5f3f9fb65dda8",
+    "origen": "results/registry/experiments.csv (fila de d8fe066f antes de D-185)"
+  }
+}

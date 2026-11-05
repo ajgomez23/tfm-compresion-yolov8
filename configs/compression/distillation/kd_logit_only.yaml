@@ -1,0 +1,13 @@
+# Destilación solo por respuesta, sin características.
+#
+# Mide cuánto aporta imitar la salida del maestro sin sus representaciones intermedias. No necesita
+# instrumentar el maestro ni entrenar adaptadores. Con kd_type=logit el esquema rechaza los pares de
+# características en lugar de ignorarlos.
+
+_base_: kd_combined.yaml
+
+technique_variant: l2n_logit_t2
+
+distillation:
+  kd_type: logit
+  feature_pairs: []

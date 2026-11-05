@@ -1,0 +1,355 @@
+{
+  "artifact": "results/exports/m_baseline_default_ptq/m_baseline_default_int8_onnxruntime.onnx",
+  "staged_artifact": "/home/gomez/tfm-edge-object-detection/results/exports/_staged/m_baseline_default_int8_onnxruntime.onnx",
+  "validator_dir": "/home/gomez/tfm-edge-object-detection/results/raw/artifact_eval/validator_m_ptq_int8-noexcl_b1a6e9e7_onnxruntime_int8",
+  "runtime": "onnxruntime",
+  "precision": "int8",
+  "experiment_id": "m_ptq_int8-noexcl_b1a6e9e7",
+  "smoke_test": false,
+  "coco": {
+    "split": "val",
+    "input_resolution": 640,
+    "num_images": 1213,
+    "num_annotations": 11507,
+    "num_detections": 75511,
+    "conf_threshold": 0.001,
+    "iou_threshold": 0.7,
+    "size_criterion_primary": "inference_resolution",
+    "by_criterion": {
+      "inference_resolution": {
+        "criterion": "inference_resolution",
+        "map_50_95": 0.28146371632681155,
+        "map_50": 0.5127047765482408,
+        "ap_75": 0.27373688022469983,
+        "ap_small": 0.110684,
+        "ap_medium": 0.325086,
+        "ap_large": 0.428408,
+        "ar_1": 0.25486864459015285,
+        "ar_10": 0.4184619427003677,
+        "ar_100": 0.434683240280194,
+        "ar_small": 0.241921,
+        "ar_medium": 0.482671,
+        "ar_large": 0.561039,
+        "objects_per_size": {
+          "small": 4165,
+          "medium": 4154,
+          "large": 3188
+        },
+        "precision_at_best_f1": 0.699084,
+        "recall_at_best_f1": 0.475294,
+        "f1_best": 0.545693,
+        "conf_at_best_f1": 0.35528,
+        "operating_point": {
+          "precision": 0.699084,
+          "recall": 0.475294,
+          "f1": 0.545693,
+          "confidence": 0.35528,
+          "num_classes": 17,
+          "iou": 0.5,
+          "max_detections": 100,
+          "reason": ""
+        }
+      },
+      "original_resolution": {
+        "criterion": "original_resolution",
+        "map_50_95": 0.28146371632681155,
+        "map_50": 0.5127047765482408,
+        "ap_75": 0.27373688022469983,
+        "ap_small": 0.00054,
+        "ap_medium": 0.023457,
+        "ap_large": 0.313029,
+        "ar_1": 0.25486864459015285,
+        "ar_10": 0.4184619427003677,
+        "ar_100": 0.434683240280194,
+        "ar_small": 0.000387,
+        "ar_medium": 0.060643,
+        "ar_large": 0.481301,
+        "objects_per_size": {
+          "small": 245,
+          "medium": 1118,
+          "large": 10144
+        },
+        "precision_at_best_f1": 0.699084,
+        "recall_at_best_f1": 0.475294,
+        "f1_best": 0.545693,
+        "conf_at_best_f1": 0.35528,
+        "operating_point": {
+          "precision": 0.699084,
+          "recall": 0.475294,
+          "f1": 0.545693,
+          "confidence": 0.35528,
+          "num_classes": 17,
+          "iou": 0.5,
+          "max_detections": 100,
+          "reason": ""
+        }
+      }
+    },
+    "per_class": {
+      "0": {
+        "name": "person",
+        "ap_50_95": 0.614909,
+        "ap_50": 0.854771,
+        "num_annotations": 2096
+      },
+      "1": {
+        "name": "ear",
+        "ap_50_95": 0.214583,
+        "ap_50": 0.545772,
+        "num_annotations": 1177
+      },
+      "2": {
+        "name": "ear-mufs",
+        "ap_50_95": 0.208372,
+        "ap_50": 0.394989,
+        "num_annotations": 47
+      },
+      "3": {
+        "name": "face",
+        "ap_50_95": 0.554633,
+        "ap_50": 0.88048,
+        "num_annotations": 1286
+      },
+      "4": {
+        "name": "face-guard",
+        "ap_50_95": 0.311395,
+        "ap_50": 0.573183,
+        "num_annotations": 19
+      },
+      "5": {
+        "name": "face-mask",
+        "ap_50_95": 0.237574,
+        "ap_50": 0.495323,
+        "num_annotations": 111
+      },
+      "6": {
+        "name": "foot",
+        "ap_50_95": 0.079074,
+        "ap_50": 0.202169,
+        "num_annotations": 142
+      },
+      "7": {
+        "name": "tool",
+        "ap_50_95": 0.108465,
+        "ap_50": 0.225179,
+        "num_annotations": 746
+      },
+      "8": {
+        "name": "glasses",
+        "ap_50_95": 0.273378,
+        "ap_50": 0.54257,
+        "num_annotations": 299
+      },
+      "9": {
+        "name": "gloves",
+        "ap_50_95": 0.205335,
+        "ap_50": 0.399388,
+        "num_annotations": 441
+      },
+      "10": {
+        "name": "helmet",
+        "ap_50_95": 0.29825,
+        "ap_50": 0.532951,
+        "num_annotations": 123
+      },
+      "11": {
+        "name": "hands",
+        "ap_50_95": 0.407796,
+        "ap_50": 0.742388,
+        "num_annotations": 2317
+      },
+      "12": {
+        "name": "head",
+        "ap_50_95": 0.523829,
+        "ap_50": 0.804743,
+        "num_annotations": 1855
+      },
+      "13": {
+        "name": "medical-suit",
+        "ap_50_95": 0.215315,
+        "ap_50": 0.435434,
+        "num_annotations": 29
+      },
+      "14": {
+        "name": "shoes",
+        "ap_50_95": 0.19566,
+        "ap_50": 0.429572,
+        "num_annotations": 719
+      },
+      "15": {
+        "name": "safety-suit",
+        "ap_50_95": 0.140956,
+        "ap_50": 0.234861,
+        "num_annotations": 33
+      },
+      "16": {
+        "name": "safety-vest",
+        "ap_50_95": 0.19536,
+        "ap_50": 0.422207,
+        "num_annotations": 67
+      }
+    },
+    "consistency": {
+      "consistent": true,
+      "max_difference": 0.0,
+      "tolerance": 1e-06,
+      "differences": {
+        "map_50_95": 0.0,
+        "map_50": 0.0,
+        "ap_75": 0.0,
+        "ar_1": 0.0,
+        "ar_10": 0.0,
+        "ar_100": 0.0,
+        "precision_at_best_f1": 0.0,
+        "recall_at_best_f1": 0.0,
+        "f1_best": 0.0,
+        "conf_at_best_f1": 0.0
+      },
+      "checked": [
+        "map_50_95",
+        "map_50",
+        "ap_75",
+        "ar_1",
+        "ar_10",
+        "ar_100",
+        "precision_at_best_f1",
+        "recall_at_best_f1",
+        "f1_best",
+        "conf_at_best_f1"
+      ]
+    }
+  },
+  "ultralytics_metrics": {
+    "split": "val",
+    "input_resolution": 640,
+    "conf_threshold": 0.001,
+    "iou_threshold": 0.7,
+    "map_50": 0.524099,
+    "map_50_95": 0.291018,
+    "mean_precision": 0.651893,
+    "mean_recall": 0.480048,
+    "num_classes_evaluated": 17,
+    "per_class": {
+      "0": {
+        "precision": 0.825858,
+        "recall": 0.835878,
+        "ap_50": 0.863691,
+        "ap_50_95": 0.623107
+      },
+      "1": {
+        "precision": 0.6428,
+        "recall": 0.593883,
+        "ap_50": 0.574387,
+        "ap_50_95": 0.235538
+      },
+      "2": {
+        "precision": 0.598131,
+        "recall": 0.361702,
+        "ap_50": 0.406932,
+        "ap_50_95": 0.216937
+      },
+      "3": {
+        "precision": 0.877075,
+        "recall": 0.862364,
+        "ap_50": 0.896713,
+        "ap_50_95": 0.584992
+      },
+      "4": {
+        "precision": 0.631586,
+        "recall": 0.578947,
+        "ap_50": 0.577107,
+        "ap_50_95": 0.308987
+      },
+      "5": {
+        "precision": 0.759717,
+        "recall": 0.427301,
+        "ap_50": 0.508875,
+        "ap_50_95": 0.249726
+      },
+      "6": {
+        "precision": 0.562947,
+        "recall": 0.112676,
+        "ap_50": 0.199232,
+        "ap_50_95": 0.078804
+      },
+      "7": {
+        "precision": 0.435877,
+        "recall": 0.225201,
+        "ap_50": 0.235555,
+        "ap_50_95": 0.112845
+      },
+      "8": {
+        "precision": 0.699571,
+        "recall": 0.548495,
+        "ap_50": 0.559084,
+        "ap_50_95": 0.282123
+      },
+      "9": {
+        "precision": 0.533631,
+        "recall": 0.424036,
+        "ap_50": 0.415244,
+        "ap_50_95": 0.215698
+      },
+      "10": {
+        "precision": 0.85327,
+        "recall": 0.398374,
+        "ap_50": 0.545487,
+        "ap_50_95": 0.30265
+      },
+      "11": {
+        "precision": 0.775693,
+        "recall": 0.698503,
+        "ap_50": 0.757635,
+        "ap_50_95": 0.421357
+      },
+      "12": {
+        "precision": 0.761883,
+        "recall": 0.809704,
+        "ap_50": 0.8297,
+        "ap_50_95": 0.553415
+      },
+      "13": {
+        "precision": 0.609176,
+        "recall": 0.344828,
+        "ap_50": 0.433823,
+        "ap_50_95": 0.219741
+      },
+      "14": {
+        "precision": 0.520876,
+        "recall": 0.443672,
+        "ap_50": 0.433635,
+        "ap_50_95": 0.197634
+      },
+      "15": {
+        "precision": 0.325782,
+        "recall": 0.181818,
+        "ap_50": 0.241422,
+        "ap_50_95": 0.143667
+      },
+      "16": {
+        "precision": 0.668308,
+        "recall": 0.313433,
+        "ap_50": 0.431163,
+        "ap_50_95": 0.200093
+      }
+    }
+  },
+  "evaluator_gap": {
+    "pycocotools_map_50": 0.5127047765482408,
+    "ultralytics_map_50": 0.524099,
+    "gap_map_50": -0.011394,
+    "pycocotools_map_50_95": 0.28146371632681155,
+    "ultralytics_map_50_95": 0.291018,
+    "gap_map_50_95": -0.009554
+  },
+  "num_raw_detections": 75511,
+  "num_matched_detections": 75511,
+  "rescaling": {
+    "rescaled": true,
+    "images_dir": "/home/gomez/tfm-edge-object-detection/data/resized_640/images",
+    "factor_min": 4.048419,
+    "factor_max": 12.8,
+    "num_images": 1213
+  },
+  "eval_time_s": 413.56
+}

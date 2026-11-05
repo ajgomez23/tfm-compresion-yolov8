@@ -1,0 +1,22 @@
+# Perfil de medida: la misma máquina, forzando CPU.
+#
+# Es la referencia de constrained_cpu. Los dos usan la misma CPU física y solo se distinguen por
+# num_threads y cpu_affinity, que se guardan en cada fila del registro.
+device_id: workstation_cpu
+description: >-
+  Equipo de desarrollo del autor, Intel Core i7-10750H, todos los hilos
+  disponibles. Ejecucion forzada en CPU.
+device_type: cpu
+valid_for_measurement: true
+available: true
+requires_temperature: false
+num_threads: null
+cpu_affinity: []
+backends:
+  - pytorch
+warmup_iterations: 50
+measure_iterations: 300
+repetitions: 3
+throughput_batch_sizes: [1, 2, 4, 8, 16]
+latency_representative: true
+notes: ""

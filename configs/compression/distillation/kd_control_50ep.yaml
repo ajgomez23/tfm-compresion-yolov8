@@ -1,0 +1,17 @@
+# Control de la extensión a 50 épocas: el mismo camino que kd_combined, sin destilar.
+#
+# El baseline `n` no sirve de referencia porque es el punto de partida, y el control de 10 épocas
+# usó otra receta. Hereda de kd_combined.yaml todo lo que no es destilar: épocas, tasa, lote, sin
+# mosaico, sin parada temprana, planificador, semilla y tipo de destilación (del tipo depende la
+# semilla de rama). Se ejecuta primero.
+#
+# Con alpha=0 el gradiente de los adaptadores tiene que ser cero; DistillationTrainer lo comprueba
+# al terminar.
+
+_base_: kd_combined.yaml
+
+technique_variant: l2n_control_alpha0
+
+distillation:
+  # Lo único que cambia respecto de kd_combined.
+  alpha: 0.0

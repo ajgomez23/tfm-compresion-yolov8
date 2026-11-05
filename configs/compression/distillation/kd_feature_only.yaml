@@ -1,0 +1,12 @@
+# Destilación solo por características, sin término de respuesta.
+#
+# Una pérdida solo de características no alcanza a la cabeza de detección, porque las capas
+# emparejadas son anteriores a ella (ver tests/test_teacher_student_features.py). La cabeza solo se
+# entrena con la pérdida de detección.
+
+_base_: kd_combined.yaml
+
+technique_variant: l2n_feature_t2
+
+distillation:
+  kd_type: feature

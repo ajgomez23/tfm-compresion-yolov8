@@ -1,0 +1,28 @@
+# Perfil de medida: cómputo restringido sobre la misma CPU.
+#
+# Sirve como aproximación a un presupuesto de cómputo reducido, no como emulación de ARM: la
+# microarquitectura, la caché y el juego de instrucciones son distintos, así que no permite
+# extrapolar a una Raspberry Pi. Sí permite ver cómo cambia la frontera de Pareto al reducir el
+# cómputo sobre el mismo hardware.
+#
+# La afinidad se fija para que el planificador no mueva el proceso entre núcleos.
+device_id: constrained_cpu
+description: >-
+  La misma CPU i7-10750H limitada a 2 hilos con afinidad fijada a los nucleos
+  0 y 1. Proxy de computo restringido, NO emulacion de ARM.
+device_type: cpu
+valid_for_measurement: true
+available: true
+requires_temperature: false
+num_threads: 2
+cpu_affinity: [0, 1]
+backends:
+  - pytorch
+warmup_iterations: 50
+measure_iterations: 300
+repetitions: 3
+throughput_batch_sizes: [1, 2, 4]
+latency_representative: false
+notes: >-
+  latency_representative=false: es un proxy de presupuesto de computo, no un
+  dispositivo de borde real. Sus latencias no representan a ninguna ARM.
